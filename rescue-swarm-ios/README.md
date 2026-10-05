@@ -28,8 +28,8 @@ empty result. No detector or TAK connection is included in this build.
 5. Repeat on the second iPhone for actual phone-to-phone validation.
 
 The workflow `.github/workflows/swift-tests.yml` runs package tests and the simulator
-build on macOS after the repository is pushed. It has been prepared, not executed here.
-Neither code nor messages have been sent to teammates automatically.
+build on macOS after the repository is pushed. It has passed on GitHub macOS runners.
+Code is published in the shared repository; no direct teammate messages were sent.
 
 ## First two-phone test
 
@@ -98,9 +98,9 @@ these Swift/Python device instructions still require execution on a Mac/iPhone.
 
 Five Windows checks passed: project/scheme references, build source coverage, plist
 permission description, matching Bonjour declaration, and Python decoding/checking the fixture.
-Twenty-nine Swift tests are written but NOT RUN: no Swift compiler or Xcode is installed
-on the available Windows machine. The SwiftUI UI, iOS build and real networking
-behavior are therefore unverified. See TEST_STATUS.md for the exact boundary.
+On 2026-10-05, all **29 Swift tests and the unsigned iOS Simulator build passed**
+on GitHub macOS CI. [Run evidence](https://github.com/mmgallai/RescueSwarm/actions/runs/37262970189).
+Physical iPhone tests, signed installation and interactive UI validation remain pending.
 
 ## Saved results and exports
 
@@ -127,7 +127,7 @@ contain image names and detections; share them deliberately using the system she
 
 Mac/device verification: run the Swift suite, process a batch, export its JSON, restart
 the app and compare saved IDs/counts. Then stop a partial run and verify it is not shown
-as completed. Report tests have been written but not executed on this Windows host.
+as completed. Report tests passed in macOS CI; the export UI still needs a device check.
 
 ## Remaining milestones
 

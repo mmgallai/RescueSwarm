@@ -1,3 +1,11 @@
+# Latest verification — 2026-10-05
+
+GitHub macOS CI passed all **29 Swift tests**, five artifact checks and the
+unsigned **iOS Simulator build**. Evidence: https://github.com/mmgallai/RescueSwarm/actions/runs/37262970189
+
+Physical iPhone networking, discovery, UI interaction and signed installation remain
+unverified. The earlier Windows-only record below is retained as history.
+
 # Verification record — 2026-10-04
 
 | Check | Outcome |
