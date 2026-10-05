@@ -46,9 +46,12 @@ class SimulationTests(unittest.TestCase):
         self.assertEqual(report["metrics"]["modeled_image_bytes"], 9000)
 
     def test_stalled_worker_times_out(self):
-        report = self.run_case(hang_worker=0, task_timeout_s=0.2)
+        # Leave room for process scheduling on shared CI runners. The injected
+        # hung worker never completes, regardless of this deadline's duration.
+        report = self.run_case(hang_worker=0, task_timeout_s=2)
         self.assert_complete(report)
-        self.assertTrue(any(e.get("reason") == "task timeout" for e in report["events"]))
+        self.assertTrue(any(e.get("reason") == "task timeout" and e.get("worker_id") == 0
+                            for e in report["events"]))
 
     def test_no_workers_finishes_with_explicit_failures(self):
         report = self.run_case(speeds=(1,), crash_worker=0)
