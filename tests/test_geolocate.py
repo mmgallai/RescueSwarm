@@ -1,4 +1,5 @@
 import datetime
+import warnings
 from xml.etree import ElementTree as ET
 
 import pytest
@@ -61,6 +62,28 @@ def test_heading_rotates_image_right_toward_south_when_facing_east():
     latitude, longitude, _ = parse_cot_point(cot_xml)
     assert latitude < 0
     assert longitude == pytest.approx(0.0)
+
+
+def test_none_elevation_function_uses_flat_ground_without_warning():
+    result = result_with_box((460, 200, 500, 240))
+
+    with warnings.catch_warnings(record=True) as caught_warnings:
+        warnings.simplefilter("always")
+        cot_xml = geolocate_person(
+            result,
+            camera_latitude=0.0,
+            camera_longitude=0.0,
+            altitude_m=100,
+            horizontal_fov_deg=90,
+            vertical_fov_deg=60,
+            elevation_fn=None,
+        )
+
+    latitude, longitude, hae = parse_cot_point(cot_xml)
+    assert latitude == pytest.approx(0.0)
+    assert longitude > 0.0
+    assert hae == pytest.approx(0.0)
+    assert caught_warnings == []
 
 
 def test_wire_message_uses_selected_detection_and_confidence():
@@ -258,7 +281,7 @@ def test_default_elevation_returns_zero_when_srtm_initialization_fails(monkeypat
     monkeypatch.setattr(geolocate, "_DEFAULT_SRTM_DATA", None)
     monkeypatch.setattr(geolocate.srtm, "Srtm1HeightMapCollection", fail_to_initialize)
 
-    assert geolocate._default_elevation_fn(37.5, -122.25) == 0.0
+    assert geolocate._default_elevation_fn(37.5, -122.25) is None
     assert geolocate._DEFAULT_SRTM_DATA is None
 
 
@@ -269,4 +292,4 @@ def test_default_elevation_returns_zero_when_tile_has_no_elevation(monkeypatch):
 
     monkeypatch.setattr(geolocate, "_DEFAULT_SRTM_DATA", EmptyElevationData())
 
-    assert geolocate._default_elevation_fn(37.5, -122.25) == 0.0
+    assert geolocate._default_elevation_fn(37.5, -122.25) is None

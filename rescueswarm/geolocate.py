@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import datetime
 import math
+import warnings
 from collections.abc import Callable
 from xml.etree import ElementTree as ET
 
@@ -21,10 +22,10 @@ def _default_elevation_fn(lat: float, lon: float) -> float:
         try:
             _DEFAULT_SRTM_DATA = srtm.Srtm1HeightMapCollection()
         except Exception:
-            return 0.0  # Fallback to sea level if offline/uninitialized
+            return None
             
     elevation = _DEFAULT_SRTM_DATA.get_altitude(lat, lon)
-    return float(elevation) if elevation is not None else 0.0
+    return float(elevation) if elevation is not None else None
 
 def geolocate_person(
     message: DetectionResult | dict,
@@ -128,8 +129,21 @@ def geolocate_person(
         target_longitude = longitude + math.degrees(east_m / (EARTH_RADIUS_M * longitude_scale))
         target_hae = 0.0  # Height above ellipsoid / ground level reference
     else:
+        drone_ground_elevation = None
+        try:
+            drone_ground_elevation = elevation_fn(latitude, longitude)
+        except Exception as e:
+            warnings.warn(
+                f"Elevation lookup failed with error: {e}. Falling back to flat-ground assumption.",
+                UserWarning,
+            )
+
+        if drone_ground_elevation is None:
+            warnings.warn(
+                "Elevation data unavailable for camera position. Falling back to flat-ground assumption.",
+                UserWarning,
+            )
         # Terrain ray-casting projection
-        drone_ground_elevation = elevation_fn(latitude, longitude)
         camera_alt_msl = drone_ground_elevation + altitude
         
         current_alt_msl = camera_alt_msl
@@ -141,6 +155,10 @@ def geolocate_person(
         
         for _ in range(max_steps):
             terrain_alt = elevation_fn(current_lat, current_lon)
+
+            if terrain_alt is None:
+                # If we march off the edge of available elevation tiles, default to last known or flat baseline
+                terrain_alt = drone_ground_elevation
             if current_alt_msl <= terrain_alt:
                 break
             
