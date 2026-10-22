@@ -21,6 +21,15 @@ https://repository.inf.uniri.hr/object/infri:1071/FILE0, then unpack it into `da
 python scripts/prepare_dataset.py ~/Downloads/<downloaded-file>.zip
 ```
 
+## Run the detector locally
+
+Runs dataset images through one worker on this machine (no coordinator needed) and prints
+each result plus timing. The YOLO26n weights download automatically on first use.
+
+```bash
+python scripts/run_local.py --flight vinograd
+```
+
 ## Tests
 
 ```bash
