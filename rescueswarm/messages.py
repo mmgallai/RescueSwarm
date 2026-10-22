@@ -77,6 +77,7 @@ class DetectionResult:
     detections: list[Detection] = field(default_factory=list)
     image_size: tuple[int, int] | None = None  # (width, height) of the original image
     error: str | None = None
+    detector_config: dict | None = None  # settings that affect results, e.g. input size
 
     def __post_init__(self):
         if self.status not in (SUCCESS, FAILURE):
@@ -91,15 +92,16 @@ class DetectionResult:
 
     @classmethod
     def success(cls, task: DetectionTask, detections: list[Detection], processing_ms: float,
-                detector: str, image_size: tuple[int, int]) -> DetectionResult:
+                detector: str, image_size: tuple[int, int],
+                detector_config: dict | None = None) -> DetectionResult:
         return cls(task.task_id, task.attempt_id, task.image_id, SUCCESS, processing_ms,
-                   detector, list(detections), image_size)
+                   detector, list(detections), image_size, detector_config=detector_config)
 
     @classmethod
     def failure(cls, task: DetectionTask, error: str, processing_ms: float,
-                detector: str) -> DetectionResult:
+                detector: str, detector_config: dict | None = None) -> DetectionResult:
         return cls(task.task_id, task.attempt_id, task.image_id, FAILURE, processing_ms,
-                   detector, error=error)
+                   detector, error=error, detector_config=detector_config)
 
     def to_wire(self) -> dict:
         """JSON header for the result frame (the coordinator adds payload_bytes on send)."""
@@ -111,4 +113,6 @@ class DetectionResult:
             message["image_size"] = {"width": self.image_size[0], "height": self.image_size[1]}
         if self.error is not None:
             message["error"] = self.error
+        if self.detector_config is not None:
+            message["detector_config"] = self.detector_config
         return message
