@@ -86,6 +86,40 @@ def test_none_elevation_function_uses_flat_ground_without_warning():
     assert caught_warnings == []
 
 
+def _raise_elevation_error(latitude, longitude):
+    raise OSError("terrain unavailable")
+
+
+@pytest.mark.parametrize(
+    ("elevation_fn", "warning"),
+    [
+        (lambda latitude, longitude: None, "Elevation data unavailable"),
+        (_raise_elevation_error, "Elevation lookup failed"),
+    ],
+)
+def test_unavailable_elevation_falls_back_to_flat_projection(elevation_fn, warning):
+    result = result_with_box((460, 200, 500, 240))
+    parameters = {
+        "camera_latitude": 0.0,
+        "camera_longitude": 0.0,
+        "altitude_m": 100,
+        "horizontal_fov_deg": 90,
+        "vertical_fov_deg": 60,
+    }
+
+    with pytest.warns(UserWarning, match=warning):
+        flat_fallback_xml = geolocate_person(
+            result, **parameters, elevation_fn=elevation_fn
+        )
+    explicit_flat_xml = geolocate_person(
+        result, **parameters, elevation_fn=None
+    )
+
+    flat_fallback_point = parse_cot_point(flat_fallback_xml)
+    explicit_flat_point = parse_cot_point(explicit_flat_xml)
+    assert flat_fallback_point == pytest.approx(explicit_flat_point)
+
+
 def test_wire_message_uses_selected_detection_and_confidence():
     message = result_with_box((300, 200, 340, 240)).to_wire()
     message["detections"].append({

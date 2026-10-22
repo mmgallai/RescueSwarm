@@ -116,7 +116,26 @@ def geolocate_person(
     dir_north = north_unit / ray_len
     dir_down = down_unit / ray_len
 
-    if elevation_fn is None:
+    drone_ground_elevation = None
+    use_flat_ground = elevation_fn is None
+    if elevation_fn is not None:
+        try:
+            drone_ground_elevation = elevation_fn(latitude, longitude)
+        except Exception as error:
+            warnings.warn(
+                f"Elevation lookup failed with error: {error}. Falling back to flat-ground assumption.",
+                UserWarning,
+            )
+            use_flat_ground = True
+
+        if drone_ground_elevation is None and not use_flat_ground:
+            warnings.warn(
+                "Elevation data unavailable for camera position. Falling back to flat-ground assumption.",
+                UserWarning,
+            )
+            use_flat_ground = True
+
+    if use_flat_ground:
         # Flat ground projection
         right_m = ray_right * altitude
         up_m = ray_up * altitude
@@ -129,20 +148,6 @@ def geolocate_person(
         target_longitude = longitude + math.degrees(east_m / (EARTH_RADIUS_M * longitude_scale))
         target_hae = 0.0  # Height above ellipsoid / ground level reference
     else:
-        drone_ground_elevation = None
-        try:
-            drone_ground_elevation = elevation_fn(latitude, longitude)
-        except Exception as e:
-            warnings.warn(
-                f"Elevation lookup failed with error: {e}. Falling back to flat-ground assumption.",
-                UserWarning,
-            )
-
-        if drone_ground_elevation is None:
-            warnings.warn(
-                "Elevation data unavailable for camera position. Falling back to flat-ground assumption.",
-                UserWarning,
-            )
         # Terrain ray-casting projection
         camera_alt_msl = drone_ground_elevation + altitude
         
