@@ -12,8 +12,9 @@ from rescueswarm.messages import Detection
 COCO_PERSON = 0  # class index of "person" in the COCO classes YOLO is pretrained on
 
 # YOLO's usual 640 shrinks a 5472-px drone photo 8.5x, leaving people a few pixels tall.
-# On a 9-image SAR-DAG sample: 640 found 1/9 people (21 ms), 1280 found 6/9 (60 ms),
-# and nothing up to 2560 did better. Revisit with the full accuracy evaluation.
+# All 227 SAR-DAG images at conf 0.25 (scripts/evaluate.py; ms = decode + detect on a Mac):
+#   640: precision 0.81, recall 0.22,  73 ms    1280: 0.88, 0.55, 112 ms    1920: 0.93, 0.61, 182 ms
+# 1280 more than doubles recall over 640; 1920 adds a little more for ~60% extra time.
 DEFAULT_IMGSZ = 1280
 
 
