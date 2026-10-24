@@ -30,6 +30,16 @@ each result plus timing. The YOLO26n weights download automatically on first use
 python scripts/run_local.py --flight vinograd
 ```
 
+## Connect workers to the coordinator
+
+The worker speaks the coordinator's TCP v1 protocol (see `scheduling-simulation/README.md` on
+the `mohamed/python-coordinator` branch). Start the coordinator, then one worker per machine:
+
+```bash
+python network.py coordinator --host 0.0.0.0 --workers 2 --images <folder>   # coordinator branch
+python scripts/tcp_worker.py --host <coordinator IP> --worker-id laptop-1
+```
+
 ## Tests
 
 ```bash
