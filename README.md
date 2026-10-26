@@ -16,3 +16,7 @@ Run the tests:
 ```bash
 pytest
 ```
+
+## Geolocation
+
+See [GEOLOCATION.md](GEOLOCATION.md) for the input contract, offline terrain handling, Swift package integration and regression tests.

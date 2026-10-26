@@ -41,7 +41,7 @@ def test_centered_person_box_maps_to_camera_location_flat():
     lat, lon, hae = parse_cot_point(cot_xml)
     assert lat == pytest.approx(37.0)
     assert lon == pytest.approx(-122.0)
-    assert hae == pytest.approx(0.0)
+    assert hae == pytest.approx(geolocate.COT_UNKNOWN)
     assert "90.0%" in cot_xml
 
 
@@ -82,7 +82,7 @@ def test_none_elevation_function_uses_flat_ground_without_warning():
     latitude, longitude, hae = parse_cot_point(cot_xml)
     assert latitude == pytest.approx(0.0)
     assert longitude > 0.0
-    assert hae == pytest.approx(0.0)
+    assert hae == pytest.approx(geolocate.COT_UNKNOWN)
     assert caught_warnings == []
 
 
@@ -226,6 +226,7 @@ def test_geolocation_with_elevated_plateau():
         horizontal_fov_deg=60,
         vertical_fov_deg=45,
         elevation_fn=plateau_elevation,
+        terrain_datum="hae",
     )
 
     _, _, hae = parse_cot_point(cot_xml)
@@ -258,6 +259,7 @@ def test_geolocation_with_sloping_terrain_shifts_target():
         horizontal_fov_deg=90,
         vertical_fov_deg=60,
         elevation_fn=sloping_elevation,
+        terrain_datum="hae",
     )
 
     lat_flat, lon_flat, _ = parse_cot_point(cot_xml_flat)
@@ -281,49 +283,3 @@ def test_geolocation_rejects_missing_detections():
             horizontal_fov_deg=60,
             vertical_fov_deg=45,
         )
-
-
-def test_default_elevation_initializes_and_caches_srtm_data(monkeypatch):
-    class ElevationData:
-        def __init__(self):
-            self.lookups = []
-
-        def get_altitude(self, latitude, longitude):
-            self.lookups.append((latitude, longitude))
-            return 123
-
-    data = ElevationData()
-    initialize_calls = []
-
-    def create_collection():
-        initialize_calls.append(True)
-        return data
-
-    monkeypatch.setattr(geolocate, "_DEFAULT_SRTM_DATA", None)
-    monkeypatch.setattr(geolocate.srtm, "Srtm1HeightMapCollection", create_collection)
-
-    assert geolocate._default_elevation_fn(37.5, -122.25) == 123.0
-    assert geolocate._default_elevation_fn(38.0, -123.0) == 123.0
-    assert len(initialize_calls) == 1
-    assert data.lookups == [(37.5, -122.25), (38.0, -123.0)]
-
-
-def test_default_elevation_returns_zero_when_srtm_initialization_fails(monkeypatch):
-    def fail_to_initialize():
-        raise OSError("elevation data unavailable")
-
-    monkeypatch.setattr(geolocate, "_DEFAULT_SRTM_DATA", None)
-    monkeypatch.setattr(geolocate.srtm, "Srtm1HeightMapCollection", fail_to_initialize)
-
-    assert geolocate._default_elevation_fn(37.5, -122.25) is None
-    assert geolocate._DEFAULT_SRTM_DATA is None
-
-
-def test_default_elevation_returns_zero_when_tile_has_no_elevation(monkeypatch):
-    class EmptyElevationData:
-        def get_altitude(self, latitude, longitude):
-            return None
-
-    monkeypatch.setattr(geolocate, "_DEFAULT_SRTM_DATA", EmptyElevationData())
-
-    assert geolocate._default_elevation_fn(37.5, -122.25) is None

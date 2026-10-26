@@ -221,3 +221,7 @@ __marimo__/
 data/
 *.pt
 runs/
+
+# Standalone Swift geolocation package
+swift/.build/
+swift/.swiftpm/

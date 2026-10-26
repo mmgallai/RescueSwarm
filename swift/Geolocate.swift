@@ -79,12 +79,19 @@ public enum GeolocationError: Error, LocalizedError {
 
 public typealias ElevationProvider = (_ latitude: Double, _ longitude: Double) throws -> Double?
 
+public let cotUnknown = 9999999.0
+
+public enum TerrainDatum { case msl, hae }
+
 private let earthRadiusMeters = 6_371_000.0
 private let personLabel = "person"
 private let successStatus = "success"
 
 /// Estimates a detection's ground position and returns a Cursor on Target XML event.
-/// Pass an elevation provider for terrain ray marching; nil uses flat-ground projection.
+/// Nadir camera only. altitudeMeters is AGL above terrain beneath the camera.
+/// Provider elevations must share terrainDatum. HAE = MSL + geoidOffsetMeters.
+/// Pass a stable explicit UID for updates; nil creates a new sighting.
+/// Bottom-center of the box is an anchor assumption, not verified person ground truth.
 public func geolocatePerson(
     _ message: DetectionResult,
     cameraLatitude: Double,
@@ -95,7 +102,12 @@ public func geolocatePerson(
     headingDegrees: Double = 0,
     detectionIndex: Int = 0,
     elevationProvider: ElevationProvider? = nil,
-    uid: String = "rescueswarm-target-01",
+    terrainDatum: TerrainDatum = .msl,
+    geoidOffsetMeters: Double? = nil,
+    flatGroundHAEMeters: Double? = nil,
+    cameraPitchDegrees: Double = -90,
+    cameraRollDegrees: Double = 0,
+    uid: String? = nil,
     staleDurationSeconds: Int = 60,
     now: Date = Date(),
     warningHandler: ((String) -> Void)? = nil
@@ -108,6 +120,23 @@ public func geolocatePerson(
         verticalFOV: verticalFOVDegrees,
         heading: headingDegrees
     )
+
+    guard cameraPitchDegrees.isFinite, cameraRollDegrees.isFinite,
+          abs(cameraPitchDegrees + 90) < 1e-6, abs(cameraRollDegrees) < 1e-6 else {
+        throw GeolocationError.invalidInput("only nadir camera pitch=-90 and roll=0 are supported")
+    }
+    guard [geoidOffsetMeters, flatGroundHAEMeters].compactMap({ $0 }).allSatisfy(\.isFinite) else {
+        throw GeolocationError.invalidInput("height conversion values must be finite")
+    }
+    if let uid, uid.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        throw GeolocationError.invalidInput("uid must be nonempty")
+    }
+    guard (1...86400).contains(staleDurationSeconds), now.timeIntervalSince1970.isFinite else {
+        throw GeolocationError.invalidInput("invalid event time or stale duration")
+    }
+    let sightingUID = uid ?? "rescueswarm-" + UUID().uuidString
+    let longitudeScale = cos(degreesToRadians(cameraLatitude))
+    guard abs(longitudeScale) >= 1e-6 else { throw GeolocationError.cameraTooCloseToPole }
 
     guard message.status == successStatus else {
         throw GeolocationError.unsuccessfulResult
@@ -159,74 +188,79 @@ public func geolocatePerson(
     let directionNorth = northUnit / rayLength
     let directionDown = downUnit / rayLength
 
-    let location: (latitude: Double, longitude: Double, hae: Double)
-    var cameraGroundElevation: Double?
-    var useFlatGround = true
-
+    func project(_ distance: Double) throws -> (latitude: Double, longitude: Double) {
+        let lat = cameraLatitude + radiansToDegrees(distance * directionNorth / earthRadiusMeters)
+        let lon = cameraLongitude + radiansToDegrees(distance * directionEast / (earthRadiusMeters * longitudeScale))
+        guard (-90...90).contains(lat) else { throw GeolocationError.invalidInput("projection crosses a pole") }
+        let normalized = ((lon + 180).truncatingRemainder(dividingBy: 360) + 360).truncatingRemainder(dividingBy: 360) - 180
+        return (lat, normalized)
+    }
+    var ground: Double?
     if let elevationProvider {
         do {
-            cameraGroundElevation = try elevationProvider(cameraLatitude, cameraLongitude)
-            useFlatGround = cameraGroundElevation == nil
-            if useFlatGround {
-                warningHandler?("Elevation data unavailable for camera position. Falling back to flat-ground assumption.")
-            }
+            ground = try elevationProvider(cameraLatitude, cameraLongitude)
+            if ground == nil { warningHandler?("Elevation data unavailable. Falling back to flat-ground assumption.") }
         } catch {
-            warningHandler?("Elevation lookup failed with error: \(error). Falling back to flat-ground assumption.")
+            warningHandler?("Elevation lookup failed: \(error). Falling back to flat-ground assumption.")
         }
+        if let ground, !ground.isFinite { throw GeolocationError.invalidInput("terrain elevation must be finite") }
     }
-
-    if useFlatGround {
-        let rightMeters = rayRight * altitudeMeters
-        let upMeters = rayUp * altitudeMeters
-        let eastMeters = rightMeters * cos(heading) + upMeters * sin(heading)
-        let northMeters = -rightMeters * sin(heading) + upMeters * cos(heading)
-        let longitudeScale = cos(degreesToRadians(cameraLatitude))
-        guard abs(longitudeScale) >= 1e-12 else {
-            throw GeolocationError.cameraTooCloseToPole
+    let location: (latitude: Double, longitude: Double, hae: Double)
+    let method: String
+    if let ground, let elevationProvider {
+        let cameraAltitude = ground + altitudeMeters
+        func sample(_ distance: Double) throws -> Double {
+            let position = try project(distance)
+            guard let terrain = try elevationProvider(position.latitude, position.longitude), terrain.isFinite else {
+                throw GeolocationError.invalidInput("terrain unavailable or invalid along ray")
+            }
+            return cameraAltitude - distance * directionDown - terrain
         }
-        location = (
-            latitude: cameraLatitude + radiansToDegrees(northMeters / earthRadiusMeters),
-            longitude: cameraLongitude + radiansToDegrees(eastMeters / (earthRadiusMeters * longitudeScale)),
-            hae: 0
-        )
+        let step = max(1.0, min(5.0, altitudeMeters / 20))
+        var low = 0.0
+        var crossing: Double?
+        for i in 1...2000 {
+            let candidate = Double(i) * step
+            if try sample(candidate) <= 0 { crossing = candidate; break }
+            low = candidate
+        }
+        guard var high = crossing else {
+            throw GeolocationError.invalidInput("no terrain intersection within bounded search")
+        }
+        while high - low > 0.01 {
+            let middle = (low + high) / 2
+            if try sample(middle) > 0 { low = middle } else { high = middle }
+        }
+        let distance = (low + high) / 2
+        guard abs(try sample(distance)) <= 0.1 else {
+            throw GeolocationError.invalidInput("terrain intersection unresolved at discontinuity")
+        }
+        let position = try project(distance)
+        let hitHeight = cameraAltitude - distance * directionDown
+        let hae: Double
+        switch terrainDatum {
+        case .hae: hae = hitHeight
+        case .msl: hae = geoidOffsetMeters.map { hitHeight + $0 } ?? cotUnknown
+        }
+        location = (position.latitude, position.longitude, hae)
+        method = "terrain intersection"
     } else {
-        guard let elevationProvider, let cameraGroundElevation else {
-            throw GeolocationError.invalidInput("elevation provider did not provide camera elevation")
-        }
-
-        let cameraAltitudeMSL = cameraGroundElevation + altitudeMeters
-        var currentAltitudeMSL = cameraAltitudeMSL
-        var currentLatitude = cameraLatitude
-        var currentLongitude = cameraLongitude
-        let stepDistance = altitudeMeters / 20
-
-        for _ in 0..<100 {
-            let terrainElevation = try elevationProvider(currentLatitude, currentLongitude) ?? cameraGroundElevation
-            if currentAltitudeMSL <= terrainElevation {
-                break
-            }
-
-            currentAltitudeMSL -= stepDistance * directionDown
-            let traveledDown = cameraAltitudeMSL - currentAltitudeMSL
-            let totalEast = traveledDown * (directionEast / directionDown)
-            let totalNorth = traveledDown * (directionNorth / directionDown)
-            let longitudeScale = cos(degreesToRadians(cameraLatitude))
-            guard abs(longitudeScale) >= 1e-12 else {
-                throw GeolocationError.cameraTooCloseToPole
-            }
-            currentLatitude = cameraLatitude + radiansToDegrees(totalNorth / earthRadiusMeters)
-            currentLongitude = cameraLongitude + radiansToDegrees(totalEast / (earthRadiusMeters * longitudeScale))
-        }
-
-        location = (currentLatitude, currentLongitude, currentAltitudeMSL)
+        let distance = altitudeMeters / directionDown
+        guard distance <= 10000 else { throw GeolocationError.invalidInput("projection exceeds local 10 km range") }
+        let position = try project(distance)
+        location = (position.latitude, position.longitude, flatGroundHAEMeters ?? cotUnknown)
+        method = "flat-ground assumption"
     }
+
+    guard location.hae.isFinite else { throw GeolocationError.invalidInput("converted HAE must be finite") }
 
     return makeCoTEvent(
         latitude: location.latitude,
         longitude: location.longitude,
         hae: location.hae,
         confidence: detection.confidence,
-        uid: uid,
+        uid: sightingUID,
+        method: method,
         now: now,
         staleDurationSeconds: staleDurationSeconds
     )
@@ -266,16 +300,17 @@ private func makeCoTEvent(
     hae: Double,
     confidence: Double,
     uid: String,
+    method: String,
     now: Date,
     staleDurationSeconds: Int
 ) -> String {
     let time = formatCoTDate(now)
     let stale = formatCoTDate(now.addingTimeInterval(TimeInterval(staleDurationSeconds)))
     let callsign = escapeXML(String(format: "Detected Person (%.2f)", locale: Locale(identifier: "en_US_POSIX"), arguments: [confidence]))
-    let remarks = escapeXML(String(format: "Rescueswarm Vision Detection. Confidence: %.1f%%", locale: Locale(identifier: "en_US_POSIX"), arguments: [confidence * 100]))
+    let remarks = escapeXML(String(format: "Rescueswarm Vision Detection. Confidence: %.1f%%. ", locale: Locale(identifier: "en_US_POSIX"), arguments: [confidence * 100]) + method + "; nadir camera. " + (hae == cotUnknown ? "Height unknown." : "Height is HAE."))
 
     return """
-    <event version="2.0" uid="\(escapeXML(uid))" type="a-u-G" time="\(time)" start="\(time)" stale="\(stale)" how="m-g"><point lat="\(formatNumber(latitude, decimals: 6))" lon="\(formatNumber(longitude, decimals: 6))" hae="\(formatNumber(hae, decimals: 1))" ce="999.0" le="999.0"/><detail><contact callsign="\(callsign)"/><remarks>\(remarks)</remarks></detail></event>
+    <event version="2.0" uid="\(escapeXML(uid))" type="a-u-G" time="\(time)" start="\(time)" stale="\(stale)" how="m-g"><point lat="\(formatNumber(latitude, decimals: 6))" lon="\(formatNumber(longitude, decimals: 6))" hae="\(formatNumber(hae, decimals: 1))" ce="9999999.0" le="9999999.0"/><detail><contact callsign="\(callsign)"/><remarks>\(remarks)</remarks></detail></event>
     """
     .trimmingCharacters(in: .whitespacesAndNewlines)
 }
