@@ -18,7 +18,9 @@ class ProjectTests(unittest.TestCase):
         self.assertEqual(objects[project["rootObject"]]["isa"], "PBXProject")
         references = [v for v in objects.values() if v["isa"] == "PBXFileReference" and v.get("sourceTree") == "<group>"]
         for ref in references:
-            self.assertTrue((ROOT/ref["path"]).is_file(), ref)
+            path = ROOT/ref["path"]
+            # A Core ML .mlpackage is a folder; everything else is a file.
+            self.assertTrue(path.is_dir() if ref["path"].endswith(".mlpackage") else path.is_file(), ref)
         sources = {v["path"] for v in references if v["path"].endswith(".swift")}
         self.assertEqual(sources, {str(p.relative_to(ROOT)).replace("\\", "/") for p in (ROOT/"App").glob("*.swift")})
         self.assertTrue((ROOT/"Package.swift").is_file())
@@ -45,7 +47,8 @@ class ProjectTests(unittest.TestCase):
             if phase["isa"] == "PBXSourcesBuildPhase":
                 for build_id in phase["files"]:
                     compiled.add(objects[objects[build_id]["fileRef"]]["path"])
-        self.assertEqual(compiled, {"App/"+p.name for p in (ROOT/"App").glob("*.swift")})
+        app_files = [*(ROOT/"App").glob("*.swift"), *(ROOT/"App").glob("*.mlpackage")]
+        self.assertEqual(compiled, {"App/"+p.name for p in app_files})
 
     def test_golden_fixture_framing_and_checksum(self):
         data = (ROOT/"Tests/RescueSwarmCoreTests/Fixtures/python-task.bin").read_bytes()

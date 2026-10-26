@@ -138,3 +138,11 @@ The batch foundation does not yet implement every feature in APP_DESIGN.md.
 Implementation references: Apple's [receive API](https://developer.apple.com/documentation/network/nwconnection/receive(minimumincompletelength:maximumlength:completion:))
 and [file importer](https://developer.apple.com/documentation/swiftui/view/fileimporter(ispresented:allowedcontenttypes:oncompletion:)),
 plus [NWBrowser](https://developer.apple.com/documentation/network/nwbrowser) for service discovery.
+
+## Person detection model
+
+`App/YOLO26n.mlpackage` is YOLO26n exported to Core ML at 1280x1280 with NMS inside the model
+(fp16, 5 MB). It is bundled in the app so detection works offline. Regenerate it on the
+`evi/detection-worker` branch with `scripts/export_coreml.py`, copy it here under the same name,
+then run `python3 tools/prepare_project.py`; any `App/*.mlpackage` is added to the Xcode project.
+The letterbox/decode steps the app must apply are in `rescueswarm/coreml_reference.py` there.

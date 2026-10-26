@@ -21,6 +21,12 @@ def prepare():
                   path="App/" + path.name, sourceTree="<group>")
         file_refs.append(ref)
         builds.append(add("build-" + path.name, "PBXBuildFile", fileRef=ref))
+    # Core ML models are compiled to .mlmodelc and bundled by the Compile Sources phase.
+    for path in sorted((ROOT / "App").glob("*.mlpackage")):
+        ref = add(path.name, "PBXFileReference", lastKnownFileType="folder.mlpackage",
+                  path="App/" + path.name, sourceTree="<group>")
+        file_refs.append(ref)
+        builds.append(add("build-" + path.name, "PBXBuildFile", fileRef=ref))
     plist = add("plist", "PBXFileReference", lastKnownFileType="text.plist.xml", path="App/Info.plist", sourceTree="<group>")
     product = add("product", "PBXFileReference", explicitFileType="wrapper.application", path="RescueSwarm.app", sourceTree="BUILT_PRODUCTS_DIR")
     group = add("group", "PBXGroup", children=file_refs+[plist, product], sourceTree="<group>")

@@ -218,6 +218,13 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>7944F3A8292CAB9774F6F8B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C423F960D6AD3640D778D056</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>878A52FC5FF6A57D50B7B870</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -228,6 +235,7 @@
 				<string>36EB7C5B735A7FFF32BAE223</string>
 				<string>58F4A975DDF3933F5AAAFAE0</string>
 				<string>4FB7DA79AA3FDEDEEC8AA501</string>
+				<string>7944F3A8292CAB9774F6F8B2</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -275,6 +283,7 @@
 				<string>4434DDE4D6CD2798C122DFE8</string>
 				<string>FE0423928FDD44F22F457076</string>
 				<string>9A79FBF3F66225ED1C20CE2B</string>
+				<string>C423F960D6AD3640D778D056</string>
 				<string>9CEEC13202AFBF12EE3ABB99</string>
 				<string>A8792157CB4F27FB949C035F</string>
 			</array>
@@ -316,6 +325,17 @@
 			<string>XCLocalSwiftPackageReference</string>
 			<key>relativePath</key>
 			<string>.</string>
+		</dict>
+		<key>C423F960D6AD3640D778D056</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.mlpackage</string>
+			<key>path</key>
+			<string>App/YOLO26n.mlpackage</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DD75E2CB1C510A828AC72D96</key>
 		<dict>
