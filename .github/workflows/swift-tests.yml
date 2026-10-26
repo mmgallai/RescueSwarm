@@ -1,0 +1,17 @@
+name: Swift app checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  swift:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: rescue-swarm-ios
+    steps:
+      - uses: actions/checkout@v6
+      - run: python3 tools/test_project.py -v
+      - run: swift test
+      - name: Build iOS app without device signing
+        run: xcodebuild -project RescueSwarm.xcodeproj -scheme RescueSwarm -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
