@@ -40,6 +40,17 @@ python network.py coordinator --host 0.0.0.0 --workers 2 --images <folder>   # c
 python scripts/tcp_worker.py --host <coordinator IP> --worker-id laptop-1
 ```
 
+## Export the model for the iOS app
+
+`coremltools` needs Python 3.12 and PyTorch 2.7, so the export uses its own environment.
+It writes `models/yolo26n-1280.mlpackage` and checks it against the PyTorch detector.
+
+```bash
+/opt/homebrew/bin/python3.12 -m venv .venv-export
+.venv-export/bin/pip install -e . coremltools "torch==2.7.0" "torchvision==0.22.0"
+.venv-export/bin/python scripts/export_coreml.py
+```
+
 ## Tests
 
 ```bash
