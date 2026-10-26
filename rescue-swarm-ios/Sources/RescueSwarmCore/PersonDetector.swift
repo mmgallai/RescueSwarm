@@ -108,6 +108,55 @@ public struct ModelOutput {
     public let confidence: MLMultiArray   // (N, 80): score per COCO class; column 0 is "person"
 }
 
+public enum OutputDecoding {
+    public static let personClass = 0  // "person" in the COCO classes YOLO is trained on
+
+    /// One model row: box (center x, center y, width, height as fractions of the input) and 80 class scores.
+    public typealias Row = (box: [Double], scores: [Double])
+
+    /// Person detections in original-photo pixels, clipped to the photo.
+    public static func decode(_ rows: [Row], letterbox: Letterbox, originalWidth: Int, originalHeight: Int,
+                              confidenceThreshold: Double) -> [Detection] {
+        let size = Double(letterbox.size)
+        var detections: [Detection] = []
+        for (box, scores) in rows {
+            guard let best = scores.indices.max(by: { scores[$0] < scores[$1] }), best == personClass,
+                  scores[personClass] >= confidenceThreshold else { continue }
+            let (cx, cy, w, h) = (box[0], box[1], box[2], box[3])
+            let topLeft = letterbox.toOriginal(x: (cx - w / 2) * size, y: (cy - h / 2) * size)
+            let bottomRight = letterbox.toOriginal(x: (cx + w / 2) * size, y: (cy + h / 2) * size)
+            // Clip to the photo: a box can reach into the padding.
+            let x1 = max(0, topLeft.x), y1 = max(0, topLeft.y)
+            let x2 = min(Double(originalWidth), bottomRight.x), y2 = min(Double(originalHeight), bottomRight.y)
+            if x1 < x2 && y1 < y2 {
+                detections.append(Detection(label: "person", confidence: scores[personClass],
+                                            box_xyxy: [x1, y1, x2, y2]))
+            }
+        }
+        return detections
+    }
+
+    /// Read the model's (N, 4) and (N, 80) outputs into rows.
+    public static func rows(from output: ModelOutput) -> [Row] {
+        let count = output.coordinates.shape.first?.intValue ?? 0
+        let classes = output.confidence.shape.last?.intValue ?? 0
+        func value(_ array: MLMultiArray, _ i: Int, _ j: Int) -> Double {
+            array[[NSNumber(value: i), NSNumber(value: j)]].doubleValue
+        }
+        return (0..<count).map { i in
+            ((0..<4).map { value(output.coordinates, i, $0) }, (0..<classes).map { value(output.confidence, i, $0) })
+        }
+    }
+}
+
+/// What the detector reports for one image.
+public struct DetectorResult {
+    public let detections: [Detection]
+    public let imageWidth: Int   // upright original size, for the result's image_size
+    public let imageHeight: Int
+    public let elapsedMs: Double // decode + letterbox + model + box mapping
+}
+
 /// Runs the bundled YOLO26n Core ML model.
 public final class PersonDetector {
     public static let defaultInputSize = 1280
@@ -127,6 +176,20 @@ public final class PersonDetector {
         let configuration = MLModelConfiguration()
         configuration.computeUnits = computeUnits
         return PersonDetector(model: try MLModel(contentsOf: compiled, configuration: configuration))
+    }
+
+    /// Find people in JPEG/PNG bytes. Boxes are in the upright original photo's pixels.
+    public func detect(imageData: Data, confidenceThreshold: Double = 0.25) throws -> DetectorResult {
+        let started = DispatchTime.now()
+        let image = try ImagePreparation.prepare(imageData, size: inputSize)
+        let output = try runModel(on: image, confidenceThreshold: confidenceThreshold)
+        let detections = OutputDecoding.decode(OutputDecoding.rows(from: output), letterbox: image.letterbox,
+                                               originalWidth: image.originalWidth,
+                                               originalHeight: image.originalHeight,
+                                               confidenceThreshold: confidenceThreshold)
+        let elapsedMs = Double(DispatchTime.now().uptimeNanoseconds - started.uptimeNanoseconds) / 1_000_000
+        return DetectorResult(detections: detections, imageWidth: image.originalWidth,
+                              imageHeight: image.originalHeight, elapsedMs: elapsedMs)
     }
 
     public func runModel(on image: PreparedImage, confidenceThreshold: Double) throws -> ModelOutput {

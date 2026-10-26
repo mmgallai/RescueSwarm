@@ -1,4 +1,5 @@
 import CoreGraphics
+import CoreML
 import CoreVideo
 import Foundation
 import ImageIO
@@ -58,7 +59,70 @@ final class ImagePreparationTests: XCTestCase {
     }
 }
 
+final class OutputDecodingTests: XCTestCase {
+    // Same cases as tests/test_coreml_reference.py on the Python side.
+    let sarDag = Letterbox.fit(width: 5472, height: 3648, size: 1280)
+
+    func scores(person: Double, car: Double = 0) -> [Double] {
+        var row = [Double](repeating: 0, count: 80)
+        row[0] = person
+        row[2] = car
+        return row
+    }
+
+    func testPersonBoxIsMappedToOriginalPixels() {
+        // A box covering the whole photo area inside the square (rows 213 to 1066).
+        let rows: [OutputDecoding.Row] = [([0.5, (213 + 853.0 / 2) / 1280, 1.0, 853.0 / 1280], scores(person: 0.9))]
+        let detection = OutputDecoding.decode(rows, letterbox: sarDag, originalWidth: 5472,
+                                                originalHeight: 3648, confidenceThreshold: 0.25)
+        XCTAssertEqual(detection.count, 1)
+        XCTAssertEqual(detection[0].label, "person")
+        XCTAssertEqual(detection[0].confidence, 0.9)
+        // 3648 rows shrink to 853.3, rounded to 853, so edges can be ~1.5 original pixels off.
+        for (value, expected) in zip(detection[0].box_xyxy, [0, 0, 5472, 3648.0]) {
+            XCTAssertEqual(value, expected, accuracy: 2)
+        }
+    }
+
+    func testOtherClassesAndWeakPeopleAreDropped() {
+        let box = [0.5, 0.5, 0.1, 0.1]
+        let rows: [OutputDecoding.Row] = [(box, scores(person: 0.9)), (box, scores(person: 0.1)),
+                                          (box, scores(person: 0.3, car: 0.8))]
+        let detections = OutputDecoding.decode(rows, letterbox: Letterbox.fit(width: 640, height: 640, size: 640),
+                                               originalWidth: 640, originalHeight: 640, confidenceThreshold: 0.25)
+        XCTAssertEqual(detections.map(\.confidence), [0.9])
+    }
+
+    func testBoxReachingIntoPaddingIsClipped() {
+        let rows: [OutputDecoding.Row] = [([0.5, 213.0 / 1280, 0.1, 0.1], scores(person: 0.9))]  // on the top edge
+        let detections = OutputDecoding.decode(rows, letterbox: sarDag, originalWidth: 5472,
+                                               originalHeight: 3648, confidenceThreshold: 0.25)
+        XCTAssertEqual(detections.first?.box_xyxy[1], 0)
+    }
+
+    func testRowsAreReadFromModelArrays() throws {
+        let coordinates = try MLMultiArray(shape: [2, 4], dataType: .float32)
+        let confidence = try MLMultiArray(shape: [2, 80], dataType: .float32)
+        for i in 0..<8 { coordinates[i] = NSNumber(value: Float(i) / 10) }
+        for i in 0..<160 { confidence[i] = 0 }
+        confidence[[1, 0]] = 0.75
+        let rows = OutputDecoding.rows(from: ModelOutput(coordinates: coordinates, confidence: confidence))
+        XCTAssertEqual(rows.count, 2)
+        XCTAssertEqual(rows[1].box, [0.4, 0.5, 0.6, 0.7].map { Double(Float($0)) })
+        XCTAssertEqual(rows[1].scores[0], 0.75)
+        XCTAssertEqual(rows[1].scores.count, 80)
+    }
+}
+
 final class PersonDetectorModelTests: XCTestCase {
+    func testDetectReportsSizeAndTimingAndFindsNobodyInABlankPhoto() async throws {
+        let detector = try await PersonDetector.load(from: bundledModelURL, computeUnits: .cpuOnly)
+        let result = try detector.detect(imageData: jpeg(width: 640, height: 480))
+        XCTAssertEqual(result.detections, [])
+        XCTAssertEqual([result.imageWidth, result.imageHeight], [640, 480])
+        XCTAssertGreaterThan(result.elapsedMs, 0)
+    }
+
     func testBundledModelRunsAndReturnsBoxesAndClassScores() async throws {
         let detector = try await PersonDetector.load(from: bundledModelURL, computeUnits: .cpuOnly)
         let prepared = try ImagePreparation.prepare(jpeg(width: 640, height: 480), size: detector.inputSize)
