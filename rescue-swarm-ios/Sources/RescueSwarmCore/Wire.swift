@@ -8,6 +8,24 @@ public struct Detection: Codable, Equatable {
     public var box_xyxy: [Double]
 }
 
+/// Width and height of the original (upright) image a result's boxes refer to.
+public struct ImageSize: Codable, Equatable {
+    public var width: Int
+    public var height: Int
+    public init(width: Int, height: Int) { self.width = width; self.height = height }
+}
+
+/// Detector settings that affect results, reported with each result (same keys as the Python worker).
+public struct DetectorConfig: Codable, Equatable {
+    public var model: String
+    public var imgsz: Int
+    public var conf: Double
+    public var runtime: String?  // "coreml" on phones; absent from the Python worker
+    public init(model: String, imgsz: Int, conf: Double, runtime: String? = nil) {
+        self.model = model; self.imgsz = imgsz; self.conf = conf; self.runtime = runtime
+    }
+}
+
 // Explicit snake_case matches the existing Python protocol, including optional fields.
 public struct Message: Codable {
     public var type: String
@@ -23,6 +41,9 @@ public struct Message: Codable {
     public var detections: [Detection]?
     public var synthetic: Bool?
     public var detector: String?
+    public var image_size: ImageSize?
+    public var error: String?
+    public var detector_config: DetectorConfig?
     public init(type: String) { self.type = type }
 }
 

@@ -29,8 +29,8 @@ struct ContentView: View {
         NavigationStack {
             Form {
                 Section {
-                    Label("Batch test • mock processing", systemImage: "testtube.2")
-                    Text("Distribute images over local Wi-Fi. This build does not detect people or send TAK alerts.")
+                    Label("Batch test • on-device detection", systemImage: "testtube.2")
+                    Text("Distribute images over local Wi-Fi. Workers find people with YOLO26n on the phone. This build does not send TAK alerts.")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
                 Section("Your role") {

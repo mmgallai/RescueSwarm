@@ -157,8 +157,9 @@ public struct DetectorResult {
     public let elapsedMs: Double // decode + letterbox + model + box mapping
 }
 
-/// Runs the bundled YOLO26n Core ML model.
-public final class PersonDetector {
+/// Runs the bundled YOLO26n Core ML model. Holds no mutable state after loading, so it can be
+/// handed to a background task; the app runs one detection at a time.
+public final class PersonDetector: @unchecked Sendable {
     public static let defaultInputSize = 1280
     public static let iouThreshold = 0.7  // NMS inside the model; Ultralytics' default
 

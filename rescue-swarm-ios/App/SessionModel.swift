@@ -40,6 +40,7 @@ final class SessionModel: ObservableObject {
     private var began: TimeInterval = 0
     private var workerReady = false
     private var workerID = "iphone-" + String(UUID().uuidString.prefix(8))
+    private var detector: PersonDetector?  // loaded once, before the first worker session
     private var now: TimeInterval { ProcessInfo.processInfo.systemUptime }
 
     init() {
@@ -150,7 +151,25 @@ final class SessionModel: ObservableObject {
             } catch { stop("Cannot listen: \(error.localizedDescription)"); return }
         } else {
             let target = discovered ?? .hostPort(host: NWEndpoint.Host(address.trimmingCharacters(in: .whitespacesAndNewlines)), port: endpoint)
-            attach(Peer(NWConnection(to: target, using: .tcp)), session: session)
+            if detector != nil {
+                attach(Peer(NWConnection(to: target, using: .tcp)), session: session)
+            } else {
+                // A worker is not ready until its model is loaded, so load before saying hello.
+                status = "Loading person detector…"
+                Task { [weak self] in
+                    do {
+                        guard let url = Bundle.main.url(forResource: "YOLO26n", withExtension: "mlmodelc")
+                        else { throw CocoaError(.fileNoSuchFile) }
+                        let loaded = try await PersonDetector.load(from: url)
+                        guard let self, self.generation == session else { return }
+                        self.detector = loaded
+                        self.attach(Peer(NWConnection(to: target, using: .tcp)), session: session)
+                    } catch {
+                        guard let self, self.generation == session else { return }
+                        self.stop("Cannot load the person detector: \(error.localizedDescription)")
+                    }
+                }
+            }
         }
         timer = Task { [weak self] in
             while !Task.isCancelled {
@@ -232,18 +251,22 @@ final class SessionModel: ObservableObject {
                   m.sha256 == Self.hash(frame.payload), work == nil else {
                 peer.close("Invalid task, checksum mismatch, or overlapping assignment"); return
             }
-            status = "Received \(imageID): \(frame.payload.count) bytes. Mock processing…"
-            let started = now
+            guard let detector else { peer.close("Person detector not loaded"); return }
+            status = "Received \(imageID): \(frame.payload.count) bytes. Detecting people…"
+            let payload = frame.payload
             work = Task { [weak self, weak peer] in
-                do { try await Task.sleep(nanoseconds: 150_000_000) } catch { return }
+                // Off the main actor, so heartbeats keep going while the model runs.
+                let result = await Task.detached(priority: .userInitiated) {
+                    DetectionWorker.process(payload, task: task, attempt: attempt, imageID: imageID, detector: detector)
+                }.value
                 guard let self, let peer, self.generation == session else { return }
-                var result = Message(type: "result")
-                result.task_id = task; result.attempt_id = attempt; result.image_id = imageID
-                result.status = "success"; result.processing_ms = (self.now - started) * 1000
-                result.detections = []; result.synthetic = true; result.detector = "mock"
                 peer.send(Frame(result)); self.completed += 1
-                self.status = "Mock result submitted. No person detection performed."
-                self.log("Verified image hash; submitted task \(task), attempt \(attempt)")
+                let people = result.detections?.count ?? 0
+                let ms = Int(result.processing_ms ?? 0)
+                self.status = result.status == "success"
+                    ? "Submitted \(imageID): \(people) \(people == 1 ? "person" : "people") found in \(ms) ms."
+                    : "Could not process \(imageID): \(result.error ?? "unknown error")"
+                self.log("Task \(task), attempt \(attempt): \(result.status ?? "?"), \(people) people, \(ms) ms")
                 self.work = nil
             }
         }
