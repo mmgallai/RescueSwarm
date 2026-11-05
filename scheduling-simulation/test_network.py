@@ -32,6 +32,34 @@ class NetworkTests(unittest.IsolatedAsyncioTestCase):
         with self.assertRaises(ValueError):
             await mock_detect(b"real-image-placeholder", "image.jpg", 0, True)
 
+    async def test_concurrent_sends_count_every_byte(self):
+        import network
+        sizes, original = [], network.send
+
+        async def slow_send(writer, message, payload=b"", lock=None):
+            # Yield after writing so concurrent worker handlers interleave their accounting.
+            size = await original(writer, message, payload, lock)
+            if message.get("type") == "task":
+                await asyncio.sleep(.002 * (message["task_id"] % 4))
+                sizes.append(size)
+            return size
+
+        network.send = slow_send
+        coordinator = Coordinator([(f"fixture-{i:04d}.ppm", fixture()) for i in range(24)],
+                                  min_workers=4, run_timeout=8)
+        port = await coordinator.start()
+        workers = [asyncio.create_task(run_worker("127.0.0.1", port, str(i), .005)) for i in range(4)]
+        try:
+            report = await coordinator.finish()
+            self.assertEqual(report["metrics"]["completed"], 24)
+            self.assertEqual(len(sizes), sum(e["event"] == "assigned" for e in report["events"]))
+            self.assertEqual(report["metrics"]["application_tx_bytes"], sum(sizes))
+        finally:
+            network.send = original
+            for worker in workers:
+                worker.cancel()
+            await asyncio.gather(*workers, return_exceptions=True)
+
     async def test_transfer_and_reconnect(self):
         coordinator = Coordinator([(f"{i}.ppm", fixture()) for i in range(12)], run_timeout=8)
         port = await coordinator.start()

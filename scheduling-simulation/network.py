@@ -196,7 +196,10 @@ class Coordinator:
                     message = {"type": "task", **assigned, "image_id": image_id,
                                "sha256": hashlib.sha256(data).hexdigest()}
                     self.event("assigned", worker_id=name, **assigned)
-                    self.tx_bytes += await asyncio.wait_for(send(writer, message, data), self.task_timeout)
+                    # Await before reading tx_bytes: `self.tx_bytes += await ...` reads the
+                    # counter first, so concurrent handlers would overwrite each other's totals.
+                    sent = await asyncio.wait_for(send(writer, message, data), self.task_timeout)
+                    self.tx_bytes += sent
                     self.image_bytes += len(data)
                 timeout = self.heartbeat_timeout - (time.monotonic()-last_message)
                 if assigned:
