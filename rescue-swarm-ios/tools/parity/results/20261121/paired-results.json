@@ -1,0 +1,820 @@
+{
+  "images": [
+    {
+      "id": "train_BRA_1002",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 260.476917,
+        "height": 3000,
+        "id": "train_BRA_1002",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 432.4405840000054
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 199.4003329999714
+      }
+    },
+    {
+      "id": "train_BRA_1003",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 174.397375,
+        "height": 3000,
+        "id": "train_BRA_1003",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 88.36566700000503
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 118.20616599999312
+      }
+    },
+    {
+      "id": "train_BRA_1011",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 178.331375,
+        "height": 3000,
+        "id": "train_BRA_1011",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 71.79129100001092
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 88.39237499995534
+      }
+    },
+    {
+      "id": "train_BRA_1014",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 135.966583,
+        "height": 3000,
+        "id": "train_BRA_1014",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 85.11716699996441
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 100.32341699997005
+      }
+    },
+    {
+      "id": "train_BRA_1023",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 207.909875,
+        "height": 3000,
+        "id": "train_BRA_1023",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 84.18233300000111
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 81.07337499995992
+      }
+    },
+    {
+      "id": "train_BRA_1041",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 169.50325,
+        "height": 3000,
+        "id": "train_BRA_1041",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 65.3233749999913
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 86.02058399998214
+      }
+    },
+    {
+      "id": "train_BRA_1048",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 132.675291,
+        "height": 3000,
+        "id": "train_BRA_1048",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 73.15420899999481
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 72.67829199997777
+      }
+    },
+    {
+      "id": "train_BRA_1063",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 163.723459,
+        "height": 3000,
+        "id": "train_BRA_1063",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 92.44395899997926
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 72.00879200001964
+      }
+    },
+    {
+      "id": "train_BRA_1068",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 129.829583,
+        "height": 3000,
+        "id": "train_BRA_1068",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 63.755417000038506
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 68.35200000000441
+      }
+    },
+    {
+      "id": "train_BRK_2007",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 145.596833,
+        "height": 3000,
+        "id": "train_BRK_2007",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 66.80600000004233
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 94.89825000002838
+      }
+    },
+    {
+      "id": "train_BRK_2027",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 130.891334,
+        "height": 3000,
+        "id": "train_BRK_2027",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 68.42145799998889
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 76.48149999999987
+      }
+    },
+    {
+      "id": "train_BRK_2029",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 131.039583,
+        "height": 3000,
+        "id": "train_BRK_2029",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 81.03887499999018
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 77.90516699998307
+      }
+    },
+    {
+      "id": "train_BRK_2043",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 138.934959,
+        "height": 3000,
+        "id": "train_BRK_2043",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 80.0048329999754
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 83.98975000000064
+      }
+    },
+    {
+      "id": "train_BRK_2056",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 134.129458,
+        "height": 3000,
+        "id": "train_BRK_2056",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 77.32191700000612
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 86.37820800004192
+      }
+    },
+    {
+      "id": "train_BRK_2092",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 146.739916,
+        "height": 3000,
+        "id": "train_BRK_2092",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 73.98208299997577
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 80.61179099996707
+      }
+    },
+    {
+      "id": "train_BRK_2102",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 127.277666,
+        "height": 3000,
+        "id": "train_BRK_2102",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 77.78420799996866
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 74.55316599998696
+      }
+    },
+    {
+      "id": "train_BRK_2128",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 139.041291,
+        "height": 3000,
+        "id": "train_BRK_2128",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 70.52320799999734
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 71.68620799996006
+      }
+    },
+    {
+      "id": "train_MED_3008",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 142.202458,
+        "height": 3000,
+        "id": "train_MED_3008",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 63.9562920000003
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 68.67195799998171
+      }
+    },
+    {
+      "id": "train_MED_3022",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 161.888958,
+        "height": 3000,
+        "id": "train_MED_3022",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 66.34229200000163
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 72.0204590000435
+      }
+    },
+    {
+      "id": "train_MED_3024",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 128.28875,
+        "height": 3000,
+        "id": "train_MED_3024",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 90.71091699996714
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 85.28100000000904
+      }
+    },
+    {
+      "id": "train_MED_3028",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 143.485625,
+        "height": 3000,
+        "id": "train_MED_3028",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 93.92212500000596
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 109.4185419999576
+      }
+    },
+    {
+      "id": "train_MED_3057",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 178.891958,
+        "height": 3000,
+        "id": "train_MED_3057",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 91.8355830000337
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 106.52816600003234
+      }
+    },
+    {
+      "id": "train_MED_3070",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 188.494708,
+        "height": 3000,
+        "id": "train_MED_3070",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 78.05837500001189
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 114.43695799999887
+      }
+    },
+    {
+      "id": "train_MED_4002",
+      "swift": {
+        "detections": [
+          {
+            "box": [
+              1961.334228515625,
+              886.71875,
+              2073.822021484375,
+              1191.40625
+            ],
+            "confidence": 0.76416015625
+          },
+          {
+            "box": [
+              2055.48095703125,
+              887.0849609375,
+              2163.26904296875,
+              1155.8837890625
+            ],
+            "confidence": 0.73388671875
+          }
+        ],
+        "elapsed_ms": 168.356917,
+        "height": 3000,
+        "id": "train_MED_4002",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [
+          {
+            "box": [
+              1959.381103515625,
+              883.6669921875,
+              2071.868896484375,
+              1194.4580078125
+            ],
+            "confidence": 0.7626953125
+          },
+          {
+            "box": [
+              2058.990478515625,
+              884.765625,
+              2163.665771484375,
+              1154.296875
+            ],
+            "confidence": 0.7109375
+          }
+        ],
+        "elapsed_ms": 64.63320799997518
+      },
+      "python_swift_pixels": {
+        "detections": [
+          {
+            "box": [
+              1961.334228515625,
+              886.71875,
+              2073.822021484375,
+              1191.40625
+            ],
+            "confidence": 0.76416015625
+          },
+          {
+            "box": [
+              2055.48095703125,
+              887.0849609375,
+              2163.26904296875,
+              1155.8837890625
+            ],
+            "confidence": 0.73388671875
+          }
+        ],
+        "elapsed_ms": 79.37425000000076
+      }
+    },
+    {
+      "id": "train_MED_4003",
+      "swift": {
+        "detections": [
+          {
+            "box": [
+              1778.3203125,
+              973.876953125,
+              1958.0078125,
+              1444.091796875
+            ],
+            "confidence": 0.84619140625
+          },
+          {
+            "box": [
+              1951.96533203125,
+              980.712890625,
+              2098.81591796875,
+              1384.521484375
+            ],
+            "confidence": 0.810546875
+          }
+        ],
+        "elapsed_ms": 138.73425,
+        "height": 3000,
+        "id": "train_MED_4003",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [
+          {
+            "box": [
+              1779.9072265625,
+              973.876953125,
+              1956.4208984375,
+              1444.091796875
+            ],
+            "confidence": 0.84912109375
+          },
+          {
+            "box": [
+              1953.125,
+              980.712890625,
+              2101.5625,
+              1384.521484375
+            ],
+            "confidence": 0.81396484375
+          }
+        ],
+        "elapsed_ms": 65.04737500000601
+      },
+      "python_swift_pixels": {
+        "detections": [
+          {
+            "box": [
+              1778.3203125,
+              973.876953125,
+              1958.0078125,
+              1444.091796875
+            ],
+            "confidence": 0.84619140625
+          },
+          {
+            "box": [
+              1951.96533203125,
+              980.712890625,
+              2098.81591796875,
+              1384.521484375
+            ],
+            "confidence": 0.810546875
+          }
+        ],
+        "elapsed_ms": 73.71870800000124
+      }
+    },
+    {
+      "id": "train_MED_4004",
+      "swift": {
+        "detections": [
+          {
+            "box": [
+              1964.111328125,
+              950.439453125,
+              2153.076171875,
+              1354.248046875
+            ],
+            "confidence": 0.8388671875
+          },
+          {
+            "box": [
+              1792.41943359375,
+              934.814453125,
+              1975.15869140625,
+              1393.310546875
+            ],
+            "confidence": 0.83056640625
+          }
+        ],
+        "elapsed_ms": 138.231042,
+        "height": 3000,
+        "id": "train_MED_4004",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [
+          {
+            "box": [
+              1965.63720703125,
+              949.8291015625,
+              2151.55029296875,
+              1352.9052734375
+            ],
+            "confidence": 0.83642578125
+          },
+          {
+            "box": [
+              1793.5791015625,
+              933.2275390625,
+              1977.9052734375,
+              1390.9912109375
+            ],
+            "confidence": 0.8359375
+          }
+        ],
+        "elapsed_ms": 63.84370900002523
+      },
+      "python_swift_pixels": {
+        "detections": [
+          {
+            "box": [
+              1964.111328125,
+              950.439453125,
+              2153.076171875,
+              1354.248046875
+            ],
+            "confidence": 0.8388671875
+          },
+          {
+            "box": [
+              1792.41943359375,
+              934.814453125,
+              1975.15869140625,
+              1393.310546875
+            ],
+            "confidence": 0.83056640625
+          }
+        ],
+        "elapsed_ms": 76.00641700003052
+      }
+    },
+    {
+      "id": "train_MED_4006",
+      "swift": {
+        "detections": [
+          {
+            "box": [
+              1752.74658203125,
+              1071.8994140625,
+              1946.47216796875,
+              1568.7255859375
+            ],
+            "confidence": 0.80322265625
+          },
+          {
+            "box": [
+              1919.189453125,
+              1091.6748046875,
+              2084.716796875,
+              1507.9345703125
+            ],
+            "confidence": 0.654296875
+          }
+        ],
+        "elapsed_ms": 138.581708,
+        "height": 3000,
+        "id": "train_MED_4006",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [
+          {
+            "box": [
+              1750.79345703125,
+              1070.80078125,
+              1944.51904296875,
+              1565.91796875
+            ],
+            "confidence": 0.81591796875
+          },
+          {
+            "box": [
+              1919.189453125,
+              1096.5576171875,
+              2115.966796875,
+              1508.9111328125
+            ],
+            "confidence": 0.6689453125
+          }
+        ],
+        "elapsed_ms": 64.7267920000445
+      },
+      "python_swift_pixels": {
+        "detections": [
+          {
+            "box": [
+              1752.74658203125,
+              1071.8994140625,
+              1946.47216796875,
+              1568.7255859375
+            ],
+            "confidence": 0.80322265625
+          },
+          {
+            "box": [
+              1919.189453125,
+              1091.6748046875,
+              2084.716796875,
+              1507.9345703125
+            ],
+            "confidence": 0.654296875
+          }
+        ],
+        "elapsed_ms": 84.41429200001949
+      }
+    },
+    {
+      "id": "train_MED_4007",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 159.97475,
+        "height": 3000,
+        "id": "train_MED_4007",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 71.91133399999217
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 101.29579199997352
+      }
+    },
+    {
+      "id": "train_MED_4043",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 183.080834,
+        "height": 3000,
+        "id": "train_MED_4043",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 78.73070800002324
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 89.001957999983
+      }
+    },
+    {
+      "id": "train_MED_4056",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 144.043375,
+        "height": 3000,
+        "id": "train_MED_4056",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 75.07299999997485
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 71.5169580000179
+      }
+    },
+    {
+      "id": "train_SB_0016",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 143.256916,
+        "height": 3000,
+        "id": "train_SB_0016",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 71.4267499999437
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 80.70191699999896
+      }
+    },
+    {
+      "id": "train_SB_0026",
+      "swift": {
+        "detections": [],
+        "elapsed_ms": 136.095,
+        "height": 3000,
+        "id": "train_SB_0026",
+        "width": 4000
+      },
+      "python_native": {
+        "detections": [],
+        "elapsed_ms": 69.00950000004968
+      },
+      "python_swift_pixels": {
+        "detections": [],
+        "elapsed_ms": 88.70587500001648
+      }
+    }
+  ],
+  "environment": {
+    "python": "3.12.10",
+    "platform": "macOS-26.7.2-arm64-arm-64bit",
+    "coremltools": "9.0",
+    "opencv": "4.11.0",
+    "numpy": "2.2.6"
+  },
+  "model_files": {
+    "Data/com.apple.CoreML/model.mlmodel": "8dd40b6dfc2938ad1b4556231e0122ef39f20216034885e0b1f8f3262b97124f",
+    "Data/com.apple.CoreML/weights/weight.bin": "5c3600af6f551d35aaa7e888fa3ab45ca5d30491e365e745b651d53e942285ca",
+    "Manifest.json": "6768d27aa076c11eedd01812216be4adb85b7f066a97d8f0b2aa6540734002b7"
+  }
+}

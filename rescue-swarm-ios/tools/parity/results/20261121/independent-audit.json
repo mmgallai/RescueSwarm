@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "counts_tp_fp_fn": {
+    "swift": [
+      8,
+      0,
+      45
+    ],
+    "python_native": [
+      8,
+      0,
+      45
+    ],
+    "python_swift_pixels": [
+      8,
+      0,
+      45
+    ]
+  },
+  "shared_pixel_detections_exactly_equal": true,
+  "same_native_person_annotation_ids": true,
+  "report_hashes": {
+    "comparison.json": "222548e39bf62fa8bd89f5953736a93dcd28392b27f6ab607bf904aac93b23ce",
+    "manifest.json": "ded32b235003c4325e7a08b697708664e10e201ebf2dd7a845c9368e309b3e67",
+    "paired-results.json": "59df74dfdc49de9f4bfcbfaa1bdd5faff110aa8b94aacff63462c70793bb945a",
+    "swift-results.json": "5edc688bbdb5014b80fc9e2e3e76b16ffc167bc2770f0c14facb5adf7fcd244b"
+  }
+}
