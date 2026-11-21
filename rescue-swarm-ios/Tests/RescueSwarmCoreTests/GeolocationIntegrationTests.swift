@@ -34,7 +34,7 @@ final class GeolocationIntegrationTests: XCTestCase {
         XCTAssertEqual(try XCTUnwrap(sightings[0].longitude), -76, accuracy: 0.000001)
         XCTAssertGreaterThan(try XCTUnwrap(sightings[1].longitude), -76)
         XCTAssertNotEqual(sightings[0].id, sightings[1].id)
-        XCTAssertTrue(sightings[0].cot_xml?.contains("2026-11-21T12:00:00Z") == true)
+        XCTAssertTrue(sightings[0].cot_xml?.contains("time=\"2026-11-21T12:00:00.000Z\"") == true)
         XCTAssertThrowsError(try report.append(saved))
         XCTAssertEqual(report.sightings?.count, 2)
         let dir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
