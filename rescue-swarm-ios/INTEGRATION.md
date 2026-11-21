@@ -78,10 +78,11 @@ choosing a new app model.
 
 ### Automated simulator sessions
 
-The `Simulator end-to-end` workflow builds a Debug app and launches three separate
-iOS Simulators: one coordinator and two workers. It exercises next-available and
-round-robin scheduling, then terminates a worker after it receives a task to check
-reassignment. The driver uses the normal SessionModel, TCP transport and bundled
+The `Simulator end-to-end` workflow builds a Debug app. Its default mode runs one
+iOS Simulator containing three independent SessionModel instances: one coordinator
+and two workers, communicating over actual TCP. It exercises next-available and
+round-robin scheduling, then closes a worker's connection after it receives a task
+to check reassignment. The driver uses the normal SessionModel, TCP transport and bundled
 Core ML detector. Its launch hook and fault injection are compiled only for Debug
 simulator builds, never physical devices or Release builds.
 
@@ -91,12 +92,17 @@ saved CoT, not geographic accuracy. Assertions check unique accepted tasks, real
 detector results, participation, retry counts, per-detection sightings and CoT
 coordinates. Reports and driver state are uploaded as workflow artifacts.
 This does not exercise file-picker gestures, Bonjour discovery or actual Wi-Fi.
+The default mode also does not test process isolation or separate simulator devices.
+Both the macOS 26 ARM and macOS 15 Intel CI attempts timed out booting the second
+simulator. The three-device mode remains available through workflow dispatch with
+`separate_simulators=true`, or by omitting `--embedded-workers` below. In that mode
+the driver terminates a worker process rather than closing its connection.
 
 To run on a Mac, build with `-configuration Debug`,
 `SWIFT_ACTIVE_COMPILATION_CONDITIONS=DEBUG` and an iOS Simulator destination, then:
 
 ```sh
-python3 tools/simulator_e2e.py --app DerivedData/Build/Products/Debug-iphonesimulator/RescueSwarm.app
+python3 tools/simulator_e2e.py --app DerivedData/Build/Products/Debug-iphonesimulator/RescueSwarm.app --embedded-workers
 ```
 
 The separate SAR-DAG parity test needs all 227 photo paths in
@@ -110,3 +116,24 @@ REQUIRE_SARDAG=1 SARDAG_ROOT=/absolute/path/to/drone_data swift test --filter Sa
 Its saved Python reference uses the exported Core ML model with Python image
 preprocessing; it is not a fresh PyTorch-versus-Core-ML export comparison. A skipped
 test is not a pass. The dataset must be provisioned separately from the code.
+
+### Verified results — 21 November 2026
+
+Code commit `d498a39`, [CI run 44938613239](https://github.com/mmgallai/RescueSwarm/actions/runs/44938613239):
+
+| Single-simulator TCP scenario | Completed tasks | Workers returning results | Reassignments |
+| --- | --- | --- | --- |
+| Next available | 6/6 | 2 (3 each) | 0 |
+| Round robin | 6/6 | 2 (3 each) | 0 |
+| Worker connection lost during a task | 6/6 | 1 surviving worker | 1 |
+
+No duplicate accepted tasks or sighting IDs. Every case saved 24 geolocated
+observations: four detected people repeated across six copies of the same photo,
+not 24 distinct people. Downloaded reports were independently checked for result
+identity, detector configuration, telemetry, coordinates, CoT and retries. The
+synthetic camera metadata is only a plumbing test. These are not phone benchmarks.
+
+Separate simulator processes remain unverified due to the second-device boot
+timeouts. SAR-DAG parity remains unverified: the reference JSON exists, but none of
+its required photos were found in the project, GB10 home/project backups or local
+Downloads. GB10's WiSARD and HERIDAL archives are different datasets.
