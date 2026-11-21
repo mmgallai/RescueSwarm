@@ -1,0 +1,25 @@
+name: Simulator end-to-end
+on:
+  push:
+    branches: [codex/swift-integration]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  simulator:
+    runs-on: macos-latest
+    timeout-minutes: 35
+    defaults:
+      run:
+        working-directory: rescue-swarm-ios
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build simulator app with isolated test driver
+        run: xcodebuild -project RescueSwarm.xcodeproj -scheme RescueSwarm -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath DerivedData SWIFT_ACTIVE_COMPILATION_CONDITIONS=DEBUG CODE_SIGNING_ALLOWED=NO build
+      - name: One coordinator and two real Core ML workers
+        run: python3 tools/simulator_e2e.py --app DerivedData/Build/Products/Debug-iphonesimulator/RescueSwarm.app
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: simulator-e2e-reports
+          path: rescue-swarm-ios/TestResults/simulator-e2e

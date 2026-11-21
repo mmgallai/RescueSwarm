@@ -10,6 +10,11 @@ struct RescueSwarmApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(model: model)
+                .task {
+#if DEBUG && targetEnvironment(simulator)
+                    await model.runSimulatorCheckIfRequested()
+#endif
+                }
                 .onChange(of: scenePhase) { phase in
                     if phase == .background && model.running {
                         model.stop("Session stopped when app entered background. Reopen and start again.")

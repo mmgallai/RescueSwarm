@@ -261,6 +261,12 @@ final class SessionModel: ObservableObject {
             }
             guard let detector else { peer.close("Person detector not loaded"); return }
             status = "Received \(imageID): \(frame.payload.count) bytes. Detecting people…"
+#if DEBUG && targetEnvironment(simulator)
+            if simulatorHoldTask {
+                // Fault injection only: let the external test terminate this process mid-task.
+                status = "E2E holding assigned task"; return
+            }
+#endif
             let payload = frame.payload
             work = Task { [weak self, weak peer] in
                 // Off the main actor, so heartbeats keep going while the model runs.
@@ -378,4 +384,58 @@ final class SessionModel: ObservableObject {
     nonisolated private static func hash(_ data: Data) -> String {
         SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined()
     }
+#if DEBUG && targetEnvironment(simulator)
+    private var simulatorCheckStarted = false
+    private var simulatorHoldTask = false
+
+    /// Drives the normal app methods in CI. Excluded from devices and Release builds.
+    func runSimulatorCheckIfRequested() async {
+        guard ProcessInfo.processInfo.arguments.contains("--simulator-e2e"), !simulatorCheckStarted else { return }
+        simulatorCheckStarted = true
+        let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        struct Configuration: Decodable {
+            let role: String
+            let port: String
+            let policy: String
+            let holdTask: Bool
+        }
+        do {
+            let config = try JSONDecoder().decode(Configuration.self, from: Data(contentsOf: directory.appendingPathComponent("e2e-config.json")))
+            role = config.role; port = config.port; address = "127.0.0.1"
+            policy = try TaskLedger.Policy(rawValue: config.policy).unwrapForSimulator()
+            expectedWorkers = 2; simulatorHoldTask = config.holdTask
+            if role == "coordinator" {
+                let images = try FileManager.default.contentsOfDirectory(at: directory.appendingPathComponent("images"), includingPropertiesForKeys: nil).sorted { $0.path < $1.path }
+                importImages(images)
+                while importing { try await Task.sleep(nanoseconds: 50_000_000) }
+                guard batch?.items.count == images.count, !images.isEmpty else { throw CocoaError(.fileReadCorruptFile) }
+                importTelemetry(directory.appendingPathComponent("telemetry.json"))
+                while importing { try await Task.sleep(nanoseconds: 50_000_000) }
+                guard imageTelemetry.count == images.count else { throw CocoaError(.fileReadCorruptFile) }
+            }
+            start()
+            for _ in 0..<2400 {
+                let state: [String: Any] = ["running": running, "status": status, "completed": completed,
+                                           "workers": workerCount, "logs": logs, "report_error": reportError ?? ""]
+                try JSONSerialization.data(withJSONObject: state, options: [.prettyPrinted, .sortedKeys])
+                    .write(to: directory.appendingPathComponent("e2e-state.json"), options: .atomic)
+                if !running { break }
+                try await Task.sleep(nanoseconds: 250_000_000)
+            }
+            if running { stop("Simulator test exceeded its deadline") }
+        } catch {
+            stop("Simulator check failed: \(error)")
+            try? Data(String(describing: error).utf8).write(to: directory.appendingPathComponent("e2e-error.txt"))
+        }
+    }
+#endif
 }
+
+#if DEBUG && targetEnvironment(simulator)
+private extension Optional {
+    func unwrapForSimulator() throws -> Wrapped {
+        guard let value = self else { throw CocoaError(.fileReadCorruptFile) }
+        return value
+    }
+}
+#endif
