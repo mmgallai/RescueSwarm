@@ -75,3 +75,38 @@ The detector parity test requires Evi's SAR-DAG fixture and is skipped when that
 external dataset is absent. The bundled app model retains its existing detector
 configuration. Training research results must be evaluated separately before
 choosing a new app model.
+
+### Automated simulator sessions
+
+The `Simulator end-to-end` workflow builds a Debug app and launches three separate
+iOS Simulators: one coordinator and two workers. It exercises next-available and
+round-robin scheduling, then terminates a worker after it receives a task to check
+reassignment. The driver uses the normal SessionModel, TCP transport and bundled
+Core ML detector. Its launch hook and fault injection are compiled only for Debug
+simulator builds, never physical devices or Release builds.
+
+Each session processes six copies of a SHA256-verified public Ultralytics example
+photo. Camera metadata is **synthetic**, to test the geolocation connection and
+saved CoT, not geographic accuracy. Assertions check unique accepted tasks, real
+detector results, participation, retry counts, per-detection sightings and CoT
+coordinates. Reports and driver state are uploaded as workflow artifacts.
+This does not exercise file-picker gestures, Bonjour discovery or actual Wi-Fi.
+
+To run on a Mac, build with `-configuration Debug`,
+`SWIFT_ACTIVE_COMPILATION_CONDITIONS=DEBUG` and an iOS Simulator destination, then:
+
+```sh
+python3 tools/simulator_e2e.py --app DerivedData/Build/Products/Debug-iphonesimulator/RescueSwarm.app
+```
+
+The separate SAR-DAG parity test needs all 227 photo paths in
+`Tests/RescueSwarmCoreTests/Fixtures/sardag-reference.json`. Set `SARDAG_ROOT` to
+their `drone_data` directory and run:
+
+```sh
+REQUIRE_SARDAG=1 SARDAG_ROOT=/absolute/path/to/drone_data swift test --filter SarDagParityTests
+```
+
+Its saved Python reference uses the exported Core ML model with Python image
+preprocessing; it is not a fresh PyTorch-versus-Core-ML export comparison. A skipped
+test is not a pass. The dataset must be provisioned separately from the code.

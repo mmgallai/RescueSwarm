@@ -16,11 +16,16 @@ import xml.etree.ElementTree as ET
 
 PHOTO = "https://raw.githubusercontent.com/ultralytics/assets/main/im/bus.jpg"
 PHOTO_SHA = "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63"
+PROGRESS = None
 
 
 def command(*args):
+    print("Running:", " ".join(args), flush=True)
+    if PROGRESS:
+        with PROGRESS.open("a") as log:
+            log.write(time.strftime("%H:%M:%S ") + " ".join(args) + "\n")
     try:
-        return subprocess.check_output(args, text=True, stderr=subprocess.STDOUT).strip()
+        return subprocess.check_output(args, text=True, stderr=subprocess.STDOUT, timeout=180).strip()
     except subprocess.CalledProcessError as error:
         print(error.output, flush=True)
         raise
@@ -77,11 +82,13 @@ def validate(report, recovery):
 
 
 def main():
+    global PROGRESS
     parser = argparse.ArgumentParser()
     parser.add_argument("--app", type=Path, required=True)
     parser.add_argument("--output", type=Path, default=Path("TestResults/simulator-e2e"))
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
+    PROGRESS = args.output / "progress.log"
     bundle = plistlib.loads((args.app / "Info.plist").read_bytes())["CFBundleIdentifier"]
     photo = urllib.request.urlopen(PHOTO, timeout=60).read()
     assert hashlib.sha256(photo).hexdigest() == PHOTO_SHA
@@ -143,7 +150,7 @@ def main():
             summaries[case] = validate(read_json(report_path), recovery)
             print(case, json.dumps(summaries[case]), flush=True)
             for device in devices:
-                subprocess.run(["xcrun", "simctl", "terminate", device, bundle], capture_output=True)
+                subprocess.run(["xcrun", "simctl", "terminate", device, bundle], capture_output=True, timeout=30)
         (args.output / "summary.json").write_text(json.dumps({"status": "PASS", "cases": summaries,
             "limitation": "Simulator CPU/network behavior, synthetic camera telemetry. Not device performance or field accuracy."}, indent=2))
     finally:
@@ -151,8 +158,12 @@ def main():
             for source in [container / "Documents", container / "Library/Application Support/Reports"]:
                 if source.exists():
                     shutil.copytree(source, args.output / f"device-{i}" / source.name, dirs_exist_ok=True)
-            subprocess.run(["xcrun", "simctl", "shutdown", device], capture_output=True)
-            subprocess.run(["xcrun", "simctl", "delete", device], capture_output=True)
+        for device in devices:
+            for action in ["shutdown", "delete"]:
+                try:
+                    subprocess.run(["xcrun", "simctl", action, device], capture_output=True, timeout=20)
+                except subprocess.TimeoutExpired:
+                    print(f"Cleanup {action} timed out for {device}", flush=True)
 
 
 if __name__ == "__main__":

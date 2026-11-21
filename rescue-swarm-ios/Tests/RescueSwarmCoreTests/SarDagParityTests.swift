@@ -39,11 +39,20 @@ final class SarDagParityTests: XCTestCase {
 
     func testSwiftDetectorFindsTheSameBoxesAsThePythonReference() async throws {
         let root = Self.datasetRoot
+        if ProcessInfo.processInfo.environment["REQUIRE_SARDAG"] == "1",
+           !FileManager.default.fileExists(atPath: root.path) {
+            XCTFail("Required SAR-DAG photos missing at \(root.path)"); return
+        }
         try XCTSkipUnless(FileManager.default.fileExists(atPath: root.path),
                           "SAR-DAG not found at \(root.path); set SARDAG_ROOT")
         let url = try XCTUnwrap(Bundle.module.url(forResource: "sardag-reference", withExtension: "json",
                                                   subdirectory: "Fixtures"))
         let reference = try JSONDecoder().decode(Reference.self, from: Data(contentsOf: url))
+        XCTAssertFalse(reference.images.isEmpty)
+        let missing = reference.images.filter { !FileManager.default.fileExists(atPath: root.appendingPathComponent($0.path).path) }
+        guard missing.isEmpty else {
+            XCTFail("Missing \(missing.count)/\(reference.images.count) SAR-DAG photos, first: \(missing[0].path)"); return
+        }
         let detector = try await PersonDetector.load(from: bundledModelURL)
 
         var referenceBoxes = 0, matched = 0, swiftOnly = 0
