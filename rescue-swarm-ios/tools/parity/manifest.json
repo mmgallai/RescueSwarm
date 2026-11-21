@@ -6,7 +6,7 @@
   "model_files": {
     "Data/com.apple.CoreML/model.mlmodel": "8dd40b6dfc2938ad1b4556231e0122ef39f20216034885e0b1f8f3262b97124f",
     "Data/com.apple.CoreML/weights/weight.bin": "5c3600af6f551d35aaa7e888fa3ab45ca5d30491e365e745b651d53e942285ca",
-    "Manifest.json": "6fdddf82ebbf61c72171d2ac04558e4bfeea33c80b0922da6bf68cf02bd7adbd"
+    "Manifest.json": "6768d27aa076c11eedd01812216be4adb85b7f066a97d8f0b2aa6540734002b7"
   },
   "settings": {
     "imgsz": 1280,
@@ -647,5 +647,6 @@
       ],
       "manually_corrected": false
     }
-  ]
+  ],
+  "model_hash_basis": "Committed Git blob bytes; text files use LF. No model change."
 }

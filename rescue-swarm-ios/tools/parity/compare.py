@@ -13,7 +13,8 @@ MODEL = HERE.parents[1] / "App/YOLO26n.mlpackage"
 
 
 def model_hashes():
-    return {p.relative_to(MODEL).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+    return {p.relative_to(MODEL).as_posix(): hashlib.sha256(
+                p.read_bytes().replace(b"\r\n", b"\n") if p.suffix == ".json" else p.read_bytes()).hexdigest()
             for p in sorted(MODEL.rglob("*")) if p.is_file()}
 
 
