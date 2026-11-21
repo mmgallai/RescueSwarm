@@ -398,7 +398,10 @@ final class SessionModel: ObservableObject {
             let port: String
             let policy: String
             let holdTask: Bool
+            let embeddedWorkers: Bool?
         }
+        var embeddedWorkers: [SessionModel] = []
+        defer { for worker in embeddedWorkers { worker.stop("Simulator session cleanup") } }
         do {
             let config = try JSONDecoder().decode(Configuration.self, from: Data(contentsOf: directory.appendingPathComponent("e2e-config.json")))
             role = config.role; port = config.port; address = "127.0.0.1"
@@ -414,9 +417,26 @@ final class SessionModel: ObservableObject {
                 guard imageTelemetry.count == images.count else { throw CocoaError(.fileReadCorruptFile) }
             }
             start()
+            if config.embeddedWorkers == true {
+                for index in 0..<2 {
+                    let worker = SessionModel()
+                    worker.role = "worker"; worker.port = port; worker.address = address
+                    worker.simulatorHoldTask = config.holdTask && index == 0
+                    worker.start()
+                    embeddedWorkers.append(worker)
+                }
+            }
+            var injectedDisconnect = false
             for _ in 0..<2400 {
+                if config.embeddedWorkers == true, config.holdTask, !injectedDisconnect,
+                   embeddedWorkers.first?.status == "E2E holding assigned task" {
+                    embeddedWorkers[0].stop("Injected worker connection loss")
+                    injectedDisconnect = true
+                }
                 let state: [String: Any] = ["running": running, "status": status, "completed": completed,
-                                           "workers": workerCount, "logs": logs, "report_error": reportError ?? ""]
+                                           "workers": workerCount, "logs": logs, "report_error": reportError ?? "",
+                                           "embedded_worker_status": embeddedWorkers.map(\.status),
+                                           "injected_disconnect": injectedDisconnect]
                 try JSONSerialization.data(withJSONObject: state, options: [.prettyPrinted, .sortedKeys])
                     .write(to: directory.appendingPathComponent("e2e-state.json"), options: .atomic)
                 if !running { break }

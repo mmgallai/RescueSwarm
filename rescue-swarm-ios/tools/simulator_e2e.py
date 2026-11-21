@@ -86,6 +86,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--app", type=Path, required=True)
     parser.add_argument("--output", type=Path, default=Path("TestResults/simulator-e2e"))
+    parser.add_argument("--embedded-workers", action="store_true",
+                        help="One iOS simulator, three independent SessionModels and real TCP; no device/process isolation")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     PROGRESS = args.output / "progress.log"
@@ -106,7 +108,7 @@ def main():
                        and (not supported or t["identifier"] in supported))
     devices, containers, summaries = [], [], {}
     try:
-        for i in range(3):
+        for i in range(1 if args.embedded_workers else 3):
             device = sim("create", f"RescueSwarm-E2E-{i}", device_type, runtime)
             devices.append(device)
             sim("boot", device)
@@ -124,7 +126,9 @@ def main():
                 for f in documents.glob("e2e-*"):
                     f.unlink()
                 (documents / "e2e-config.json").write_text(json.dumps({"role": "coordinator" if i == 0 else "worker",
-                    "port": "18765", "policy": policy, "holdTask": recovery and i == 1}))
+                    "port": "18765", "policy": policy,
+                    "holdTask": recovery and (i == 1 or args.embedded_workers),
+                    "embeddedWorkers": args.embedded_workers}))
             docs = containers[0] / "Documents"
             images = docs / "images"
             images.mkdir(exist_ok=True)
@@ -138,12 +142,14 @@ def main():
             previous = set((containers[0] / "Library/Application Support/Reports").glob("*.json"))
             for device in devices:
                 sim("launch", device, bundle, "--simulator-e2e")
-            if recovery:
+            if recovery and not args.embedded_workers:
                 state = containers[1] / "Documents/e2e-state.json"
                 wait_for(lambda: read_json(state).get("status") == "E2E holding assigned task")
                 sim("terminate", devices[1], bundle)
             state = docs / "e2e-state.json"
             final = wait_for(lambda: (s if (s := read_json(state)) and not s["running"] else None))
+            if recovery and args.embedded_workers:
+                assert final["injected_disconnect"] is True
             assert not final["report_error"], final
             reports = set((containers[0] / "Library/Application Support/Reports").glob("*.json")) - previous
             assert len(reports) == 1, reports
@@ -154,6 +160,7 @@ def main():
             for device in devices:
                 subprocess.run(["xcrun", "simctl", "terminate", device, bundle], capture_output=True, timeout=30)
         (args.output / "summary.json").write_text(json.dumps({"status": "PASS", "cases": summaries,
+            "simulator_count": len(devices), "embedded_workers": args.embedded_workers,
             "limitation": "Simulator CPU/network behavior, synthetic camera telemetry. Not device performance or field accuracy."}, indent=2))
     finally:
         for i, (device, container) in enumerate(zip(devices, containers)):
