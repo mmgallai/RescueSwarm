@@ -1,0 +1,20 @@
+name: Geolocation checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest
+      - run: python -m pytest tests/test_geolocate.py tests/test_geolocate_regressions.py tests/test_messages.py
+  swift:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: swift test --package-path swift
+

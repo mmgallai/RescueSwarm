@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# RescueSwarm: dataset and model weights are downloaded locally, never committed
+data/
+*.pt
+runs/
+
+# Standalone Swift geolocation package
+swift/.build/
+swift/.swiftpm/
