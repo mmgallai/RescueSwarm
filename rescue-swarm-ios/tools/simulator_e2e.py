@@ -95,11 +95,13 @@ def main():
     (args.output / "photo-provenance.json").write_text(json.dumps({"url": PHOTO, "sha256": PHOTO_SHA,
         "purpose": "Integration only; synthetic camera telemetry; not SAR-DAG or aerial accuracy."}, indent=2))
     runtimes = json.loads(sim("list", "runtimes", "--json"))["runtimes"]
-    runtime = next(r["identifier"] for r in reversed(runtimes) if r["isAvailable"] and ".iOS-" in r["identifier"])
+    runtime = min((r for r in runtimes if r["isAvailable"] and ".iOS-" in r["identifier"]),
+                  key=lambda r: tuple(map(int, r["version"].split("."))))["identifier"]
     types = json.loads(sim("list", "devicetypes", "--json"))["devicetypes"]
     # simctl's list is newest first; reversing it selected unsupported iPhone 6s.
     supported = {t["identifier"] for r in runtimes if r["identifier"] == runtime
                  for t in r.get("supportedDeviceTypes", [])}
+    types.sort(key=lambda t: t["name"] != "iPhone 16 Pro")
     device_type = next(t["identifier"] for t in types if t["name"].startswith("iPhone")
                        and (not supported or t["identifier"] in supported))
     devices, containers, summaries = [], [], {}

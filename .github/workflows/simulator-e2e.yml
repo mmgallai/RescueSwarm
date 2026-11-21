@@ -7,13 +7,20 @@ permissions:
   contents: read
 jobs:
   simulator:
-    runs-on: macos-latest
+    runs-on: macos-15-intel
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
     timeout-minutes: 35
     defaults:
       run:
         working-directory: rescue-swarm-ios
     steps:
       - uses: actions/checkout@v6
+      - name: Record runner environment
+        run: |
+          xcodebuild -version
+          sysctl hw.memsize hw.ncpu
+          xcrun simctl list runtimes
       - name: Build simulator app with isolated test driver
         run: xcodebuild -project RescueSwarm.xcodeproj -scheme RescueSwarm -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath DerivedData SWIFT_ACTIVE_COMPILATION_CONDITIONS=DEBUG CODE_SIGNING_ALLOWED=NO build
       - name: One coordinator and two real Core ML workers
