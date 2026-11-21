@@ -97,6 +97,8 @@ final class GeolocationIntegrationTests: XCTestCase {
         let matching = try manifest([row(hash: batch.items[0].sha256)])
         XCTAssertEqual(matching.match(batch).keys.sorted(), ["0000-image.jpg"])
         XCTAssertTrue(try manifest([row()]).match(batch).isEmpty)
+        try Data([4, 5, 6]).write(to: batch.items[0].url)
+        XCTAssertThrowsError(try batch.read(0))
     }
     func testLegacyReportWithoutNewFieldsStillLoads() throws {
         let report = SessionReport(policy: "single", imageIDs: ["a"], expectedWorkers: 1)

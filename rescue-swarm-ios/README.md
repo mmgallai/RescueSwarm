@@ -1,9 +1,11 @@
 # RescueSwarm native app foundation
 
-Implemented source for the first native milestone, not a finished rescue app.
-The coordinator sends a selected batch of imported images or one built-in PPM fixture. A worker
-verifies SHA-256, simulates 150ms processing and returns an explicitly synthetic,
-empty result. No detector or TAK connection is included in this build.
+The integration branch connects the Swift coordinator, Evi's Core ML person
+detector and Aidan's geolocation package. Workers verify image hashes and return
+person detections. The coordinator matches imported telemetry by image hash and
+saves estimated locations and CoT XML with accepted results. See
+[INTEGRATION.md](INTEGRATION.md) for the telemetry format and current workflow.
+Physical device validation and TAK network delivery remain pending.
 
 ## What is in the folder
 
@@ -17,7 +19,7 @@ empty result. No detector or TAK connection is included in this build.
 
 ## Test and build on the teammate's Mac
 
-1. Copy this entire folder. Install/open Xcode and complete its initial setup.
+1. Clone this repository, including the sibling `swift` package. Install/open Xcode and complete its initial setup.
 2. From this folder run `bash tools/test_on_mac.sh`. It stops on failure and saves logs
    in TestResults. Do not call the app verified until this passes.
 3. Open `RescueSwarm.xcodeproj`. Select the RescueSwarm scheme and an iPhone simulator.
@@ -34,14 +36,15 @@ Code is published in the shared repository; no direct teammate messages were sen
 ## First two-phone test
 
 1. Connect both phones to the same local Wi-Fi and keep RescueSwarm in the foreground.
-2. On phone A choose Coordinator. Use the fixture, or choose up to 500 JPG/PNG files,
+2. On phone A choose Coordinator and choose up to 500 JPG/PNG files,
    each under 16 MiB. Choose Single worker for a two-phone test (one coordinator,
    one worker). Leave port 8765 and tap Start. Wait for the listening status.
 3. Set a recognizable session name on A before starting. On phone B choose Worker,
    tap Find nearby sessions, then Join beside A's name. Allow local-network access when
    prompted. The selected Bonjour endpoint supplies the connection address and port.
 4. Phone A must show one accepted result per image; phone B must log verified image
-   hashes and submitted tasks. Results are synthetic and contain no person detections.
+   hashes and submitted detections. Import matching telemetry on A before starting
+   to generate candidate locations. Empty scenes may legitimately produce no detections.
 5. Repeat with an imported photo. Turn off Internet upstream while retaining local Wi-Fi
    and repeat. If discovery is unavailable, enter A's Wi-Fi IP and port on B and tap
    Start. The Python coordinator is not advertised through Bonjour; use manual mode for it.
@@ -131,8 +134,8 @@ as completed. Report tests passed in macOS CI; the export UI still needs a devic
 
 ## Remaining milestones
 
-Build/device fixes first, then persistence/rejoin, measured
-comparison reports, real Core ML inference and geolocation/TAK.
+Device validation first, then persistence/rejoin, measured
+comparison reports and TAK transport.
 The batch foundation does not yet implement every feature in APP_DESIGN.md.
 
 Implementation references: Apple's [receive API](https://developer.apple.com/documentation/network/nwconnection/receive(minimumincompletelength:maximumlength:completion:))

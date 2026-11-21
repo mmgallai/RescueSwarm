@@ -45,6 +45,8 @@ public struct ImageBatch {
         guard size == item.byteCount, size > 0, size <= Wire.maxPayload else { throw WireError.invalidPayload }
         let bytes = try Data(contentsOf: item.url)
         guard bytes.count == item.byteCount else { throw WireError.invalidPayload }
+        let hash = SHA256.hash(data: bytes).map { String(format: "%02x", $0) }.joined()
+        guard hash == item.sha256 else { throw WireError.invalidPayload }
         return bytes
     }
 }
