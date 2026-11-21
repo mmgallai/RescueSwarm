@@ -25,6 +25,7 @@ struct ContentView: View {
     @StateObject private var discovery = SessionDiscovery()
     @Environment(\.scenePhase) private var scenePhase
     @State private var importing = false
+    @State private var importingTelemetry = false
     var body: some View {
         NavigationStack {
             Form {
@@ -64,6 +65,14 @@ struct ContentView: View {
                         TextField("Session name", text: $model.sessionName)
                         LabeledContent("Image", value: model.imageName)
                         Button("Choose images") { importing = true }
+                        Button("Import telemetry JSON") { importingTelemetry = true }
+                            .fileImporter(isPresented: $importingTelemetry, allowedContentTypes: [.json]) { result in
+                                switch result {
+                                case .success(let url): model.importTelemetry(url)
+                                case .failure(let error): model.status = "Telemetry import failed: \(error.localizedDescription)"
+                                }
+                            }
+                        Text(model.telemetryStatus).font(.footnote)
                         Picker("Scheduling", selection: $model.policy) {
                             Text("Next available").tag(TaskLedger.Policy.nextAvailable)
                             Text("Round robin").tag(TaskLedger.Policy.roundRobin)
@@ -82,6 +91,18 @@ struct ContentView: View {
                     if model.running { Button("Stop", role: .destructive) { model.stop() } }
                     else { Button(model.importing ? "Importing…" : "Start") { model.start() }.disabled(model.importing) }
                 }
+                Section("Candidate sightings") {
+                    ForEach(model.sightings) { sighting in
+                        VStack(alignment: .leading) {
+                            Text("\(sighting.image_id) • person \(sighting.detection_index + 1)")
+                            if let lat = sighting.latitude, let lon = sighting.longitude {
+                                Text(String(format: "%.6f, %.6f", lat, lon)).textSelection(.enabled)
+                                Text("Approximate location • flat ground • review required").font(.caption)
+                            }
+                            if let issue = sighting.issue { Text(issue).font(.caption).foregroundStyle(.orange) }
+                        }
+                    }
+                }
                 Section("Saved coordinator runs") {
                     if let error = model.reportError { Text(error).foregroundStyle(.red) }
                     if model.savedReports.isEmpty { Text("No saved runs yet").foregroundStyle(.secondary) }
@@ -90,6 +111,7 @@ struct ContentView: View {
                             Text("\(report.policy) • \(report.results.count)/\(report.image_ids.count) results")
                             Text(report.state == "running" ? "Unfinished checkpoint" : report.state).font(.caption)
                             Text(report.started_at, style: .date).font(.caption)
+                            Text("\(report.sightings?.count ?? 0) candidate sightings").font(.caption)
                             if let url = model.reportURL(report) { ShareLink("Export JSON report", item: url) }
                         }
                     }

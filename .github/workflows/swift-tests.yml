@@ -13,5 +13,7 @@ jobs:
       - uses: actions/checkout@v6
       - run: python3 tools/test_project.py -v
       - run: swift test
+      - name: Python coordinator regression tests
+        run: python3 -m unittest discover -s ../scheduling-simulation -v
       - name: Build iOS app without device signing
         run: xcodebuild -project RescueSwarm.xcodeproj -scheme RescueSwarm -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build

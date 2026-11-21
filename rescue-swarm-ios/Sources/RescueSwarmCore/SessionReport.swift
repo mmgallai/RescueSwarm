@@ -28,6 +28,9 @@ public struct SessionReport: Codable, Identifiable {
     public private(set) var results: [SavedResult] = []
     public private(set) var first_result_s: Double?
     public private(set) var tasks_per_worker: [String: Int] = [:]
+    // Optional fields keep reports written before geolocation readable.
+    public var telemetry: [String: ImageTelemetry]?
+    public private(set) var sightings: [Sighting]?
     public init(policy: String, imageIDs: [String], expectedWorkers: Int) {
         schema_version = 1; id = UUID(); started_at = Date()
         self.policy = policy; image_ids = imageIDs; expected_workers = expectedWorkers
@@ -38,6 +41,8 @@ public struct SessionReport: Codable, Identifiable {
               saved.received_s.isFinite, saved.received_s >= 0,
               !results.contains(where: { $0.result.task_id == task }) else { throw WireError.invalidResult }
         results.append(saved)
+        let located = Sighting.locate(saved.result, runID: id, telemetry: telemetry?[image_ids[task]])
+        sightings = (sightings ?? []) + located
         first_result_s = results.map(\.received_s).min()
         tasks_per_worker[saved.worker_id, default: 0] += 1
     }

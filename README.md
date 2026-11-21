@@ -1,6 +1,13 @@
 # RescueSwarm
 Distributed smartphone computing for drone-based search and rescue without internet access.
 
+## Integrated iPhone app
+
+Open `rescue-swarm-ios/RescueSwarm.xcodeproj`. The integration branch connects the
+Swift coordinator, Core ML person detector and geolocation package. See
+[the integration guide](rescue-swarm-ios/INTEGRATION.md) for image telemetry import,
+saved sightings, assumptions and physical-device verification.
+
 ## Setup
 
 Requires Python 3.10+.

@@ -1,4 +1,5 @@
 import Foundation
+import CryptoKit
 
 /// File-backed imports: a failed selection leaves the previous batch intact.
 public struct ImageBatch {
@@ -6,6 +7,7 @@ public struct ImageBatch {
         public let imageID: String
         public let url: URL
         public let byteCount: Int
+        public let sha256: String
     }
     public let directory: URL
     public let items: [Item]
@@ -27,7 +29,8 @@ public struct ImageBatch {
                 try fm.copyItem(at: source, to: target)
                 let copiedSize = try target.resourceValues(forKeys: [.fileSizeKey]).fileSize ?? 0
                 guard copiedSize > 0, copiedSize <= Wire.maxPayload else { throw WireError.invalidPayload }
-                items.append(Item(imageID: name, url: target, byteCount: copiedSize))
+                let hash = SHA256.hash(data: try Data(contentsOf: target)).map { String(format: "%02x", $0) }.joined()
+                items.append(Item(imageID: name, url: target, byteCount: copiedSize, sha256: hash))
             }
             return ImageBatch(directory: folder, items: items)
         } catch {

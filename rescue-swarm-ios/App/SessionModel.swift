@@ -15,6 +15,9 @@ final class SessionModel: ObservableObject {
     @Published var imageName = "fixture.ppm"
     @Published var imageCount = 1
     @Published var importing = false
+    @Published var telemetryStatus = "Choose images, then import their telemetry JSON"
+    @Published var sightings: [Sighting] = []
+    private var imageTelemetry: [String: ImageTelemetry] = [:]
     @Published var expectedWorkers = 2
     @Published var policy: TaskLedger.Policy = .nextAvailable
     @Published var failed = 0
@@ -93,6 +96,8 @@ final class SessionModel: ObservableObject {
                 }.value
                 let old = batch
                 batch = imported; imageCount = imported.items.count
+                imageTelemetry = [:]
+                telemetryStatus = "Import telemetry for this image batch"
                 imageName = "\(imageCount) imported images"
                 status = "Batch ready. Images copied into app storage."
                 if let old { _ = await Task.detached { try? FileManager.default.removeItem(at: old.directory) }.value }
@@ -116,6 +121,7 @@ final class SessionModel: ObservableObject {
         }
         generation = UUID(); completed = 0; failed = 0; running = true; began = now; batchStarted = false
         batchBegan = nil; report = nil
+        sightings = []
         status = "Connecting…"
         let session = generation
         if role == "coordinator" {
@@ -123,6 +129,7 @@ final class SessionModel: ObservableObject {
             report = SessionReport(policy: policy.rawValue,
                 imageIDs: batch?.items.map(\.imageID) ?? ["fixture.ppm"],
                 expectedWorkers: policy == .single ? 1 : expectedWorkers)
+            report?.telemetry = imageTelemetry
             do { try checkpoint() } catch {
                 stop("Cannot start: report could not be saved.", saveReport: false)
                 reportError = error.localizedDescription; return
@@ -240,6 +247,7 @@ final class SessionModel: ObservableObject {
                     ledger = updatedLedger
                     assignedAt.removeValue(forKey: peer.id)
                     completed = ledger.completed.count
+                    sightings = report?.sightings ?? []
                     log("Accepted task \(m.task_id ?? -1), attempt \(m.attempt_id ?? -1), detector: \(m.detector ?? "unknown")")
                     dispatch()
                 } else { log("Ignored duplicate or old result") }
@@ -344,6 +352,28 @@ final class SessionModel: ObservableObject {
     }
     private func imageID(_ task: Int) -> String {
         batch?.items[task].imageID ?? "fixture.ppm"
+    }
+    func importTelemetry(_ url: URL) {
+        guard !running, !importing, let selected = batch else {
+            status = "Choose images before importing telemetry"; return
+        }
+        importing = true
+        Task {
+            defer { importing = false }
+            do {
+                let matched = try await Task.detached {
+                    let access = url.startAccessingSecurityScopedResource()
+                    defer { if access { url.stopAccessingSecurityScopedResource() } }
+                    let size = try url.resourceValues(forKeys: [.fileSizeKey]).fileSize ?? 0
+                    guard size > 0, size <= 4 * 1024 * 1024 else { throw WireError.invalidPayload }
+                    return try TelemetryManifest.load(Data(contentsOf: url)).match(selected)
+                }.value
+                guard !matched.isEmpty else { throw CocoaError(.fileReadCorruptFile) }
+                imageTelemetry = matched
+                telemetryStatus = "Telemetry matched to \(matched.count)/\(selected.items.count) images"
+                status = telemetryStatus
+            } catch { status = "Telemetry import failed; previous metadata retained: \(error.localizedDescription)" }
+        }
     }
     nonisolated private static func hash(_ data: Data) -> String {
         SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined()
