@@ -19,7 +19,11 @@ PHOTO_SHA = "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63"
 
 
 def command(*args):
-    return subprocess.check_output(args, text=True, stderr=subprocess.STDOUT).strip()
+    try:
+        return subprocess.check_output(args, text=True, stderr=subprocess.STDOUT).strip()
+    except subprocess.CalledProcessError as error:
+        print(error.output, flush=True)
+        raise
 
 
 def sim(*args):
@@ -86,7 +90,11 @@ def main():
     runtimes = json.loads(sim("list", "runtimes", "--json"))["runtimes"]
     runtime = next(r["identifier"] for r in reversed(runtimes) if r["isAvailable"] and ".iOS-" in r["identifier"])
     types = json.loads(sim("list", "devicetypes", "--json"))["devicetypes"]
-    device_type = next(t["identifier"] for t in reversed(types) if t["name"].startswith("iPhone"))
+    # simctl's list is newest first; reversing it selected unsupported iPhone 6s.
+    supported = {t["identifier"] for r in runtimes if r["identifier"] == runtime
+                 for t in r.get("supportedDeviceTypes", [])}
+    device_type = next(t["identifier"] for t in types if t["name"].startswith("iPhone")
+                       and (not supported or t["identifier"] in supported))
     devices, containers, summaries = [], [], {}
     try:
         for i in range(3):
