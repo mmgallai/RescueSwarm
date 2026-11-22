@@ -25,7 +25,7 @@ exported = Path(model.export(format="coreml", imgsz=size, nms=True, half=False, 
 assert not MODEL.exists(), "Never overwrite an existing export"
 exported.rename(MODEL)
 assert hashlib.sha256(checkpoint.read_bytes()).hexdigest() == EXPECTED
-manifest = json.loads((HERE / "manifest.json").read_text())
+manifest = json.loads(Path(os.environ.get("PARITY_SOURCE_MANIFEST", str(HERE / "manifest.json"))).read_text())
 manifest["source_checkpoint_sha256"] = EXPECTED
 manifest["source_checkpoint"] = "D85: yolo26n-wisard-full-20261022/mixed640/weights/best.pt"
 manifest["model_files"] = model_hashes()

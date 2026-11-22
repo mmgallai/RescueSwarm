@@ -18,7 +18,8 @@ final class CorrectedValidationParityTests: XCTestCase {
         let cutoff = settings["conf"] as! Double
         let inferenceCut = settings["inference_conf"] as? Double ?? cutoff
         let nmsCut = settings["iou"] as! Double
-        XCTAssertEqual(images.count, manifest["crop_fixture"] as? Bool == true ? 512 : 32)
+        let sourceCount = manifest["source_image_count"] as? Int ?? 32
+        XCTAssertEqual(images.count, manifest["crop_fixture"] as? Bool == true ? sourceCount * 16 : sourceCount)
         let modelURL = ProcessInfo.processInfo.environment["PARITY_MODEL"].map { URL(fileURLWithPath: $0) } ?? bundledModelURL
         let detector = try await PersonDetector.load(from: modelURL, computeUnits: .all)
         XCTAssertEqual(detector.model.modelDescription.inputDescriptionsByName["image"]?.imageConstraint?.pixelsWide, size)

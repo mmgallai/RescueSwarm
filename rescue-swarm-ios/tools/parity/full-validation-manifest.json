@@ -1,0 +1,4996 @@
+{
+  "schema_version": 1,
+  "dataset": "HERIDAL corrected validation",
+  "selection": "Complete frozen corrected HERIDAL validation cohort, all 247 images / 427 people. No selection or recalibration.",
+  "source_manifest_sha256": "3444c8549421650804070e669724cab9020d3677c0647a2dfd0ff73507c569c1",
+  "model_files": {
+    "Data/com.apple.CoreML/model.mlmodel": "8dd40b6dfc2938ad1b4556231e0122ef39f20216034885e0b1f8f3262b97124f",
+    "Data/com.apple.CoreML/weights/weight.bin": "5c3600af6f551d35aaa7e888fa3ab45ca5d30491e365e745b651d53e942285ca",
+    "Manifest.json": "6768d27aa076c11eedd01812216be4adb85b7f066a97d8f0b2aa6540734002b7"
+  },
+  "settings": {
+    "imgsz": 1280,
+    "conf": 0.25,
+    "iou": 0.7,
+    "compute_units": "ALL",
+    "weights": "existing bundled CoreML package; no retraining or re-export"
+  },
+  "images": [
+    {
+      "id": "train_BRA_1002",
+      "path": "train_BRA_1002.jpg",
+      "sha256": "a0f5e9de8b274881d388fa2b9ef4a8bb8e50ecdc5aa02f0883ab8a539aefa529",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1731.0,
+          2065.0,
+          1779.0,
+          2106.0
+        ],
+        [
+          1539.0,
+          45.0,
+          1573.0,
+          99.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1003",
+      "path": "train_BRA_1003.jpg",
+      "sha256": "9e5419ab91ee0234e195c59fbd61636a749bc9cd42019e61758e9532dbb24c8b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1005",
+      "path": "train_BRA_1005.jpg",
+      "sha256": "79d20e24316c56867f9b4de49d0349216711dc31baa4d32d0b3cbd89a2b6dfe7",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1006",
+      "path": "train_BRA_1006.jpg",
+      "sha256": "97788c3f74a947f6490c97cccf26aab273f38f061ee266bbb96db2013634ac14",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1008",
+      "path": "train_BRA_1008.jpg",
+      "sha256": "87baec246a42bb28bdfae710a2f422610fd782c23844d500d56d60a0f86754ed",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1009",
+      "path": "train_BRA_1009.jpg",
+      "sha256": "deb4487303ed659abe4f2c1926461dad624cee6190dcc74453fba3e7480c507c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1011",
+      "path": "train_BRA_1011.jpg",
+      "sha256": "5f7603a90df44921e01443dc0581f92f23bcd71d60e94a299e15baf773503858",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          559.0,
+          208.0,
+          627.0,
+          269.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1012",
+      "path": "train_BRA_1012.jpg",
+      "sha256": "c0280239fb6384c2786a3ca718ff79413583737a3e9c68d27e497ce27f653ca0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          755.0,
+          1013.0,
+          792.0,
+          1047.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1014",
+      "path": "train_BRA_1014.jpg",
+      "sha256": "11e0df05ee319f1d2f8a1c9bc35a80ae9842619f8a885eab83e9919e4c3aab4d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          122.0,
+          966.0,
+          190.0,
+          1012.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1015",
+      "path": "train_BRA_1015.jpg",
+      "sha256": "b1e142185596af95f1d913eb1d2531b1ad1d6607d008be9cdfc98247dda0ef66",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          93.0,
+          1453.0,
+          164.0,
+          1492.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1017",
+      "path": "train_BRA_1017.jpg",
+      "sha256": "a9eea57bf6f4910122fd630cf6bb77a7ab5ae2c994179719e324647c8d2801cc",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          243.0,
+          818.0,
+          303.0,
+          862.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1020",
+      "path": "train_BRA_1020.jpg",
+      "sha256": "34f8cdbd1a5b138dc85843984ab3bba887e8cb94f38434bc334dd49a2248c261",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          708.0,
+          664.0,
+          774.0,
+          717.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1021",
+      "path": "train_BRA_1021.jpg",
+      "sha256": "5458b0c19da66cabaa6c54b31145943c8b09b522f72535fadd2c6ce4103ca8e7",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          588.0,
+          172.0,
+          621.0,
+          202.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1023",
+      "path": "train_BRA_1023.jpg",
+      "sha256": "0c47593ca44068c92b1d762de77a93f86c6f07812578d466fbb5d708d197dbfe",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          795.0,
+          2657.0,
+          844.0,
+          2716.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1025",
+      "path": "train_BRA_1025.jpg",
+      "sha256": "eb82dcfb1b983684ae640b4855138b916c1cc8841c9e8ae2f70ec687558fc394",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          822.0,
+          755.0,
+          883.0,
+          806.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1026",
+      "path": "train_BRA_1026.jpg",
+      "sha256": "cc2a044e1748bc397d45c561710bf3f6f375e3d93d4f134b624dab27390ae75f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          102.0,
+          2409.0,
+          182.0,
+          2466.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1027",
+      "path": "train_BRA_1027.jpg",
+      "sha256": "e27f029ecf2ddbdc6d274e75d566aa0ccae9b146afd51b41a0dd13db6d9ffd62",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          18.0,
+          1596.0,
+          108.0,
+          1625.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1029",
+      "path": "train_BRA_1029.jpg",
+      "sha256": "ee96466da8452099524aff79bda12e0ad5b627636ac9187aeaf68ac70f3a5d8f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1815.0,
+          2612.0,
+          1834.0,
+          2653.0
+        ],
+        [
+          1784.0,
+          2639.0,
+          1812.0,
+          2670.0
+        ],
+        [
+          1654.0,
+          2654.0,
+          1682.0,
+          2695.0
+        ],
+        [
+          1732.0,
+          2664.0,
+          1763.0,
+          2705.0
+        ],
+        [
+          1719.0,
+          2649.0,
+          1740.0,
+          2686.0
+        ],
+        [
+          1700.0,
+          2676.0,
+          1725.0,
+          2707.0
+        ],
+        [
+          1687.0,
+          2634.0,
+          1714.0,
+          2678.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1030",
+      "path": "train_BRA_1030.jpg",
+      "sha256": "8fc557531834f98ddf4bb5eb00f9df06ddc2a7c6a2545eb76d4c2f7739660797",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1032",
+      "path": "train_BRA_1032.jpg",
+      "sha256": "5d70810a4d732efa25dee8123b661c63d749043baf9ea8fccf78eb02df14cafd",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          756.0,
+          1307.0,
+          825.0,
+          1343.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1033",
+      "path": "train_BRA_1033.jpg",
+      "sha256": "ed1118b7d2ca5a85fb3e5d46ffd49c9bd61e9e26b5a962fce1ba9bd10971b30a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          696.0,
+          2679.0,
+          766.0,
+          2727.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1038",
+      "path": "train_BRA_1038.jpg",
+      "sha256": "bde802159d4c4de7feeafd181372dcea5e4d7f879f5b0560f60bc3d0813c5879",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          616.0,
+          1981.0,
+          699.0,
+          2039.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1041",
+      "path": "train_BRA_1041.jpg",
+      "sha256": "285eae15d5d1449fede83d079ac35ad360ba1019e1b3e98a39d40e932951a67c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1042",
+      "path": "train_BRA_1042.jpg",
+      "sha256": "4e28bad57bb193ac9d2fdfc25e60fd97c3163e33937c50fe9bb5181e1418202c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1044",
+      "path": "train_BRA_1044.jpg",
+      "sha256": "ac0548b5782da9563079ea67d8f51b9edf3ae89809de4ce9c63249584d1399e9",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1046",
+      "path": "train_BRA_1046.jpg",
+      "sha256": "001c93a1766a6c4df41d1577234709140fc2a049625ba63ff8a585d6f55aa402",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1047",
+      "path": "train_BRA_1047.jpg",
+      "sha256": "2314c6b4077276eba65599fff8690c2ac25d709ba9a7057063e847c422bfdbcd",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1048",
+      "path": "train_BRA_1048.jpg",
+      "sha256": "712faad92f5d11ba33805e8b47032345f90517d79273f83ebbe7debff251f2ce",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1049",
+      "path": "train_BRA_1049.jpg",
+      "sha256": "daaf4af1c4628127138d1968f51aaae6c7084a4ec44a02f5bab3289fa6cafb1b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1050",
+      "path": "train_BRA_1050.jpg",
+      "sha256": "b617627909f9ea00193e95eeed1b17b00dcbd3669791d398744400c45f3551da",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1053",
+      "path": "train_BRA_1053.jpg",
+      "sha256": "d8bbc868ebb5a09b0ec41646d5fb22dc1715d6005df793ab3e343f7054afb732",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1704.0,
+          178.0,
+          1750.0,
+          233.0
+        ],
+        [
+          1190.0,
+          2859.0,
+          1237.0,
+          2942.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1063",
+      "path": "train_BRA_1063.jpg",
+      "sha256": "b6176bb7ad231d9c947eeddd379320bb8cf13d293bd7a2cd881b096782264f02",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2966.0,
+          2458.0,
+          3013.0,
+          2510.0
+        ],
+        [
+          2860.0,
+          2444.0,
+          2900.0,
+          2502.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRA_1068",
+      "path": "train_BRA_1068.jpg",
+      "sha256": "fa94509229547152f32fbdbe62f0bfae1d1c54cc3e46bbb0c4d4d81aa33c2036",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          505.0,
+          1550.0,
+          572.0,
+          1582.0
+        ],
+        [
+          474.0,
+          1585.0,
+          547.0,
+          1616.0
+        ],
+        [
+          334.0,
+          1633.0,
+          408.0,
+          1655.0
+        ],
+        [
+          373.0,
+          1550.0,
+          423.0,
+          1573.0
+        ],
+        [
+          316.0,
+          1544.0,
+          371.0,
+          1565.0
+        ],
+        [
+          304.0,
+          1523.0,
+          374.0,
+          1543.0
+        ],
+        [
+          271.0,
+          1561.0,
+          346.0,
+          1587.0
+        ],
+        [
+          272.0,
+          1527.0,
+          316.0,
+          1555.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1002",
+      "path": "train_BRK_1002.jpg",
+      "sha256": "845f8b86fd7245892bd38abfecdebbb909530eff8a9778bab452832622e172e6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1010.0,
+          2782.0,
+          1060.0,
+          2827.0
+        ],
+        [
+          2074.0,
+          2003.0,
+          2113.0,
+          2056.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1003",
+      "path": "train_BRK_1003.jpg",
+      "sha256": "6f26a530b2635e8315da19daddb33877c14a34ab2c64ffd77a523ffca40796ff",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1006.0,
+          2766.0,
+          1057.0,
+          2817.0
+        ],
+        [
+          2075.0,
+          1992.0,
+          2114.0,
+          2042.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1005",
+      "path": "train_BRK_1005.jpg",
+      "sha256": "5326fdc62f003364bd11046fc87f53e0aeeaee5bb0339e37415601d97a170207",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          989.0,
+          2768.0,
+          1041.0,
+          2826.0
+        ],
+        [
+          2036.0,
+          1995.0,
+          2081.0,
+          2052.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1006",
+      "path": "train_BRK_1006.jpg",
+      "sha256": "672109b43e5ee296ec9cf17b9f12be7a17398f54c925167e411f543b64fea37a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          992.0,
+          2771.0,
+          1043.0,
+          2828.0
+        ],
+        [
+          2034.0,
+          2007.0,
+          2090.0,
+          2053.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1008",
+      "path": "train_BRK_1008.jpg",
+      "sha256": "61ffe2b5f910e58792291bbd645f7604af3fb88431419c51df96e7468e3e134d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          988.0,
+          2773.0,
+          1043.0,
+          2827.0
+        ],
+        [
+          2037.0,
+          1995.0,
+          2070.0,
+          2050.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1009",
+      "path": "train_BRK_1009.jpg",
+      "sha256": "5b7a209113dd5111b1f23fba25be6fd8d35b61b1d715408f053f4194c9c5adf4",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1048.0,
+          2531.0,
+          1095.0,
+          2587.0
+        ],
+        [
+          2038.0,
+          1814.0,
+          2074.0,
+          1869.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1010",
+      "path": "train_BRK_1010.jpg",
+      "sha256": "f127903c20dfd6b49f24f6bd57f369c795cb0e69a5cc774f838c7fec7712173b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1079.0,
+          2573.0,
+          1123.0,
+          2638.0
+        ],
+        [
+          2053.0,
+          1921.0,
+          2094.0,
+          1961.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1011",
+      "path": "train_BRK_1011.jpg",
+      "sha256": "b02e3f32562f067e73bfc04a14ed5c22d6c8a37a0b00e3a68de5715ac2d2c241",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          943.0,
+          2492.0,
+          993.0,
+          2535.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1014",
+      "path": "train_BRK_1014.jpg",
+      "sha256": "c060674e01429d7f5d3c7f8d7b3ed8aa10b0951e95edff31afb2c555a7463f36",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          987.0,
+          2710.0,
+          1036.0,
+          2753.0
+        ],
+        [
+          2115.0,
+          1907.0,
+          2148.0,
+          1963.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1015",
+      "path": "train_BRK_1015.jpg",
+      "sha256": "5be1581290f1a889d6dcd3d496cbba1414b0b376588f105d4094c71e512fe73c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1008.0,
+          2837.0,
+          1056.0,
+          2883.0
+        ],
+        [
+          2120.0,
+          1987.0,
+          2153.0,
+          2044.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1016",
+      "path": "train_BRK_1016.jpg",
+      "sha256": "eae0315d589121a5438af3b01a5fbcc20396021d7fda9a9c9d24986c992f082e",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1016.0,
+          2798.0,
+          1068.0,
+          2844.0
+        ],
+        [
+          2117.0,
+          1956.0,
+          2155.0,
+          2014.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1018",
+      "path": "train_BRK_1018.jpg",
+      "sha256": "a3bbc74f62c7062567d7b3e4c02c0aa945f047d83bf99b34206fe2f833706f9a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1792.0,
+          2212.0,
+          1837.0,
+          2294.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1019",
+      "path": "train_BRK_1019.jpg",
+      "sha256": "4e0fe93083abe17249cba5cfb2e46cd8c0bac071d47c7fd2215e10f8612ecf9a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1784.0,
+          2216.0,
+          1830.0,
+          2299.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_1020",
+      "path": "train_BRK_1020.jpg",
+      "sha256": "9f5ae245dc26bbdd4b630770e02144001fb8db687e3fba96375e5022e6c1ea84",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1785.0,
+          2212.0,
+          1827.0,
+          2296.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2001",
+      "path": "train_BRK_2001.jpg",
+      "sha256": "82b2fa216ca9a04d2ab1a0045e63cb57f632be3da0b23282c39d168b94a2b1f0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2062.0,
+          1533.0,
+          2117.0,
+          1595.0
+        ],
+        [
+          1627.0,
+          1169.0,
+          1674.0,
+          1221.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2002",
+      "path": "train_BRK_2002.jpg",
+      "sha256": "dce5d8b520d5532f154fa5fc4f01df8d8edee55ae0be5aa010a9516aabbed6e7",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2364.0,
+          2174.0,
+          2413.0,
+          2248.0
+        ],
+        [
+          1830.0,
+          2103.0,
+          1871.0,
+          2150.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2003",
+      "path": "train_BRK_2003.jpg",
+      "sha256": "2edafbdb6a5dd47c79b6da71d4e11034d5044ebfa9c6d45650b5baf26b87e7e8",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2432.0,
+          2070.0,
+          2480.0,
+          2143.0
+        ],
+        [
+          1926.0,
+          2105.0,
+          1964.0,
+          2156.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2004",
+      "path": "train_BRK_2004.jpg",
+      "sha256": "518ca9adb0f9bf859911c5733dc368004c4c0aa01c8b603e6a5a5773dfd6e9d8",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2441.0,
+          2065.0,
+          2488.0,
+          2140.0
+        ],
+        [
+          1930.0,
+          2097.0,
+          1974.0,
+          2144.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2005",
+      "path": "train_BRK_2005.jpg",
+      "sha256": "e0c91aa0c2d8d258887133c76199c02f2d826acbc3c1dc01dc5def93725cf56a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2983.0,
+          2025.0,
+          3036.0,
+          2099.0
+        ],
+        [
+          2506.0,
+          2068.0,
+          2555.0,
+          2114.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2007",
+      "path": "train_BRK_2007.jpg",
+      "sha256": "45bf934b89e03368e6fdeb187029b6053569a45823e311f3112f845155aa802e",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2597.0,
+          1705.0,
+          2653.0,
+          1793.0
+        ],
+        [
+          2028.0,
+          1959.0,
+          2069.0,
+          2030.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2008",
+      "path": "train_BRK_2008.jpg",
+      "sha256": "8a32b497f16a376840e64559bc35f9283118cb636d5a5d5915e5dbec641451a5",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2614.0,
+          1709.0,
+          2666.0,
+          1792.0
+        ],
+        [
+          2039.0,
+          1958.0,
+          2082.0,
+          2028.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2011",
+      "path": "train_BRK_2011.jpg",
+      "sha256": "0e6104a61661205b752db0d14964898efcff5b8971381c7dff3a03028397ebbe",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1331.0,
+          1996.0,
+          1376.0,
+          2068.0
+        ],
+        [
+          1830.0,
+          1579.0,
+          1866.0,
+          1657.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2012",
+      "path": "train_BRK_2012.jpg",
+      "sha256": "12d39a457f4976fb35d172998049705c04a00c38c3a0d4b968292d0c9d364116",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1336.0,
+          1995.0,
+          1381.0,
+          2061.0
+        ],
+        [
+          1831.0,
+          1577.0,
+          1872.0,
+          1664.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2013",
+      "path": "train_BRK_2013.jpg",
+      "sha256": "4c47240e6f3ec0664cce0f412e8bc80d28635e8d31cd1b2891a61de1f696f5c2",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1342.0,
+          1990.0,
+          1387.0,
+          2058.0
+        ],
+        [
+          1846.0,
+          1582.0,
+          1885.0,
+          1650.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2015",
+      "path": "train_BRK_2015.jpg",
+      "sha256": "cc4846eb595d1fd4d7fb0eaaf3809e150cedaa3516adace05853c7e074c5ee32",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1348.0,
+          1987.0,
+          1392.0,
+          2056.0
+        ],
+        [
+          1869.0,
+          1576.0,
+          1908.0,
+          1652.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2016",
+      "path": "train_BRK_2016.jpg",
+      "sha256": "a7a32733f4edb7e79f143578012b4760b6fb94b98ad29417b70fd183d6ed66b6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1871.0,
+          1638.0,
+          1915.0,
+          1718.0
+        ],
+        [
+          1349.0,
+          1988.0,
+          1397.0,
+          2056.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2018",
+      "path": "train_BRK_2018.jpg",
+      "sha256": "b9a68bc148bb32b2ddc153520eb17c2b627378dd6ab96eb6962705d75773be14",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2443.0,
+          1834.0,
+          2495.0,
+          1878.0
+        ],
+        [
+          3317.0,
+          2289.0,
+          3380.0,
+          2338.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2021",
+      "path": "train_BRK_2021.jpg",
+      "sha256": "83e63a78618a6455a3d8501eac7196caf7eb23de0aa0965ff1e312866b07e31c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2022",
+      "path": "train_BRK_2022.jpg",
+      "sha256": "61402898344214171ed642fce4d08ce5c852611cb4fc911d603f4a8f79571b90",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2023",
+      "path": "train_BRK_2023.jpg",
+      "sha256": "e1d16e6df92450674e2b134e8d9d14013b1f45c4212f72071ad8e9c742a971a1",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2024",
+      "path": "train_BRK_2024.jpg",
+      "sha256": "36df05dfaa264d096a2bd109bc197bfb5a4780de1725f5e3656a3a8ec5f6e86e",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2026",
+      "path": "train_BRK_2026.jpg",
+      "sha256": "e1d4e98ec9332d665179db6e61a089dd3cfe714bd3565b118ba32e138059f433",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2027",
+      "path": "train_BRK_2027.jpg",
+      "sha256": "dc9ce4f359153a9ba389fa42c85b0e0193485760c806484d94f691220b66390d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1267,
+          872,
+          1326,
+          946
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2028",
+      "path": "train_BRK_2028.jpg",
+      "sha256": "73ad09ecf76a9c47ef291b884fe1f203e83c0dac82b4bade29b4fe5266b79238",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2058.0,
+          2003.0,
+          2111.0,
+          2047.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2029",
+      "path": "train_BRK_2029.jpg",
+      "sha256": "0768fc82b68a93591cc89ffbe517d993fe7990fc1e8a7da26e7b0fa8a0fc05b4",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2031",
+      "path": "train_BRK_2031.jpg",
+      "sha256": "10521b2c479fae1a3d832f2ab50151f6904d354216183f4c1232f0ecbf4b271e",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2032",
+      "path": "train_BRK_2032.jpg",
+      "sha256": "e74c62e9f516f4f23a585eb6dd6fbcdc1a27fe566b51e96e3d3e5656c62d4c33",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2036",
+      "path": "train_BRK_2036.jpg",
+      "sha256": "0c72bb3197428e0071eca38a3532c6ef713ff309f77e342b2af2e62b4e1adc9b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2069.0,
+          1938.0,
+          2116.0,
+          1982.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2037",
+      "path": "train_BRK_2037.jpg",
+      "sha256": "9daf8de463f33811549e3137b84237353fb8ebe56e7061ad358c7705b93304d0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2058.0,
+          1980.0,
+          2106.0,
+          2031.0
+        ],
+        [
+          2085.0,
+          2956.0,
+          2126.0,
+          3000.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2039",
+      "path": "train_BRK_2039.jpg",
+      "sha256": "da18cfcfa16b235195a238628a4bb7cc4a6782a8cad59ab639cb896a8be3e12b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1663.0,
+          1664.0,
+          1710.0,
+          1709.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2040",
+      "path": "train_BRK_2040.jpg",
+      "sha256": "bdcb8abab74af6b21a27299bd5b85287c33800c10a6ee1351315e5b4d84ebfbb",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1654.0,
+          1669.0,
+          1708.0,
+          1722.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2042",
+      "path": "train_BRK_2042.jpg",
+      "sha256": "cbda24c066b47c4cd1d974f8a88cc7c604c78dc0544631aa32ac7dd5edb018f6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1636.0,
+          1674.0,
+          1697.0,
+          1750.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2043",
+      "path": "train_BRK_2043.jpg",
+      "sha256": "cbbee2277b0a0e47367f757fdf235d668d3025055246d1983adb8d3a3c2d1858",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1633.0,
+          1681.0,
+          1693.0,
+          1759.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2044",
+      "path": "train_BRK_2044.jpg",
+      "sha256": "94f2ae13481359b15f2eed43b9c39428f5f1f5151ada53d8efc64285d0c720aa",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1626.0,
+          1674.0,
+          1686.0,
+          1759.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2045",
+      "path": "train_BRK_2045.jpg",
+      "sha256": "1a2d32780d3c1151fad406da82f5d9a9c6208cfcff124b230a072ddd8deb86e1",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1626.0,
+          1672.0,
+          1692.0,
+          1763.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2047",
+      "path": "train_BRK_2047.jpg",
+      "sha256": "8648c90e9c89493c9a511e33e41a7ffd27d255875b4edc303ec15338009202b0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1636.0,
+          1267.0,
+          1718.0,
+          1346.0
+        ],
+        [
+          518.0,
+          2150.0,
+          606.0,
+          2209.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2048",
+      "path": "train_BRK_2048.jpg",
+      "sha256": "a5edcc3caa32e474086674dcff68dc923097129b2b8b9d07ee85495cb3c7f997",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2143.0,
+          1214.0,
+          2221.0,
+          1302.0
+        ],
+        [
+          1389.0,
+          25.0,
+          1442.0,
+          117.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2049",
+      "path": "train_BRK_2049.jpg",
+      "sha256": "c57a1858711a84560b48c16e95819b5c871ebd623ad984655b0851df1fc945d0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2134.0,
+          1258.0,
+          2210.0,
+          1342.0
+        ],
+        [
+          1437.0,
+          2.0,
+          1507.0,
+          90.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2050",
+      "path": "train_BRK_2050.jpg",
+      "sha256": "e2f8b48bec3bd13af6b80d1a6a5180ee5d0e665df807f21c74dbea336af3e7d2",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          3516.0,
+          1494.0,
+          3619.0,
+          1538.0
+        ],
+        [
+          2072.0,
+          1759.0,
+          2167.0,
+          1819.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2053",
+      "path": "train_BRK_2053.jpg",
+      "sha256": "f72140477f84ba33c8aabc04f24066e3478ff1e7865fb24197d4dbadd5a179c5",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1955.0,
+          1788.0,
+          2057.0,
+          1848.0
+        ],
+        [
+          3643.0,
+          1603.0,
+          3742.0,
+          1676.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2054",
+      "path": "train_BRK_2054.jpg",
+      "sha256": "3c09cdc55435fae13a5b0df9e8b1f8bcda344f0fcb1d3d877b58a726b2751166",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1708.0,
+          1785.0,
+          1811.0,
+          1844.0
+        ],
+        [
+          3398.0,
+          1586.0,
+          3501.0,
+          1663.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2055",
+      "path": "train_BRK_2055.jpg",
+      "sha256": "8696ef9c3dedc697e9372e81a2dab4b5a7a5f35176e4070a24bd731db43dec52",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1713.0,
+          1781.0,
+          1823.0,
+          1837.0
+        ],
+        [
+          3392.0,
+          1578.0,
+          3490.0,
+          1658.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2056",
+      "path": "train_BRK_2056.jpg",
+      "sha256": "f79bb28dd1a8cdd205bebf7248938fcc8f09fe77933cad4c5850c60fe3273e3f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1719.0,
+          1771.0,
+          1813.0,
+          1825.0
+        ],
+        [
+          3396.0,
+          1562.0,
+          3490.0,
+          1639.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2057",
+      "path": "train_BRK_2057.jpg",
+      "sha256": "50b90ee68ff5d09a68fab39d2157215faed4d6f667d48c400ab605b6eb738d08",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1729.0,
+          1779.0,
+          1828.0,
+          1836.0
+        ],
+        [
+          3412.0,
+          1557.0,
+          3507.0,
+          1633.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2058",
+      "path": "train_BRK_2058.jpg",
+      "sha256": "e20c3e2da10bcce783be9bbd3c1bc54fa42f73e07180f4f5da2248f117bcd5eb",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1737.0,
+          1782.0,
+          1835.0,
+          1844.0
+        ],
+        [
+          3420.0,
+          1558.0,
+          3521.0,
+          1632.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2060",
+      "path": "train_BRK_2060.jpg",
+      "sha256": "28b46c1190153131233a2e1240d433a53a2f32a1694bba97eefcef93044aa003",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1650.0,
+          1158.0,
+          1699.0,
+          1248.0
+        ],
+        [
+          1893.0,
+          2816.0,
+          1977.0,
+          2909.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2061",
+      "path": "train_BRK_2061.jpg",
+      "sha256": "9ada1dfa0d0d0086852909c32dcd1c0f7e9c77d5b1e8c44af993cf401846a390",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1824.0,
+          149.0,
+          1912.0,
+          240.0
+        ],
+        [
+          2244.0,
+          1788.0,
+          2290.0,
+          1870.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2063",
+      "path": "train_BRK_2063.jpg",
+      "sha256": "3e2e45006cbe6865c2da92e3a839b3ef33850495c8d9b3ba2195f38ce20d690a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          901.0,
+          637.0,
+          1016.0,
+          698.0
+        ],
+        [
+          2337.0,
+          1509.0,
+          2408.0,
+          1579.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2064",
+      "path": "train_BRK_2064.jpg",
+      "sha256": "2e93502b86123f96b40e1c9a4933bb0223e285b0d87339af57225741d66dfba6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          904.0,
+          631.0,
+          1021.0,
+          691.0
+        ],
+        [
+          2335.0,
+          1506.0,
+          2406.0,
+          1576.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2065",
+      "path": "train_BRK_2065.jpg",
+      "sha256": "7cd99ef69e99d1290e681673db71fd94aecf59656041e25b2845816086ea8caf",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          899.0,
+          585.0,
+          1019.0,
+          640.0
+        ],
+        [
+          2339.0,
+          1499.0,
+          2413.0,
+          1572.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2066",
+      "path": "train_BRK_2066.jpg",
+      "sha256": "0ec9f294d757436521fc560acd7318a3e56a548ca76103641b4d4e067983412b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          820.0,
+          678.0,
+          924.0,
+          740.0
+        ],
+        [
+          2345.0,
+          1460.0,
+          2419.0,
+          1530.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2068",
+      "path": "train_BRK_2068.jpg",
+      "sha256": "c8f3b103c0c044a2df047dce82d709bd981cf8b2d725c3626cda9936d3676372",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2051.0,
+          1082.0,
+          2147.0,
+          1159.0
+        ],
+        [
+          752.0,
+          2187.0,
+          802.0,
+          2273.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2069",
+      "path": "train_BRK_2069.jpg",
+      "sha256": "eaaaa9aa7fe376f325e119767c1609d38b243c5360d8d6dcbec07c7a5033f11c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2048.0,
+          1069.0,
+          2144.0,
+          1149.0
+        ],
+        [
+          732.0,
+          2150.0,
+          798.0,
+          2212.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2071",
+      "path": "train_BRK_2071.jpg",
+      "sha256": "a97a1be6d9f101078dd41a09d2e8efee1489f0596086175d6024419afe5a9791",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1900.0,
+          1032.0,
+          1986.0,
+          1129.0
+        ],
+        [
+          1017.0,
+          2473.0,
+          1076.0,
+          2554.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2072",
+      "path": "train_BRK_2072.jpg",
+      "sha256": "610b94f4dbb7cd524c1ac0a267b206233493d55563cf1fecb501ea94eac2ce73",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1867.0,
+          1208.0,
+          1904.0,
+          1254.0
+        ],
+        [
+          1021.0,
+          2043.0,
+          1073.0,
+          2078.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2074",
+      "path": "train_BRK_2074.jpg",
+      "sha256": "76e1360bfe8c3dd4b5c251922c9f9cdea2d09a1569782b0fb8a2caa38118e4ab",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1498.0,
+          1581.0,
+          1538.0,
+          1610.0
+        ],
+        [
+          1139.0,
+          1971.0,
+          1177.0,
+          2006.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2075",
+      "path": "train_BRK_2075.jpg",
+      "sha256": "fe153fdc5233ea502c7e479b5adcb299579d26728747127b93cc344001d9b7e5",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          635.0,
+          1811.0,
+          686.0,
+          1843.0
+        ],
+        [
+          550.0,
+          1961.0,
+          600.0,
+          2003.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2077",
+      "path": "train_BRK_2077.jpg",
+      "sha256": "2f4077eb00ff8be24b47733e72e32ea8bc324f01c5c83b4c0341ab69810605b4",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          117.0,
+          1944.0,
+          174.0,
+          1980.0
+        ],
+        [
+          92.0,
+          1923.0,
+          146.0,
+          1958.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2078",
+      "path": "train_BRK_2078.jpg",
+      "sha256": "1c2ce9617ad396e01687b98317917c3889b2d9a065e8784ff10904d0f4a6e2cd",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2079",
+      "path": "train_BRK_2079.jpg",
+      "sha256": "534771e6643ae26d38e520a332768056a3ee9822f7308a0d2a059fce8614ad0d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2080",
+      "path": "train_BRK_2080.jpg",
+      "sha256": "fd09f06a0e121acfcb13068fee0edb8a350c46d0b214bd5c3106c53d15061cc0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2081",
+      "path": "train_BRK_2081.jpg",
+      "sha256": "e863f8540272b9b019c9f7d4dbe594fb85fd22da7d2080d028c071994ec34870",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2082",
+      "path": "train_BRK_2082.jpg",
+      "sha256": "dccd731a7820dc182e94ad5de506326c9b9edef062ced0aab3d736a181ad4bfa",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2084",
+      "path": "train_BRK_2084.jpg",
+      "sha256": "8aa760230f0df13356311d2b9523d75b5913bc55cf866529b87eb275af2c8c29",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2085",
+      "path": "train_BRK_2085.jpg",
+      "sha256": "29c9d7c9f3ba0bf5a32b157ddbab94dd0f88f1a2ebb5e2b41291b777aff8e4d9",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2272.0,
+          2318.0,
+          2322.0,
+          2368.0
+        ],
+        [
+          2453.0,
+          2428.0,
+          2512.0,
+          2493.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2090",
+      "path": "train_BRK_2090.jpg",
+      "sha256": "829ce6346ca28b3b6a380e5860d4ee3f37f71c5d09e53241400718e8780f4641",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2092",
+      "path": "train_BRK_2092.jpg",
+      "sha256": "5c36bf1b131af85eba0d21b80fdce1e399242bb2f2ed61019494a35df15007e6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2579.0,
+          1011.0,
+          2659.0,
+          1080.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2093",
+      "path": "train_BRK_2093.jpg",
+      "sha256": "977913225e75cd0bb4dbd94f786b054faac23792304b062cecc77f9ab0d72670",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2593.0,
+          1020.0,
+          2665.0,
+          1082.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2094",
+      "path": "train_BRK_2094.jpg",
+      "sha256": "708a3f1f8a80d430be82e544078875cf5a760055561c6d67a339b5bf10c7d364",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2952.0,
+          1038.0,
+          3016.0,
+          1101.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2096",
+      "path": "train_BRK_2096.jpg",
+      "sha256": "4a3d496ba81f6b6dca8418c4a96ce968448ec850737d471f5aa2ba9f6ca3b66d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2931.0,
+          1092.0,
+          3007.0,
+          1160.0
+        ],
+        [
+          2729.0,
+          2444.0,
+          2815.0,
+          2543.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2097",
+      "path": "train_BRK_2097.jpg",
+      "sha256": "e63fa26217b893d0a4f54475b0c9246c44c4af4304d4e6a9cf948f65c5227323",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2929.0,
+          1094.0,
+          3002.0,
+          1160.0
+        ],
+        [
+          2733.0,
+          2449.0,
+          2814.0,
+          2544.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2098",
+      "path": "train_BRK_2098.jpg",
+      "sha256": "0fedf08c8772e005a22f6d5a84d272d9e0256be865d666c32b067a24f659a99f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2523.0,
+          1024.0,
+          2594.0,
+          1100.0
+        ],
+        [
+          2289.0,
+          2384.0,
+          2361.0,
+          2479.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2100",
+      "path": "train_BRK_2100.jpg",
+      "sha256": "c8f9f7c980ddc5787cc65db0c646296fc5a9c4e909f9c1378918c0de93ae2e35",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2538.0,
+          1040.0,
+          2608.0,
+          1100.0
+        ],
+        [
+          2080.0,
+          2475.0,
+          2172.0,
+          2655.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2101",
+      "path": "train_BRK_2101.jpg",
+      "sha256": "441a9953fd30a3e6428903c1953198ea0cc54d09bd81fc7504be2478e7910a93",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2396.0,
+          730.0,
+          2489.0,
+          779.0
+        ],
+        [
+          2119.0,
+          2117.0,
+          2207.0,
+          2297.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2102",
+      "path": "train_BRK_2102.jpg",
+      "sha256": "b985109bffb943a81e08d70d55e56020659358f30a4944232af9e66128f3b4fc",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2261,
+          994,
+          2371,
+          1087
+        ],
+        [
+          2104,
+          2413,
+          2230,
+          2618
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2103",
+      "path": "train_BRK_2103.jpg",
+      "sha256": "f708daa5e8858bcfa164887cff136c27d27a186597f41ba4bedccc29ef3f0d90",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2252.0,
+          1023.0,
+          2323.0,
+          1080.0
+        ],
+        [
+          2106.0,
+          2436.0,
+          2202.0,
+          2626.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2104",
+      "path": "train_BRK_2104.jpg",
+      "sha256": "97a9cb8699619a93bb18b6bd65f3d41b20fa27a10d486db28dde167a4b822c1c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2248.0,
+          1088.0,
+          2310.0,
+          1139.0
+        ],
+        [
+          2099.0,
+          2334.0,
+          2179.0,
+          2496.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2106",
+      "path": "train_BRK_2106.jpg",
+      "sha256": "54953ceea840e9e6c03dd90171993235d65316d8ca8e214734c7da2ef2b62cf1",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2252.0,
+          1073.0,
+          2319.0,
+          1128.0
+        ],
+        [
+          2111.0,
+          2340.0,
+          2196.0,
+          2504.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2107",
+      "path": "train_BRK_2107.jpg",
+      "sha256": "5e30bb94f4dc2b9a0e6a8923ea0efcd3537bfad9d92f38ac8e8cbba51229eb6b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2256.0,
+          1074.0,
+          2320.0,
+          1126.0
+        ],
+        [
+          2107.0,
+          2346.0,
+          2191.0,
+          2501.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2108",
+      "path": "train_BRK_2108.jpg",
+      "sha256": "7969f1f1e684a52ef659437d398a3cb9abf17a14d7aeef5bb8c3fc3450055a04",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2390.0,
+          1065.0,
+          2465.0,
+          1129.0
+        ],
+        [
+          2269.0,
+          2346.0,
+          2349.0,
+          2500.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2110",
+      "path": "train_BRK_2110.jpg",
+      "sha256": "30aa56858652724d4f18e36d929d6f1e2865466fdec77eadcc39d3eb1e58ae3c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1676.0,
+          532.0,
+          1756.0,
+          688.0
+        ],
+        [
+          1423.0,
+          1885.0,
+          1502.0,
+          1929.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2111",
+      "path": "train_BRK_2111.jpg",
+      "sha256": "8f20c03ab6124782b5d61e7d2d4a3ff13062d1ccc7dfb44ae20670a8bd85265e",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1310.0,
+          1620.0,
+          1382.0,
+          1685.0
+        ],
+        [
+          2085.0,
+          513.0,
+          2158.0,
+          659.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2112",
+      "path": "train_BRK_2112.jpg",
+      "sha256": "66fb812cce247605888bec824a49394a78c3efa5532e2f7ce27f3c2894d1a070",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2412.0,
+          652.0,
+          2518.0,
+          796.0
+        ],
+        [
+          1321.0,
+          1363.0,
+          1378.0,
+          1435.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2114",
+      "path": "train_BRK_2114.jpg",
+      "sha256": "e34027d713a87834e145a47e315848463486b1debfc7e80bf1c7a3d05fc7e939",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2783.0,
+          1157.0,
+          2922.0,
+          1236.0
+        ],
+        [
+          1510.0,
+          1025.0,
+          1582.0,
+          1109.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2116",
+      "path": "train_BRK_2116.jpg",
+      "sha256": "ad805fa6c1f42e581f84c7018eb2d0a5272f7cbe3ab632698bfcdd74d08269d3",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2791.0,
+          1149.0,
+          2865.0,
+          1228.0
+        ],
+        [
+          1497.0,
+          1034.0,
+          1576.0,
+          1119.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2120",
+      "path": "train_BRK_2120.jpg",
+      "sha256": "da52db5db7143ab17999849a8a703bccc6ca711ea7dd61b3e0b684ecb28028b3",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2837.0,
+          632.0,
+          2899.0,
+          700.0
+        ],
+        [
+          1506.0,
+          576.0,
+          1563.0,
+          651.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2122",
+      "path": "train_BRK_2122.jpg",
+      "sha256": "cc333c2036d5aa64fca8887ac133288cd0fa117e298973f8a05ceb137419451c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2756.0,
+          749.0,
+          2829.0,
+          846.0
+        ],
+        [
+          1460.0,
+          673.0,
+          1509.0,
+          746.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2123",
+      "path": "train_BRK_2123.jpg",
+      "sha256": "05eda9b81c6b7b285251af5895465a52bf9035c418a38878e6fedc601c041e62",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2759.0,
+          749.0,
+          2827.0,
+          844.0
+        ],
+        [
+          1462.0,
+          670.0,
+          1512.0,
+          743.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2125",
+      "path": "train_BRK_2125.jpg",
+      "sha256": "d495b4b1764364f91172cce404af157295351b122d5fdedb2d81b8390c91dcaf",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1412.0,
+          661.0,
+          1480.0,
+          733.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2126",
+      "path": "train_BRK_2126.jpg",
+      "sha256": "993c56ef9430c1a522f2faeb5db420da9ed11bf233e5cd35c7e4f1c9cdf5322d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2128",
+      "path": "train_BRK_2128.jpg",
+      "sha256": "a0f4ee97c8fcb4f9025831d55242f93496c7b1ba954e621ec0e7236f113065a2",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2129",
+      "path": "train_BRK_2129.jpg",
+      "sha256": "8d783cd0b458c143ce9b5dd0a0c648a675bfb8d08c19bb8b4d9c1530fe5535d5",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2130",
+      "path": "train_BRK_2130.jpg",
+      "sha256": "6a77a5a7f8281ec55dfd8ad931b6b5cdbd4bc462195249096e3168dd072776fb",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2132",
+      "path": "train_BRK_2132.jpg",
+      "sha256": "82608211b5b62e30f18083b95a5f8c03e9ff0e73d9cea249bf30771c0e353840",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2134",
+      "path": "train_BRK_2134.jpg",
+      "sha256": "9dee5f23c52b2d91bdfe15c359fe7cc97d6f41ab34467c87e75d91486f47530c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2138",
+      "path": "train_BRK_2138.jpg",
+      "sha256": "5dc51d7a17bded3c7a65967543cc1aeb4e5e29dc667340d5f4e49e506ecc8223",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_BRK_2139",
+      "path": "train_BRK_2139.jpg",
+      "sha256": "e24a86654e3ab9f15bcf35d9e3c05b8d836047041b32e0bd98d98604f401c2a6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3002",
+      "path": "train_MED_3002.jpg",
+      "sha256": "e4394af88e45ce4a86ecf721f3cccdfd8efebb507251446d5c89c6f458f8c316",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1913.0,
+          2412.0,
+          1949.0,
+          2454.0
+        ],
+        [
+          1974.0,
+          2593.0,
+          2009.0,
+          2644.0
+        ],
+        [
+          1523.0,
+          1237.0,
+          1562.0,
+          1278.0
+        ],
+        [
+          1569.0,
+          1230.0,
+          1596.0,
+          1271.0
+        ],
+        [
+          1424.0,
+          141.0,
+          1470.0,
+          233.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3003",
+      "path": "train_MED_3003.jpg",
+      "sha256": "69f0e5f5d06da0b6558b347bd07cb212bc43b8d94b5e1987df043a6b77bb193c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1890.0,
+          280.0,
+          1935.0,
+          351.0
+        ],
+        [
+          1497.0,
+          1431.0,
+          1547.0,
+          1467.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3004",
+      "path": "train_MED_3004.jpg",
+      "sha256": "18b96e2f7cb812bb668ce60280501324fbf2ac43a522e6fdf428c47ded8b184a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1654.0,
+          2199.0,
+          1702.0,
+          2247.0
+        ],
+        [
+          1603.0,
+          2207.0,
+          1652.0,
+          2257.0
+        ],
+        [
+          2271.0,
+          976.0,
+          2340.0,
+          1072.0
+        ],
+        [
+          1751.0,
+          984.0,
+          1812.0,
+          1034.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3006",
+      "path": "train_MED_3006.jpg",
+      "sha256": "432fb3b3ac3e7f6ae2f708bb49b2c9abe4fb2033260d2b10e3eda2d262fc0cac",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2276.0,
+          978.0,
+          2343.0,
+          1073.0
+        ],
+        [
+          1760.0,
+          991.0,
+          1820.0,
+          1035.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3007",
+      "path": "train_MED_3007.jpg",
+      "sha256": "15e2b841d34c82edc1669909677272cd43d022c75e84801210d9af5e693bd84a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2297.0,
+          1582.0,
+          2367.0,
+          1680.0
+        ],
+        [
+          1724.0,
+          1553.0,
+          1796.0,
+          1601.0
+        ],
+        [
+          1587.0,
+          2658.0,
+          1631.0,
+          2704.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3008",
+      "path": "train_MED_3008.jpg",
+      "sha256": "499d1fd56507865ce022490b1802d4a25b00d4d096b54d4c62759cc912246468",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2326.0,
+          2295.0,
+          2403.0,
+          2399.0
+        ],
+        [
+          1686.0,
+          2220.0,
+          1761.0,
+          2264.0
+        ],
+        [
+          2339.0,
+          120.0,
+          2396.0,
+          223.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3010",
+      "path": "train_MED_3010.jpg",
+      "sha256": "1b958eacf4c0a113076d52778a00bab64f87ab0049b5ce0a2f28ecb46f69f584",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2284.0,
+          2662.0,
+          2362.0,
+          2757.0
+        ],
+        [
+          1691.0,
+          2562.0,
+          1762.0,
+          2604.0
+        ],
+        [
+          2428.0,
+          371.0,
+          2475.0,
+          456.0
+        ],
+        [
+          2451.0,
+          1.0,
+          2502.0,
+          117.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3011",
+      "path": "train_MED_3011.jpg",
+      "sha256": "e29cd54572875bcd9585424a56a3e03bcecd4142095289c00cedc3392ebaf7c2",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2383.0,
+          114.0,
+          2426.0,
+          235.0
+        ],
+        [
+          2423.0,
+          213.0,
+          2469.0,
+          329.0
+        ],
+        [
+          2529.0,
+          553.0,
+          2574.0,
+          646.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3012",
+      "path": "train_MED_3012.jpg",
+      "sha256": "602e9443d604f1e305859fccc7f71c52e90440994dee740406b3a7ed7a497930",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2405.0,
+          519.0,
+          2458.0,
+          626.0
+        ],
+        [
+          2502.0,
+          830.0,
+          2546.0,
+          914.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3014",
+      "path": "train_MED_3014.jpg",
+      "sha256": "f37db56da359e71cb6ec84018d92234a0e163329fcaa1dce8b58c5e3b65814f5",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2033.0,
+          911.0,
+          2075.0,
+          990.0
+        ],
+        [
+          2081.0,
+          631.0,
+          2129.0,
+          706.0
+        ],
+        [
+          2127.0,
+          547.0,
+          2179.0,
+          662.0
+        ],
+        [
+          2207.0,
+          185.0,
+          2255.0,
+          296.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3015",
+      "path": "train_MED_3015.jpg",
+      "sha256": "4f783fa65359187252682c4eaabdef075af508a604be5efb327f7ae8070eccef",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2090.0,
+          1146.0,
+          2156.0,
+          1241.0
+        ],
+        [
+          2178.0,
+          1014.0,
+          2238.0,
+          1115.0
+        ],
+        [
+          2060.0,
+          930.0,
+          2110.0,
+          1017.0
+        ],
+        [
+          1998.0,
+          1401.0,
+          2036.0,
+          1480.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3016",
+      "path": "train_MED_3016.jpg",
+      "sha256": "75d3c0640571073976211a7d8abebd8ea6a7d69b6442efda47afe83228dacf56",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2083.0,
+          1414.0,
+          2130.0,
+          1494.0
+        ],
+        [
+          2022.0,
+          1222.0,
+          2086.0,
+          1312.0
+        ],
+        [
+          2239.0,
+          1119.0,
+          2308.0,
+          1242.0
+        ],
+        [
+          2352.0,
+          901.0,
+          2410.0,
+          1013.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3017",
+      "path": "train_MED_3017.jpg",
+      "sha256": "c3c1de67261c460a002aa2b1f28082baa974f014104525ac94a62f32c446712d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2148.0,
+          2395.0,
+          2206.0,
+          2475.0
+        ],
+        [
+          2000.0,
+          2360.0,
+          2079.0,
+          2441.0
+        ],
+        [
+          2383.0,
+          1983.0,
+          2480.0,
+          2117.0
+        ],
+        [
+          2367.0,
+          1764.0,
+          2444.0,
+          1880.0
+        ],
+        [
+          2322.0,
+          902.0,
+          2387.0,
+          1031.0
+        ],
+        [
+          2203.0,
+          224.0,
+          2264.0,
+          342.0
+        ],
+        [
+          2292.0,
+          17.0,
+          2360.0,
+          180.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3018",
+      "path": "train_MED_3018.jpg",
+      "sha256": "b8f4a37cb92eb960c07acbed2a5ebe8083705001524eec9403d75abba418120a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2220.0,
+          2432.0,
+          2281.0,
+          2496.0
+        ],
+        [
+          2002.0,
+          2422.0,
+          2074.0,
+          2509.0
+        ],
+        [
+          2369.0,
+          1956.0,
+          2459.0,
+          2091.0
+        ],
+        [
+          2369.0,
+          1731.0,
+          2450.0,
+          1839.0
+        ],
+        [
+          2340.0,
+          1040.0,
+          2406.0,
+          1162.0
+        ],
+        [
+          2246.0,
+          174.0,
+          2301.0,
+          332.0
+        ],
+        [
+          2297.0,
+          58.0,
+          2357.0,
+          218.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3020",
+      "path": "train_MED_3020.jpg",
+      "sha256": "0899a0c4a59acc3cf68435990e627a25070b85b72befab0e425ae6d20c7a45d0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2221.0,
+          1017.0,
+          2300.0,
+          1178.0
+        ],
+        [
+          2282.0,
+          1258.0,
+          2361.0,
+          1410.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3021",
+      "path": "train_MED_3021.jpg",
+      "sha256": "099ff71649553c3c81ff28099628c0490d369382c809d9e5f976142bd3fe67ea",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2223.0,
+          1551.0,
+          2315.0,
+          1698.0
+        ],
+        [
+          2277.0,
+          1888.0,
+          2359.0,
+          1998.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3022",
+      "path": "train_MED_3022.jpg",
+      "sha256": "92cedfabb4db6b6f75f68cde08f2cc397d7e51f281313e8007356a46e3fd1bf2",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2158.0,
+          1823.0,
+          2230.0,
+          1955.0
+        ],
+        [
+          2211,
+          2356,
+          2295,
+          2457
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3023",
+      "path": "train_MED_3023.jpg",
+      "sha256": "717c2cd98ff8ff58afcaeb4d4a8351e8b9f4712742de4ea3b5b9b71366641bf6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2147.0,
+          2723.0,
+          2242.0,
+          2829.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3024",
+      "path": "train_MED_3024.jpg",
+      "sha256": "bcc8661b21f5ae69e8867c707a074a8b5d2a14dec43d6f1bb192c5397ab89be9",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3025",
+      "path": "train_MED_3025.jpg",
+      "sha256": "6f882927ea9a97ba342274983e5c07a6c5b0b6f28ad1215ca00d1abf264273a3",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3027",
+      "path": "train_MED_3027.jpg",
+      "sha256": "f01880ced82e7dad0251da0298e6806fa78a2644b03c21d4b6f85974cd092f01",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1660.0,
+          606.0,
+          1733.0,
+          698.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3028",
+      "path": "train_MED_3028.jpg",
+      "sha256": "3fadbdea819e0d0b367ecb0c0694941564f1d6a07b87f7c033ccb7b74bf53a23",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          697.0,
+          1183.0,
+          792.0,
+          1294.0
+        ],
+        [
+          744.0,
+          1052.0,
+          837.0,
+          1151.0
+        ],
+        [
+          967.0,
+          754.0,
+          1051.0,
+          872.0
+        ],
+        [
+          1126.0,
+          525.0,
+          1180.0,
+          627.0
+        ],
+        [
+          826,
+          880,
+          944,
+          1020
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3029",
+      "path": "train_MED_3029.jpg",
+      "sha256": "a76cd83ce1bdc5bdfcef4d7bffec273b0a432db42dd471edbd9f6517f2ace6e6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          381.0,
+          2363.0,
+          493.0,
+          2441.0
+        ],
+        [
+          493.0,
+          1961.0,
+          604.0,
+          2045.0
+        ],
+        [
+          216.0,
+          2059.0,
+          346.0,
+          2140.0
+        ],
+        [
+          662.0,
+          1728.0,
+          758.0,
+          1828.0
+        ],
+        [
+          857.0,
+          1437.0,
+          933.0,
+          1539.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3030",
+      "path": "train_MED_3030.jpg",
+      "sha256": "29802adaae357ad8e46bbbeb4ce094420f32d4f889995702da1a149df3dffe24",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          326.0,
+          1556.0,
+          462.0,
+          1638.0
+        ],
+        [
+          377.0,
+          1204.0,
+          491.0,
+          1287.0
+        ],
+        [
+          437.0,
+          994.0,
+          563.0,
+          1074.0
+        ],
+        [
+          523.0,
+          603.0,
+          628.0,
+          689.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3031",
+      "path": "train_MED_3031.jpg",
+      "sha256": "ae96ea6841573b8a5ce6358ca4e9ba75bbc927e3e5abd9a160bb6ea21eb0f231",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          237.0,
+          2501.0,
+          381.0,
+          2609.0
+        ],
+        [
+          370.0,
+          2407.0,
+          493.0,
+          2524.0
+        ],
+        [
+          388.0,
+          2181.0,
+          521.0,
+          2310.0
+        ],
+        [
+          321.0,
+          1780.0,
+          449.0,
+          1872.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3032",
+      "path": "train_MED_3032.jpg",
+      "sha256": "de9096e4d8b40360a6d898c09a20b48fc7ef42a7bf41613178b95dfcddd6f7ce",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3034",
+      "path": "train_MED_3034.jpg",
+      "sha256": "43d9ad5593a2200240483552a2d9347dceb7e666e4de47cf02fda277e4a65edc",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1538.0,
+          823.0,
+          1613.0,
+          888.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3035",
+      "path": "train_MED_3035.jpg",
+      "sha256": "6cc0cd9b512ce957d9b7aec22b0f54844f7e5f4d842fb540cb8d18de853af633",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1514.0,
+          830.0,
+          1575.0,
+          903.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3036",
+      "path": "train_MED_3036.jpg",
+      "sha256": "bf209657073132bc6523c524ce31159fbbeb0cfc42c1d96ab20421f87b3f2eec",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1499.0,
+          728.0,
+          1569.0,
+          797.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3038",
+      "path": "train_MED_3038.jpg",
+      "sha256": "002ba19a94917848ec8e7d2ea0cb1b966826e303d1c8c0468ef91cb3e5daaf89",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1271.0,
+          2527.0,
+          1334.0,
+          2587.0
+        ],
+        [
+          1535.0,
+          589.0,
+          1581.0,
+          648.0
+        ],
+        [
+          1446.0,
+          1015.0,
+          1488.0,
+          1071.0
+        ],
+        [
+          1511.0,
+          988.0,
+          1546.0,
+          1039.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3039",
+      "path": "train_MED_3039.jpg",
+      "sha256": "ee94ac3ba71ce15866e376100a4b374f537883f4b4dc3c34e62eafb57db6984a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1246.0,
+          616.0,
+          1292.0,
+          668.0
+        ],
+        [
+          1832.0,
+          769.0,
+          1889.0,
+          812.0
+        ],
+        [
+          1333.0,
+          1873.0,
+          1383.0,
+          1924.0
+        ],
+        [
+          1323.0,
+          1952.0,
+          1376.0,
+          2004.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3041",
+      "path": "train_MED_3041.jpg",
+      "sha256": "a0e5e2d8554c18ecb751d1557773e8b7d54e50e853d632355185ca3a3306af1f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1292.0,
+          2865.0,
+          1342.0,
+          2953.0
+        ],
+        [
+          1312.0,
+          2952.0,
+          1354.0,
+          3000.0
+        ],
+        [
+          1421.0,
+          1530.0,
+          1466.0,
+          1561.0
+        ],
+        [
+          1758.0,
+          1275.0,
+          1797.0,
+          1311.0
+        ],
+        [
+          1200.0,
+          1203.0,
+          1247.0,
+          1249.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3042",
+      "path": "train_MED_3042.jpg",
+      "sha256": "345975c0767660a4b3b2e3bc3cdf4420bc7859085dd217c11547486bcb091d10",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1134.0,
+          1211.0,
+          1234.0,
+          1259.0
+        ],
+        [
+          1446.0,
+          1376.0,
+          1492.0,
+          1416.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3044",
+      "path": "train_MED_3044.jpg",
+      "sha256": "e04d4fb48d80acb662cac8a31060c184a2357bcc357b8a5ac9da88535c1996e3",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          835.0,
+          1792.0,
+          967.0,
+          1860.0
+        ],
+        [
+          1220.0,
+          1227.0,
+          1281.0,
+          1274.0
+        ],
+        [
+          1632.0,
+          1101.0,
+          1670.0,
+          1146.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3045",
+      "path": "train_MED_3045.jpg",
+      "sha256": "45356596459c68c5b5cae4ac4bcd068a659ed46882eccb052689a79a3e4e0043",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          754.0,
+          2411.0,
+          888.0,
+          2489.0
+        ],
+        [
+          1154.0,
+          1676.0,
+          1212.0,
+          1729.0
+        ],
+        [
+          1559.0,
+          1666.0,
+          1610.0,
+          1707.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3048",
+      "path": "train_MED_3048.jpg",
+      "sha256": "789c28c488c6b73e73fd86c1007caeb4a2d9a1002130ec705880fc90b8221dc0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          902.0,
+          2637.0,
+          967.0,
+          2709.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3049",
+      "path": "train_MED_3049.jpg",
+      "sha256": "479a32c2fc1700fff2cc57aec3dd5a204feefb3e69f865372b7b024aab1bc2fa",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3051",
+      "path": "train_MED_3051.jpg",
+      "sha256": "7aad577602fe60c1bfd68dd09e31bd1d07d4a74961d64f3c197a87c840ac1bcf",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          428.0,
+          875.0,
+          480.0,
+          909.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3052",
+      "path": "train_MED_3052.jpg",
+      "sha256": "6d6b93bb28530b6e883ff087d1927f80a6c0e5d16355eabe2c06558247ac2b42",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3054",
+      "path": "train_MED_3054.jpg",
+      "sha256": "6f9afddad98bdba148f1abb6331994171bb9e5386d9c0a6e44e26e054d8cfc9d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3055",
+      "path": "train_MED_3055.jpg",
+      "sha256": "89068f4b979693cedd3b5dbd252319cb5de058888ae35029d1902045615370e3",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3057",
+      "path": "train_MED_3057.jpg",
+      "sha256": "855fbc0b2fb5b67ade4218646e1ac3c3839224b040432af22f9c441ce7edaa2b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3060",
+      "path": "train_MED_3060.jpg",
+      "sha256": "68947b20aa11d2b7c5fa9057d3deb7b11471d44d8d1800af911423b27295841d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          783.0,
+          1674.0,
+          850.0,
+          1707.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3061",
+      "path": "train_MED_3061.jpg",
+      "sha256": "0f7d9e573fb871f0cf29455874f37d11d8341540d874584aada0b6e98c9d90b6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3062",
+      "path": "train_MED_3062.jpg",
+      "sha256": "bffb01e2541e57446956e36e22299ac283123bdc96c9aade9570923cc70a79cf",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          766.0,
+          998.0,
+          831.0,
+          1045.0
+        ],
+        [
+          2724.0,
+          168.0,
+          2774.0,
+          228.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3064",
+      "path": "train_MED_3064.jpg",
+      "sha256": "dfcdb9aaa76687f3a97059fccb00725fe5848b76b97328359aca6b40e75b88fb",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          3430.0,
+          2220.0,
+          3496.0,
+          2274.0
+        ],
+        [
+          3656.0,
+          2058.0,
+          3730.0,
+          2122.0
+        ],
+        [
+          1259.0,
+          1268.0,
+          1308.0,
+          1314.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3065",
+      "path": "train_MED_3065.jpg",
+      "sha256": "0a665c57ea6029a2e005a05305935105f2c956c9944683c7d7f81ae8c5d9210b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1926.0,
+          753.0,
+          1975.0,
+          810.0
+        ],
+        [
+          2062.0,
+          1159.0,
+          2105.0,
+          1209.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3067",
+      "path": "train_MED_3067.jpg",
+      "sha256": "0160a06e5579b365b03121e1227ba6177a23632e3fecb1122c9ed430de79a64a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2230.0,
+          1040.0,
+          2283.0,
+          1185.0
+        ],
+        [
+          1900.0,
+          2101.0,
+          1948.0,
+          2151.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3068",
+      "path": "train_MED_3068.jpg",
+      "sha256": "cc699a8d71bce5c58d8aef62e52a9d1d6c0cdc9a8c9b1975afaf47093b938b14",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2237.0,
+          1063.0,
+          2295.0,
+          1213.0
+        ],
+        [
+          1905.0,
+          2123.0,
+          1957.0,
+          2173.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3070",
+      "path": "train_MED_3070.jpg",
+      "sha256": "42c11088fab7228b9e7ebb944ddccb21f8d1ff13e0e3d17f89c4d6d056aebb6f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2223.0,
+          1739.0,
+          2278.0,
+          1876.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_3071",
+      "path": "train_MED_3071.jpg",
+      "sha256": "67bb1cd3c725c05cb52fd2af876a16eb7806e3a80479bcc55a9bc61512ab69b4",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2243.0,
+          2516.0,
+          2298.0,
+          2642.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4002",
+      "path": "train_MED_4002.jpg",
+      "sha256": "bf5dad88a3389918e1cf8379e138a95373d351800aa2daec7a12d110ec5d47b6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1942,
+          864,
+          2073,
+          1187
+        ],
+        [
+          2074,
+          870,
+          2168,
+          1177
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4003",
+      "path": "train_MED_4003.jpg",
+      "sha256": "44cf9a353c155e1c940ec4f4b717f26d0e51602eb11243c98c52a83520e29c6f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1745,
+          932,
+          1958,
+          1446
+        ],
+        [
+          1949,
+          959,
+          2155,
+          1410
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4004",
+      "path": "train_MED_4004.jpg",
+      "sha256": "31314f0a282196babf977cd9ebd062ac0d3107ced42300f40795736e55966dd2",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1782,
+          920,
+          1971,
+          1420
+        ],
+        [
+          1962,
+          921,
+          2143,
+          1375
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4006",
+      "path": "train_MED_4006.jpg",
+      "sha256": "4d6b284fb218e5fc5bb939595758197242594b6cce65f8b2320410c2965e8cc6",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1751,
+          1050,
+          1934,
+          1567
+        ],
+        [
+          1935,
+          1057,
+          2121,
+          1499
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4007",
+      "path": "train_MED_4007.jpg",
+      "sha256": "9d1f4fd454a6c21ee184e0584b48caef56de05cd81c64dbadb5d9fffaddc9b43",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2359,
+          811,
+          2464,
+          929
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4009",
+      "path": "train_MED_4009.jpg",
+      "sha256": "262a0545d500d3c3b805d74ec0287b9fe133511c0c94051bd52fb17fd64465ba",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          450.0,
+          282.0,
+          514.0,
+          374.0
+        ],
+        [
+          1572.0,
+          1062.0,
+          1615.0,
+          1153.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4010",
+      "path": "train_MED_4010.jpg",
+      "sha256": "2c0d081342b5e0170a8a1639f8ad6fedfbc13b5d9efdfabb2f67e8f5a390447a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1694.0,
+          2.0,
+          1730.0,
+          86.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4012",
+      "path": "train_MED_4012.jpg",
+      "sha256": "545dba0d137a92b0bf6ee38f575b63add76a3c1347c6e1eac756c3e6bdf38bc9",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          608.0,
+          103.0,
+          669.0,
+          191.0
+        ],
+        [
+          1684.0,
+          822.0,
+          1733.0,
+          912.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4013",
+      "path": "train_MED_4013.jpg",
+      "sha256": "30607b682e3495f606fe7af7a76a40eeb4b352de0ad5b98bb231cabf52451766",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          481.0,
+          603.0,
+          551.0,
+          706.0
+        ],
+        [
+          1723.0,
+          1461.0,
+          1781.0,
+          1548.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4015",
+      "path": "train_MED_4015.jpg",
+      "sha256": "e57dd33c2aec05f59276889751e7676978388e906f1bcd62ad8b9d833438c46f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          379.0,
+          1505.0,
+          463.0,
+          1642.0
+        ],
+        [
+          1922.0,
+          2666.0,
+          1983.0,
+          2738.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4016",
+      "path": "train_MED_4016.jpg",
+      "sha256": "5288a4c209013cce36b1410a0ecf7a574e06313b0eb6ff90281be9d11b7abb41",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          237.0,
+          2338.0,
+          336.0,
+          2515.0
+        ],
+        [
+          487.0,
+          17.0,
+          554.0,
+          110.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4018",
+      "path": "train_MED_4018.jpg",
+      "sha256": "9f8d452d315f0f6af55d9d4a4aafa423c8ca284799c00d8fc1045ccb2915cb82",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4021",
+      "path": "train_MED_4021.jpg",
+      "sha256": "72ea3f8f7c7e4943b4d88d6eeecc0cdf3eca24edb0a717c07cba26831e05b98d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4022",
+      "path": "train_MED_4022.jpg",
+      "sha256": "02bbe242bab1e49e884852085c08ef2b18978f5f82ab8f02f609057f37fd6de4",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4024",
+      "path": "train_MED_4024.jpg",
+      "sha256": "9d713241b041b7aeca787f2fba0b9a8dc96a56d90da35b3e16967ca8c0cd16c4",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4025",
+      "path": "train_MED_4025.jpg",
+      "sha256": "aa32de307aff28f72f4ff757cbad05bc0592cb8473b0682fbc129ce7b6f9a34c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4026",
+      "path": "train_MED_4026.jpg",
+      "sha256": "8c76e2e14869b1ae6b590a9058f8790da7ec9841628117437c82b798fd3dc26b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          3688.0,
+          56.0,
+          3760.0,
+          131.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4027",
+      "path": "train_MED_4027.jpg",
+      "sha256": "a9a6f246de753f53b5f90070062f0a8926a42737a6f771888cfa1ec2b3135a3a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          3686.0,
+          1013.0,
+          3757.0,
+          1069.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4028",
+      "path": "train_MED_4028.jpg",
+      "sha256": "543497294c1b8e0f007620d7df9ea8a29e36e0d1671953f109c8a6768255fbed",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2638.0,
+          988.0,
+          2724.0,
+          1063.0
+        ],
+        [
+          3661.0,
+          2039.0,
+          3752.0,
+          2107.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4029",
+      "path": "train_MED_4029.jpg",
+      "sha256": "a7f1fadcb52318ea8cf5c92a71ff2960ab58455a6b58905d713210f61f513e31",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4030",
+      "path": "train_MED_4030.jpg",
+      "sha256": "641b2ee11e6f1ba1808b15287462b6c9a1a4eb7e62b42d00b701552600cd055a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1123.0,
+          207.0,
+          1191.0,
+          289.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4031",
+      "path": "train_MED_4031.jpg",
+      "sha256": "03af376a2c4780b8caac1936d0cb2f10fa5f537880220ecee0057285563b4f8a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          672.0,
+          1110.0,
+          745.0,
+          1184.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4032",
+      "path": "train_MED_4032.jpg",
+      "sha256": "302d9665309a5f48f0865145aad7594c22a01fbbbad0a0322b083b4dea2ecbd8",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          603.0,
+          2048.0,
+          707.0,
+          2124.0
+        ],
+        [
+          748.0,
+          187.0,
+          816.0,
+          262.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4033",
+      "path": "train_MED_4033.jpg",
+      "sha256": "b9537a9600b449e9df1b3f27333e658bfd66955f50dd47cdddb255eaae770e2f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1348.0,
+          1333.0,
+          1407.0,
+          1394.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4035",
+      "path": "train_MED_4035.jpg",
+      "sha256": "4b3780b378abcb1132074c54f343fcde069af35ad062bec13161e27be3751e6a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1538.0,
+          2919.0,
+          1607.0,
+          3000.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4036",
+      "path": "train_MED_4036.jpg",
+      "sha256": "33288378cb512f661a1dbc20be3f2be7fd53c4d5db8c3777004da6a3821aab94",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4037",
+      "path": "train_MED_4037.jpg",
+      "sha256": "0301a035bbce29ebadb2a305d18f6f362a944b7f86b69474607ef8d21bf61449",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4039",
+      "path": "train_MED_4039.jpg",
+      "sha256": "34ab7d59323064e04d4d5730616ae8beaf7769b37a45b09978ab750a3cb6c9d4",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4040",
+      "path": "train_MED_4040.jpg",
+      "sha256": "7bc9c4071f97e77bc7413ad1304fe7c0bb48da4f9f54323fa5001994553b63d4",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4041",
+      "path": "train_MED_4041.jpg",
+      "sha256": "1c2bfaaf1167b08afcaa5c75f96350d8ad258cd3714bc2994c6fd7b816b65427",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4043",
+      "path": "train_MED_4043.jpg",
+      "sha256": "cbddd1bd1e1cfa59f0b4f49219f343e40ec5a9b876d2ba20905348c5ca4c92ec",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2194.0,
+          581.0,
+          2247.0,
+          666.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4044",
+      "path": "train_MED_4044.jpg",
+      "sha256": "01def73d4e6a51b42c44871167b1a3731c2240ab3df913e2076b00693a649022",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2266.0,
+          1331.0,
+          2315.0,
+          1390.0
+        ],
+        [
+          2126.0,
+          467.0,
+          2223.0,
+          575.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4046",
+      "path": "train_MED_4046.jpg",
+      "sha256": "529acc2f19a73a149b75938f965a8a184521766d4916df8258ba2134d5826a2a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2238.0,
+          1872.0,
+          2331.0,
+          1967.0
+        ],
+        [
+          2380.0,
+          2697.0,
+          2429.0,
+          2761.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4047",
+      "path": "train_MED_4047.jpg",
+      "sha256": "60e9a6cd0fe1ffb5391233ba298ef1568697eb5e5ffe8c5501dd0e1c6ba6c4cc",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2302.0,
+          2808.0,
+          2396.0,
+          2886.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4048",
+      "path": "train_MED_4048.jpg",
+      "sha256": "be44174928286f2d084d77ec870f2b983a5c15eab35d5c86d399097fbff3cfca",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4049",
+      "path": "train_MED_4049.jpg",
+      "sha256": "8e3972e996ed174b28552f2bf1c505ee65e9d1e8243a10a27b3fd730157c7254",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2480.0,
+          1184.0,
+          2542.0,
+          1289.0
+        ],
+        [
+          2516.0,
+          1004.0,
+          2574.0,
+          1111.0
+        ],
+        [
+          800.0,
+          260.0,
+          844.0,
+          345.0
+        ],
+        [
+          842.0,
+          149.0,
+          884.0,
+          229.0
+        ],
+        [
+          1339.0,
+          295.0,
+          1388.0,
+          391.0
+        ],
+        [
+          1362.0,
+          276.0,
+          1394.0,
+          362.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4052",
+      "path": "train_MED_4052.jpg",
+      "sha256": "85f807a60c457b32620c280f1a5aa92ef0bd6666c73b451df8a5ed38c69dfb6c",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2434.0,
+          2897.0,
+          2494.0,
+          2952.0
+        ],
+        [
+          750.0,
+          715.0,
+          819.0,
+          798.0
+        ],
+        [
+          747.0,
+          658.0,
+          808.0,
+          728.0
+        ],
+        [
+          524.0,
+          799.0,
+          587.0,
+          866.0
+        ],
+        [
+          1510.0,
+          277.0,
+          1554.0,
+          340.0
+        ],
+        [
+          1009.0,
+          192.0,
+          1047.0,
+          257.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4053",
+      "path": "train_MED_4053.jpg",
+      "sha256": "9fb86cb609d69f6446f8658f17f373764aaf308ac99c9ec142d5327cfe622336",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          160.0,
+          1476.0,
+          238.0,
+          1525.0
+        ],
+        [
+          218.0,
+          1450.0,
+          296.0,
+          1516.0
+        ],
+        [
+          466.0,
+          1271.0,
+          534.0,
+          1351.0
+        ],
+        [
+          524.0,
+          1191.0,
+          593.0,
+          1271.0
+        ],
+        [
+          1342.0,
+          743.0,
+          1385.0,
+          801.0
+        ],
+        [
+          814.0,
+          654.0,
+          856.0,
+          720.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4054",
+      "path": "train_MED_4054.jpg",
+      "sha256": "e1f45814967b6d38c2524cca5edd8ec2493042c52f1d1f37cf00ab440d12ffe0",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          157.0,
+          1039.0,
+          252.0,
+          1130.0
+        ],
+        [
+          218.0,
+          953.0,
+          302.0,
+          1023.0
+        ],
+        [
+          508.0,
+          367.0,
+          560.0,
+          447.0
+        ],
+        [
+          969.0,
+          439.0,
+          1040.0,
+          497.0
+        ],
+        [
+          2812.0,
+          423.0,
+          2875.0,
+          505.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4055",
+      "path": "train_MED_4055.jpg",
+      "sha256": "4d619fccf8bb7d15e37d911e4d3b48a66522a45ed28cf50dfb556a22a63025ca",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          856.0,
+          1019.0,
+          914.0,
+          1075.0
+        ],
+        [
+          382.0,
+          973.0,
+          434.0,
+          1034.0
+        ],
+        [
+          2741.0,
+          1000.0,
+          2796.0,
+          1051.0
+        ],
+        [
+          94.0,
+          1580.0,
+          174.0,
+          1625.0
+        ],
+        [
+          94.0,
+          1503.0,
+          199.0,
+          1567.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4056",
+      "path": "train_MED_4056.jpg",
+      "sha256": "407eb0e9725a1492992adceaaa62a80572a3753b0333e6cbbaac712bba116332",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          168.0,
+          1765.0,
+          220.0,
+          1810.0
+        ],
+        [
+          549.0,
+          1823.0,
+          619.0,
+          1880.0
+        ],
+        [
+          2398.0,
+          1813.0,
+          2449.0,
+          1859.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4057",
+      "path": "train_MED_4057.jpg",
+      "sha256": "e6eea8b51c9c8963d10bd79d93303bbd888aca593b92cb570185c0f137dcdf76",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1583.0,
+          2269.0,
+          1636.0,
+          2325.0
+        ],
+        [
+          1707.0,
+          583.0,
+          1755.0,
+          635.0
+        ],
+        [
+          1776.0,
+          280.0,
+          1825.0,
+          329.0
+        ],
+        [
+          1185.0,
+          0.0,
+          1251.0,
+          84.0
+        ],
+        [
+          1338.0,
+          109.0,
+          1388.0,
+          194.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4059",
+      "path": "train_MED_4059.jpg",
+      "sha256": "d4f51e555b74a5ef50492df4ac645ac0810c7742d742efdd4f68cf440ee2611b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          8.0,
+          1296.0,
+          122.0,
+          1353.0
+        ],
+        [
+          56.0,
+          1175.0,
+          153.0,
+          1228.0
+        ],
+        [
+          1207.0,
+          1515.0,
+          1255.0,
+          1555.0
+        ],
+        [
+          887.0,
+          1430.0,
+          950.0,
+          1477.0
+        ],
+        [
+          1511.0,
+          1603.0,
+          1558.0,
+          1643.0
+        ],
+        [
+          1449.0,
+          1861.0,
+          1506.0,
+          1913.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4060",
+      "path": "train_MED_4060.jpg",
+      "sha256": "317e68ea8ee03e87d66d86e104bcfa3cffd1c9b0bd982fbf9b8ba6bc4f2dd93e",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          746.0,
+          2118.0,
+          824.0,
+          2168.0
+        ],
+        [
+          1239.0,
+          2168.0,
+          1293.0,
+          2218.0
+        ],
+        [
+          1384.0,
+          2246.0,
+          1427.0,
+          2297.0
+        ],
+        [
+          1327.0,
+          2484.0,
+          1380.0,
+          2530.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4062",
+      "path": "train_MED_4062.jpg",
+      "sha256": "bd6bc6b26ce428511c84d381d674bd43fb1b6281f8227beef4e633b02db758f9",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          729.0,
+          525.0,
+          816.0,
+          590.0
+        ],
+        [
+          749.0,
+          375.0,
+          807.0,
+          441.0
+        ],
+        [
+          877.0,
+          468.0,
+          943.0,
+          513.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4063",
+      "path": "train_MED_4063.jpg",
+      "sha256": "5f9b4846fbb6b49ee6555c57126d4662c34d56e4298a606338763482ac64946f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1756.0,
+          911.0,
+          1808.0,
+          972.0
+        ],
+        [
+          1691.0,
+          873.0,
+          1744.0,
+          931.0
+        ],
+        [
+          983.0,
+          2001.0,
+          1052.0,
+          2039.0
+        ],
+        [
+          1003.0,
+          1931.0,
+          1058.0,
+          1972.0
+        ],
+        [
+          662.0,
+          1913.0,
+          733.0,
+          1953.0
+        ],
+        [
+          1253.0,
+          1505.0,
+          1325.0,
+          1558.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4065",
+      "path": "train_MED_4065.jpg",
+      "sha256": "6e0c26a9d06516c4f4ba3660485c9c32ebcdb4802a6139eaf5e9894adb427871",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1868.0,
+          2618.0,
+          1909.0,
+          2687.0
+        ],
+        [
+          1827.0,
+          2599.0,
+          1875.0,
+          2675.0
+        ],
+        [
+          3591.0,
+          643.0,
+          3662.0,
+          697.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4066",
+      "path": "train_MED_4066.jpg",
+      "sha256": "0aab4f31453801573533de2d6c2b3d088769d4c2a134961720b32d274e5aed4a",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          840.0,
+          503.0,
+          920.0,
+          587.0
+        ],
+        [
+          682.0,
+          715.0,
+          768.0,
+          784.0
+        ],
+        [
+          3441.0,
+          672.0,
+          3533.0,
+          731.0
+        ],
+        [
+          3655.0,
+          1350.0,
+          3736.0,
+          1393.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4067",
+      "path": "train_MED_4067.jpg",
+      "sha256": "80376d0747984d9b853293d5e4ee87e8d7448e4f96cb9435ba96032a1569d15d",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1126.0,
+          902.0,
+          1195.0,
+          973.0
+        ],
+        [
+          1182.0,
+          800.0,
+          1249.0,
+          863.0
+        ],
+        [
+          3672.0,
+          2402.0,
+          3747.0,
+          2456.0
+        ],
+        [
+          3709.0,
+          1708.0,
+          3804.0,
+          1761.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_MED_4068",
+      "path": "train_MED_4068.jpg",
+      "sha256": "d50baf5966a31a8c03981f1879e62e472399cd7ed52df05e8fcf8bd66121a5ed",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1120.0,
+          1558.0,
+          1185.0,
+          1609.0
+        ],
+        [
+          1215.0,
+          1528.0,
+          1293.0,
+          1577.0
+        ],
+        [
+          3777.0,
+          2169.0,
+          3873.0,
+          2232.0
+        ],
+        [
+          3733.0,
+          2856.0,
+          3819.0,
+          2924.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_SB_0003",
+      "path": "train_SB_0003.jpg",
+      "sha256": "bbfdb0889eefa2710116b00396802c871f11a357960a4e0fcc4e2566e446c678",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1383.0,
+          1010.0,
+          1426.0,
+          1048.0
+        ],
+        [
+          1960.0,
+          2155.0,
+          2028.0,
+          2207.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_SB_0013",
+      "path": "train_SB_0013.jpg",
+      "sha256": "a5c2e9d72040d15f59571e7134ab673b8b4580ad0420ed716b8f92468d50bc27",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          690.0,
+          1677.0,
+          729.0,
+          1732.0
+        ],
+        [
+          1938.0,
+          1734.0,
+          2002.0,
+          1804.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_SB_0016",
+      "path": "train_SB_0016.jpg",
+      "sha256": "0cd0c40b11b2fb3e8b7648641527cbaf4a8b2147bb5a0982c6c0afd22f6b591f",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          785.0,
+          1031.0,
+          831.0,
+          1100.0
+        ],
+        [
+          1834.0,
+          1712.0,
+          1885.0,
+          1790.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_SB_0026",
+      "path": "train_SB_0026.jpg",
+      "sha256": "92221b9879430f748e32e79e1be896755592a5a62f8db6ceb70abb1e3369d335",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2208.0,
+          1563.0,
+          2244.0,
+          1592.0
+        ],
+        [
+          2281.0,
+          2131.0,
+          2314.0,
+          2167.0
+        ],
+        [
+          2333.0,
+          2787.0,
+          2371.0,
+          2849.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_SB_0029",
+      "path": "train_SB_0029.jpg",
+      "sha256": "9d25a18f40393957626e1f3e5d502784737c0fe1329c72642c02a36c2ee5ca5b",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          2182.0,
+          1581.0,
+          2218.0,
+          1610.0
+        ],
+        [
+          1802.0,
+          2147.0,
+          1864.0,
+          2207.0
+        ],
+        [
+          2326.0,
+          2757.0,
+          2361.0,
+          2816.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    },
+    {
+      "id": "train_SB_0033",
+      "path": "train_SB_0033.jpg",
+      "sha256": "de7bc83850d0876cc24390084afa5629861e0ee6b6583801d83a6dcd4ec0da58",
+      "width": 4000,
+      "height": 3000,
+      "boxes": [
+        [
+          1752.0,
+          1988.0,
+          1806.0,
+          2024.0
+        ],
+        [
+          2311.0,
+          1778.0,
+          2348.0,
+          1806.0
+        ],
+        [
+          1980.0,
+          2594.0,
+          2009.0,
+          2635.0
+        ]
+      ],
+      "annotation_version": "human-review-v1-20261023"
+    }
+  ],
+  "model_hash_basis": "Committed Git blob bytes; text files use LF. No model change.",
+  "source_image_count": 247
+}

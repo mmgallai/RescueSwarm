@@ -34,7 +34,7 @@ def prepare(root):
                 cropped['images'].append(dict(id=ident, source_id=row['id'], rect=rect,
                     path=path.name, width=rect[2]-rect[0], height=rect[3]-rect[1], boxes=[],
                     sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
-    assert len(cropped['images']) == 512
+    assert len(cropped['images']) == 16 * manifest.get('source_image_count', 32)
     (root/'manifest.json').write_text(json.dumps(cropped, indent=2))
 
 
@@ -90,7 +90,7 @@ def run(root):
     report['swift_global_merge_check'] = 'PASS'
     report['limitations'] += ['Lossless crop fixtures use the historical PIL decoding and exact integer grid. Swift independently restores coordinates and performs global NMS.',
         'Original research used GB10 FP16 batches of 16; this macOS PyTorch reference is CPU FP32 and sequential. No timing equivalence claimed.',
-        '32 reused validation images, not the historical full 247-image cohort. No recalibration.']
+        f"{len(source['images'])} reused corrected validation images. No recalibration or new generalization claim."]
     (root/'comparison.json').write_text(json.dumps(report,indent=2))
     print(json.dumps(report,indent=2))
 

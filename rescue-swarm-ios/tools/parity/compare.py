@@ -27,17 +27,24 @@ def provision(root):
     root.mkdir(parents=True, exist_ok=True)
     if source_manifest.resolve() != (root / "manifest.json").resolve():
         shutil.copy2(source_manifest, root / "manifest.json")
-    with zipfile.ZipFile(RemoteZip()) as archive:
-        for row in manifest["images"]:
-            path = root / row["path"]
-            if not path.exists():
-                # ZipFile checks CRC; SHA256 must also match the corrected-label manifest.
-                data = archive.read("heridal_keras_retinanet_voc/JPEGImages/" + row["path"])
-                assert hashlib.sha256(data).hexdigest() == row["sha256"], row["id"]
-                path.write_bytes(data)
-            assert hashlib.sha256(path.read_bytes()).hexdigest() == row["sha256"]
-            print("VERIFIED", row["id"], flush=True)
-    print("Provisioned all 32 frozen validation images", flush=True)
+    def download(rows):
+        # Independent range-reader per worker; no shared seek position.
+        with zipfile.ZipFile(RemoteZip()) as archive:
+            for row in rows:
+                path = root / row["path"]
+                if not path.exists():
+                    # ZipFile checks CRC; SHA256 must also match corrected metadata.
+                    data = archive.read("heridal_keras_retinanet_voc/JPEGImages/" + row["path"])
+                    assert hashlib.sha256(data).hexdigest() == row["sha256"], row["id"]
+                    path.write_bytes(data)
+                assert hashlib.sha256(path.read_bytes()).hexdigest() == row["sha256"]
+                print("VERIFIED", row["id"], flush=True)
+    workers = int(os.environ.get("PARITY_DOWNLOAD_WORKERS", "1"))
+    assert 1 <= workers <= 4
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        list(pool.map(download, [manifest["images"][i::workers] for i in range(workers)]))
+    print(f"Provisioned all {len(manifest['images'])} frozen validation images", flush=True)
 
 
 def iou(a, b):
@@ -117,7 +124,8 @@ def audit(root):
     manifest = json.loads((root / "manifest.json").read_text())
     paired = json.loads((root / "paired-results.json").read_text())
     rows = {r["id"]: r for r in manifest["images"]}
-    assert {r["id"] for r in paired["images"]} == set(rows) and len(rows) == 32
+    assert {r["id"] for r in paired["images"]} == set(rows) and len(rows) == manifest.get("source_image_count", 32)
+    assert len(paired["images"]) == len(rows)
     summary = {"images": len(rows), "annotated_people": sum(len(r["boxes"]) for r in rows.values()),
                "settings": manifest["settings"], "model_files": manifest["model_files"], "accuracy": {}, "agreement": {}}
     has_torch = "python_pytorch" in paired["images"][0]
