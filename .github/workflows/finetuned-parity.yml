@@ -29,7 +29,7 @@ jobs:
       - name: Install isolated export and inference dependencies
         run: |
           python -m venv .venv-parity
-          .venv-parity/bin/pip install coremltools==9.0 torch==2.7.0 torchvision==0.22.0 ultralytics==8.4.171 opencv-python==4.11.0.86 opencv-python-headless==4.11.0.86 numpy==2.2.6 Pillow==11.2.1 scipy==1.15.3
+          .venv-parity/bin/pip install coremltools==9.0 torch==2.7.0 torchvision==0.22.0 ultralytics==8.4.171 opencv-python==4.11.0.86 opencv-python-headless==4.11.0.86 numpy==1.26.4 Pillow==11.2.1 scipy==1.15.3
       - name: Export an immutable checkpoint copy, outside the app
         run: .venv-parity/bin/python tools/parity/export_finetuned.py
       - name: Hash-verify same frozen corrected validation sample
