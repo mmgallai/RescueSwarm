@@ -1,6 +1,9 @@
 name: Full validation tiled parity
 on:
   workflow_dispatch:
+  push:
+    branches: [codex/swift-integration]
+    paths: ['.github/workflows/full-tiled-parity.yml']
 permissions:
   contents: read
 jobs:
