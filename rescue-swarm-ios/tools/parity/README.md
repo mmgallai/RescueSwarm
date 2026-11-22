@@ -72,3 +72,47 @@ it does not imply rescue readiness. This is full-image 1280 inference, not the
 fine-tuned/tiled research pipeline. See `results/20261121` for complete metrics and
 paired predictions. Timings in those predictions are single-pass diagnostics,
 not a controlled speed comparison or phone benchmark.
+
+## Retained fine-tuned checkpoint — 21 November 2026
+
+[Fine-tuned comparison run 44972619050](https://github.com/mmgallai/RescueSwarm/actions/runs/44972619050)
+passed on `0d2f99c`. This exports a **copy** of D85's retained
+`yolo26n-wisard-full-20261022/mixed640/weights/best.pt`, SHA256
+`321b3164ad4c94005345bfd716997e2e5741d6dfb6687dabd156080e1cec47ae`.
+The checkpoint in `checkpoints/d85-best.pt` is for testing only and is not part of
+the app bundle. The original app package and detector implementation remain unchanged.
+No retraining, threshold tuning or new checkpoint selection was performed.
+
+Same 32 photos, corrected labels, 1280 input, confidence 0.25 and NMS IoU 0.7:
+
+| Fine-tuned pipeline | Correct detections | False positives | Missed annotations | Recall | Precision |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Original PyTorch checkpoint, CPU FP32 | 15 | 14 | 38 | 28.30% | 51.72% |
+| Python/CoreML, native OpenCV preprocessing | 16 | 15 | 37 | 30.19% | 51.61% |
+| Swift/CoreML, native app preprocessing | 18 | 10 | 35 | 33.96% | 64.29% |
+| Python/CoreML, exact Swift pixels | 18 | 10 | 35 | 33.96% | 64.29% |
+
+- Native Python/CoreML and Swift match 26 boxes, with five Python-only and two
+  Swift-only boxes. Mean matched IoU 0.925381; mean score difference 0.041091.
+- With identical pixels, all 28 Swift and Python/CoreML detections are exactly
+  equal, including scores and box coordinates. No language-level inference or
+  coordinate-decoding mismatch was demonstrated.
+- Python/CoreML retains all 29 PyTorch detections at IoU >= 0.5 and adds two in
+  `train_MED_3028`. Export is not bit-identical to PyTorch; predictions are preserved
+  in the reports rather than declaring perfect export equivalence.
+- Swift retains all 15 annotation instances found by PyTorch and matches three
+  additional instances. This is a small, reused validation sample, not a guarantee
+  of person retention on other images.
+
+Compared with the previous app-model result on these same images, Swift finds
+18 rather than 8 people, with 10 rather than 0 false positives. It still misses
+35/53 annotations. These are full-frame 1280 settings; historical stronger results
+used larger resolutions or overlapping crops and separately calibrated thresholds.
+This result does not justify immediate app replacement or claim field readiness.
+
+Export dependencies are pinned: Ultralytics 8.4.171, Torch 2.7.0, torchvision 0.22.0,
+CoreMLTools 9.0 and NumPy 1.26.4. The initial NumPy 2.2.6 dependency conflict was
+resolved before export; no model change was required. Source and candidate hashes,
+paired predictions, and an independent local matching audit are saved in
+`results/finetuned-20261121`. The Core ML package is retained as a workflow artifact
+and in the local project handover folder, outside the app.

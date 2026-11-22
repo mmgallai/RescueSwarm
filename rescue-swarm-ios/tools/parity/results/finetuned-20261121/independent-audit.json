@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "counts_tp_fp_fn": {
+    "swift": [
+      18,
+      10,
+      35
+    ],
+    "python_native": [
+      16,
+      15,
+      37
+    ],
+    "python_swift_pixels": [
+      18,
+      10,
+      35
+    ],
+    "python_pytorch": [
+      15,
+      14,
+      38
+    ]
+  },
+  "sample_identical_to_previous_comparison": true,
+  "candidate_package_hashes_verified": true,
+  "shared_pixel_detections_exactly_equal": true,
+  "torch_vs_coreml_native": {
+    "pytorch_boxes": 29,
+    "coreml_boxes": 31,
+    "matched": 29
+  },
+  "pytorch_matched_annotations_lost_in_swift": [],
+  "additional_matched_annotations_in_swift": [
+    "train_BRA_1014:0",
+    "train_MED_3028:4",
+    "train_SB_0016:1"
+  ],
+  "report_hashes": {
+    "comparison.json": "88010a1456f40e0b55637459060a8b94ddc53f987e7100fc6e85606a9ce9f7d9",
+    "manifest.json": "51b868720ae05a7776376836ff5ba935c02ee757d6e6d8f95122306c51eb1c59",
+    "paired-results.json": "c9738a9c6a9cbe34e045db35bc17c1cf38c9ebc8c1302399ebf3cc4664d08e5c",
+    "swift-results.json": "e13fdd931392684d9cd42b2903eca03a3ddbdd40d3cab7e3526900bc91b9ae1a"
+  }
+}
