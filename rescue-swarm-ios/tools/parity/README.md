@@ -172,3 +172,65 @@ workflow artifact and local handover artifact, outside the app bundle. The
 initial test-only async call compile error was fixed before this passing run.
 Regular Swift app checks and the original bundled-model parity also pass on
 `cdb3d42`. Physical-device testing remains separate.
+
+## Complete corrected validation cohort — 21 November 2026
+
+[Full run 44982879055](https://github.com/mmgallai/RescueSwarm/actions/runs/44982879055)
+passed on `4f88688`. This extends the preceding experiment to **all 247 corrected
+validation images / 427 annotated person instances / 3,952 crops**. No image
+selection, retraining, confidence calibration or app replacement was performed.
+The source manifest was checked against the immutable D90 metadata, all image
+hashes and labels were verified, and training-image hashes are disjoint.
+
+Same retained D85 checkpoint and frozen settings: 640 inputs, 4x4 crops with 10%
+margins per side, per-crop/global NMS IoU 0.5, inclusive confidence
+0.2193603515625, inference floor 0.21923828125. No decision-model filtering.
+
+| Pipeline | Found | Missed | False positives | Recall | Precision |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Archived GB10 PyTorch FP16 baseline | 317 | 110 | 134 | 74.24% | 70.29% |
+| New Python/PyTorch, macOS CPU FP32 | 316 | 111 | 134 | 74.00% | 70.22% |
+| New Python/Core ML, native OpenCV preprocessing | 317 | 110 | 133 | 74.24% | 70.44% |
+| New Swift/Core ML | 312 | 115 | 133 | 73.07% | 70.11% |
+| Python/Core ML using exact Swift input pixels | 312 | 115 | 133 | 73.07% | 70.11% |
+
+The historical confidence-ordered matching rule and the independent
+maximum-cardinality matcher produce the same aggregate counts. Python/Core ML
+reproduces the earlier recall, but **Swift does not exactly reproduce it**: its
+recall is 1.17 percentage points lower, a net loss of five matches.
+
+Person identities relative to the archived baseline:
+
+- Python/PyTorch retains 316 of the original 317, loses `train_MED_4053:4`, and
+  gains none. CPU FP32 is not the historical GB10 FP16 runtime.
+- Python/Core ML retains 316, loses `train_BRA_1032:0`, and gains
+  `train_BRK_2054:0`. Equal recall does not mean identical detected people.
+- Swift retains 309, loses eight original matches and gains three. Every lost
+  and gained annotation ID is listed in `historical-comparison-audit.json`.
+
+All **445 shared-pixel Python/Core ML and Swift outputs match exactly**, including
+boxes and confidence (IoU 1 and confidence difference 0). Their source-coordinate
+restoration and global NMS also match. Thus the native Python/Core ML-versus-Swift
+gap is isolated to preprocessing, including its downstream effects on scores,
+localization and suppression. This does not establish that PyTorch and the
+Core ML export are bit-identical. Native Python/Core ML matches 436 Swift boxes,
+with 14 Python-only and nine Swift-only outputs; matched mean IoU is 0.950362.
+
+The old 32-image experiment is fully reproduced: all four modes give exactly
+the same per-image detections for those 32 photos, and their 512 crop fixture
+hashes/rectangles match. The larger cohort reveals differences that the smaller
+sample did not expose.
+
+Independent local audits passed for full cohort membership, original source
+hashes, corrected labels, training separation, all crop rectangles, model-package
+hashes, boxes, inclusive confidence filtering, all metric counts, and historical
+person-identity retention. Reports and predictions are in
+`results/full-tiled-20261121`. The separate tested package is retained as a workflow
+artifact and locally under `project_docs/full-tiled-parity-20261121`, outside the
+app. The checkpoint, production detector and bundled app model are unchanged.
+
+The next implementation issue is matching preprocessing before app adoption.
+This run does not change app preprocessing or tune away the gap. It is a complete
+reused-validation comparison, not a new generalization test, a phone speed/battery
+measurement, or proof of field readiness. The original 90% recall target remains
+unmet.

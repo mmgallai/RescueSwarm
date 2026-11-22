@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "metrics": {
+    "swift": {
+      "tp": 312,
+      "fp": 133,
+      "fn": 115
+    },
+    "python_native": {
+      "tp": 317,
+      "fp": 133,
+      "fn": 110
+    },
+    "python_swift_pixels": {
+      "tp": 312,
+      "fp": 133,
+      "fn": 115
+    },
+    "python_pytorch": {
+      "tp": 316,
+      "fp": 134,
+      "fn": 111
+    }
+  },
+  "files": {
+    "comparison.json": "8fe2b4161a379944e845d12ed41ecac12628474e1a6df9b037774df03fe9ef0f",
+    "crop-manifest.json": "3c38a63662a3783fc5d4389309b285bb785446928198eebe5f0a3c8bc56fa3ba",
+    "crop-results.json": "8b852b10d24c691bd47e972f64df630c7e500d1f3815274b8a1c1281f5bfe99b",
+    "manifest.json": "1125279fd1f82b9befbd51e25a75da4633cc14b7d03363fc06680c2b4473a062",
+    "paired-results.json": "dc8bf7e9568cce714a4145176ec62bf98ff8d94f6489b67e259781e8116e0b55",
+    "source-manifest.json": "1125279fd1f82b9befbd51e25a75da4633cc14b7d03363fc06680c2b4473a062",
+    "swift-merged.json": "cbf9e9bc077371f9a98c75adc420226309f9b0ee3fe030b1295c9eb46e884b21",
+    "swift-results.json": "4f0fbfd0a5f984854de590d4b0e8523e554a7c2f01faf9d3352cb87ce7116704"
+  }
+}

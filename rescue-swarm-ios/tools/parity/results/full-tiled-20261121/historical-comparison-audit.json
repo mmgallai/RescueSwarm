@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "model_file_hashes_verified": true,
+  "historical": {
+    "tp": 317,
+    "fp": 134,
+    "fn": 110,
+    "recall": 0.7423887587822015,
+    "precision": 0.7028824833702882
+  },
+  "comparison": {
+    "swift": {
+      "tp": 312,
+      "fp": 133,
+      "fn": 115,
+      "retained": 309,
+      "lost": [
+        "train_BRK_1010:1",
+        "train_BRK_2028:0",
+        "train_MED_3034:0",
+        "train_MED_3038:0",
+        "train_MED_3044:2",
+        "train_MED_4009:1",
+        "train_MED_4057:3",
+        "train_SB_0033:2"
+      ],
+      "gained": [
+        "train_BRK_2085:1",
+        "train_MED_4046:0",
+        "train_MED_4053:3"
+      ]
+    },
+    "python_native": {
+      "tp": 317,
+      "fp": 133,
+      "fn": 110,
+      "retained": 316,
+      "lost": [
+        "train_BRA_1032:0"
+      ],
+      "gained": [
+        "train_BRK_2054:0"
+      ]
+    },
+    "python_swift_pixels": {
+      "tp": 312,
+      "fp": 133,
+      "fn": 115,
+      "retained": 309,
+      "lost": [
+        "train_BRK_1010:1",
+        "train_BRK_2028:0",
+        "train_MED_3034:0",
+        "train_MED_3038:0",
+        "train_MED_3044:2",
+        "train_MED_4009:1",
+        "train_MED_4057:3",
+        "train_SB_0033:2"
+      ],
+      "gained": [
+        "train_BRK_2085:1",
+        "train_MED_4046:0",
+        "train_MED_4053:3"
+      ]
+    },
+    "python_pytorch": {
+      "tp": 316,
+      "fp": 134,
+      "fn": 111,
+      "retained": 316,
+      "lost": [
+        "train_MED_4053:4"
+      ],
+      "gained": []
+    }
+  },
+  "note": "Fixed historical cutoff; source identities use the historical confidence-ordered matching rule. No calibration.",
+  "prior_32_image_reproducibility": {
+    "swift": {
+      "identical_images": 32,
+      "changed_images": []
+    },
+    "python_native": {
+      "identical_images": 32,
+      "changed_images": []
+    },
+    "python_swift_pixels": {
+      "identical_images": 32,
+      "changed_images": []
+    },
+    "python_pytorch": {
+      "identical_images": 32,
+      "changed_images": []
+    }
+  }
+}
