@@ -13,7 +13,8 @@ final class CorrectedValidationParityTests: XCTestCase {
         let manifest = try JSONSerialization.jsonObject(with: Data(contentsOf: root.appendingPathComponent("manifest.json"))) as! [String: Any]
         let images = manifest["images"] as! [[String: Any]]
         XCTAssertEqual(images.count, 32)
-        let detector = try await PersonDetector.load(from: bundledModelURL, computeUnits: .all)
+        let modelURL = ProcessInfo.processInfo.environment["PARITY_MODEL"].map { URL(fileURLWithPath: $0) } ?? bundledModelURL
+        let detector = try await PersonDetector.load(from: modelURL, computeUnits: .all)
         XCTAssertEqual(detector.inputSize, 1280)
         XCTAssertEqual(PersonDetector.iouThreshold, 0.7)
         var records: [[String: Any]] = []
