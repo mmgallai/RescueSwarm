@@ -33,7 +33,7 @@ final class CorrectedValidationParityTests: XCTestCase {
                 "iouThreshold": MLFeatureValue(double: nmsCut),
                 "confidenceThreshold": MLFeatureValue(double: inferenceCut)])
             let began = Date()
-            let output = try detector.model.prediction(from: input)
+            let output = try await detector.model.prediction(from: input)
             let decoded = OutputDecoding.decode(OutputDecoding.rows(from: ModelOutput(
                 coordinates: try XCTUnwrap(output.featureValue(for: "coordinates")?.multiArrayValue),
                 confidence: try XCTUnwrap(output.featureValue(for: "confidence")?.multiArrayValue))),
