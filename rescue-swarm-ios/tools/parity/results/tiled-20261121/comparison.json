@@ -1,0 +1,267 @@
+{
+  "images": 32,
+  "annotated_people": 53,
+  "settings": {
+    "imgsz": 640,
+    "conf": 0.2193603515625,
+    "iou": 0.5,
+    "compute_units": "ALL",
+    "weights": "Frozen D85 checkpoint, separate CoreML export; no retraining or app replacement",
+    "inference_conf": 0.21923828125,
+    "global_nms_iou": 0.5,
+    "grid": 4,
+    "margin_per_side": 0.1
+  },
+  "model_files": {
+    "Data/com.apple.CoreML/model.mlmodel": "c77350c197696b58dd482bbf593e44edef9b4681c6777ee6ab5f5742765d07da",
+    "Data/com.apple.CoreML/weights/weight.bin": "f2a1dc4f7db957bb539d67682733475328cb0599ce0a020c3f04d8abf0e92772",
+    "Manifest.json": "ec8876f501ff83e8e72f5700cb2d24b764afe98f275176743a0d515fecf7ff0d"
+  },
+  "accuracy": {
+    "swift": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23,
+      "precision": 0.5357142857142857,
+      "recall": 0.5660377358490566,
+      "missed_annotation_ids": [
+        "train_BRA_1002:1",
+        "train_BRA_1011:0",
+        "train_BRA_1063:0",
+        "train_BRA_1063:1",
+        "train_BRA_1068:0",
+        "train_BRA_1068:1",
+        "train_BRA_1068:2",
+        "train_BRA_1068:3",
+        "train_BRA_1068:4",
+        "train_BRA_1068:5",
+        "train_BRA_1068:6",
+        "train_BRA_1068:7",
+        "train_BRK_2007:0",
+        "train_BRK_2027:0",
+        "train_BRK_2056:1",
+        "train_MED_3022:1",
+        "train_MED_3028:1",
+        "train_MED_3028:2",
+        "train_MED_3028:4",
+        "train_MED_4002:1",
+        "train_MED_4006:0",
+        "train_MED_4056:0",
+        "train_MED_4056:2"
+      ]
+    },
+    "python_native": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23,
+      "precision": 0.5357142857142857,
+      "recall": 0.5660377358490566,
+      "missed_annotation_ids": [
+        "train_BRA_1002:1",
+        "train_BRA_1011:0",
+        "train_BRA_1063:0",
+        "train_BRA_1063:1",
+        "train_BRA_1068:0",
+        "train_BRA_1068:1",
+        "train_BRA_1068:2",
+        "train_BRA_1068:3",
+        "train_BRA_1068:4",
+        "train_BRA_1068:5",
+        "train_BRA_1068:6",
+        "train_BRA_1068:7",
+        "train_BRK_2007:0",
+        "train_BRK_2027:0",
+        "train_BRK_2056:1",
+        "train_MED_3022:1",
+        "train_MED_3028:1",
+        "train_MED_3028:2",
+        "train_MED_3028:4",
+        "train_MED_4002:1",
+        "train_MED_4006:0",
+        "train_MED_4056:0",
+        "train_MED_4056:2"
+      ]
+    },
+    "python_swift_pixels": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23,
+      "precision": 0.5357142857142857,
+      "recall": 0.5660377358490566,
+      "missed_annotation_ids": [
+        "train_BRA_1002:1",
+        "train_BRA_1011:0",
+        "train_BRA_1063:0",
+        "train_BRA_1063:1",
+        "train_BRA_1068:0",
+        "train_BRA_1068:1",
+        "train_BRA_1068:2",
+        "train_BRA_1068:3",
+        "train_BRA_1068:4",
+        "train_BRA_1068:5",
+        "train_BRA_1068:6",
+        "train_BRA_1068:7",
+        "train_BRK_2007:0",
+        "train_BRK_2027:0",
+        "train_BRK_2056:1",
+        "train_MED_3022:1",
+        "train_MED_3028:1",
+        "train_MED_3028:2",
+        "train_MED_3028:4",
+        "train_MED_4002:1",
+        "train_MED_4006:0",
+        "train_MED_4056:0",
+        "train_MED_4056:2"
+      ]
+    },
+    "python_pytorch": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23,
+      "precision": 0.5357142857142857,
+      "recall": 0.5660377358490566,
+      "missed_annotation_ids": [
+        "train_BRA_1002:1",
+        "train_BRA_1011:0",
+        "train_BRA_1063:0",
+        "train_BRA_1063:1",
+        "train_BRA_1068:0",
+        "train_BRA_1068:1",
+        "train_BRA_1068:2",
+        "train_BRA_1068:3",
+        "train_BRA_1068:4",
+        "train_BRA_1068:5",
+        "train_BRA_1068:6",
+        "train_BRA_1068:7",
+        "train_BRK_2007:0",
+        "train_BRK_2027:0",
+        "train_BRK_2056:1",
+        "train_MED_3022:1",
+        "train_MED_3028:1",
+        "train_MED_3028:2",
+        "train_MED_3028:4",
+        "train_MED_4002:1",
+        "train_MED_4006:0",
+        "train_MED_4056:0",
+        "train_MED_4056:2"
+      ]
+    }
+  },
+  "agreement": {
+    "python_native": {
+      "python_boxes": 56,
+      "swift_boxes": 56,
+      "matched": 54,
+      "python_only": 2,
+      "swift_only": 2,
+      "mean_iou": 0.953117566092121,
+      "min_iou": 0.767488759340721,
+      "mean_confidence_difference": 0.022901746961805556,
+      "max_confidence_difference": 0.107421875,
+      "unmatched_images": [
+        {
+          "id": "train_BRA_1063",
+          "python": 1,
+          "swift": 0,
+          "matched": 0
+        },
+        {
+          "id": "train_BRA_1068",
+          "python": 0,
+          "swift": 1,
+          "matched": 0
+        },
+        {
+          "id": "train_MED_3028",
+          "python": 4,
+          "swift": 5,
+          "matched": 4
+        },
+        {
+          "id": "train_MED_4003",
+          "python": 5,
+          "swift": 4,
+          "matched": 4
+        }
+      ]
+    },
+    "python_swift_pixels": {
+      "python_boxes": 56,
+      "swift_boxes": 56,
+      "matched": 56,
+      "python_only": 0,
+      "swift_only": 0,
+      "mean_iou": 1.0,
+      "min_iou": 1.0,
+      "mean_confidence_difference": 0.0,
+      "max_confidence_difference": 0.0,
+      "unmatched_images": []
+    },
+    "python_pytorch": {
+      "python_boxes": 56,
+      "swift_boxes": 56,
+      "matched": 55,
+      "python_only": 1,
+      "swift_only": 1,
+      "mean_iou": 0.949813632496097,
+      "min_iou": 0.7699548066653331,
+      "mean_confidence_difference": 0.023732597448609092,
+      "max_confidence_difference": 0.10590428113937378,
+      "unmatched_images": [
+        {
+          "id": "train_BRA_1063",
+          "python": 1,
+          "swift": 0,
+          "matched": 0
+        },
+        {
+          "id": "train_MED_3028",
+          "python": 4,
+          "swift": 5,
+          "matched": 4
+        }
+      ]
+    }
+  },
+  "shared_pixel_check": "PASS",
+  "limitations": [
+    "Reused, stratified corrected-validation sample; not a new accuracy benchmark.",
+    "PyTorch source checkpoint additionally evaluated on CPU with FP32, rect=False, max_det=300; CoreML export may use reduced-precision operations.",
+    "Native Python uses OpenCV resize; Swift uses ImageIO/CoreGraphics. Shared-pixel pass isolates preprocessing differences.",
+    "Lossless crop fixtures use the historical PIL decoding and exact integer grid. Swift independently restores coordinates and performs global NMS.",
+    "Original research used GB10 FP16 batches of 16; this macOS PyTorch reference is CPU FP32 and sequential. No timing equivalence claimed.",
+    "32 reused validation images, not the historical full 247-image cohort. No recalibration."
+  ],
+  "source_checkpoint_sha256": "321b3164ad4c94005345bfd716997e2e5741d6dfb6687dabd156080e1cec47ae",
+  "historical_greedy_accuracy": {
+    "swift": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23,
+      "recall": 0.5660377358490566,
+      "precision": 0.5357142857142857
+    },
+    "python_native": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23,
+      "recall": 0.5660377358490566,
+      "precision": 0.5357142857142857
+    },
+    "python_swift_pixels": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23,
+      "recall": 0.5660377358490566,
+      "precision": 0.5357142857142857
+    },
+    "python_pytorch": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23,
+      "recall": 0.5660377358490566,
+      "precision": 0.5357142857142857
+    }
+  },
+  "swift_global_merge_check": "PASS"
+}

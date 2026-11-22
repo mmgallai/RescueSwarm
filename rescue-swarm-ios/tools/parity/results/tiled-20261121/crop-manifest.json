@@ -1,0 +1,7716 @@
+{
+  "schema_version": 1,
+  "dataset": "HERIDAL corrected validation",
+  "selection": "All nine manually corrected images plus deterministic round-robin samples across site and zero/one/multiple-person strata, seed parity-20261121. Frozen before inference.",
+  "source_manifest_sha256": "3444c8549421650804070e669724cab9020d3677c0647a2dfd0ff73507c569c1",
+  "model_files": {
+    "Data/com.apple.CoreML/model.mlmodel": "c77350c197696b58dd482bbf593e44edef9b4681c6777ee6ab5f5742765d07da",
+    "Data/com.apple.CoreML/weights/weight.bin": "f2a1dc4f7db957bb539d67682733475328cb0599ce0a020c3f04d8abf0e92772",
+    "Manifest.json": "ec8876f501ff83e8e72f5700cb2d24b764afe98f275176743a0d515fecf7ff0d"
+  },
+  "settings": {
+    "imgsz": 640,
+    "conf": 0.2193603515625,
+    "iou": 0.5,
+    "compute_units": "ALL",
+    "weights": "Frozen D85 checkpoint, separate CoreML export; no retraining or app replacement",
+    "inference_conf": 0.21923828125,
+    "global_nms_iou": 0.5,
+    "grid": 4,
+    "margin_per_side": 0.1
+  },
+  "images": [
+    {
+      "id": "train_BRA_1002-crop00",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1002-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "74829c97252d8ecc1079dd0d9b9a7edbe8db50904c35948f0bd90ccf0ee1e678"
+    },
+    {
+      "id": "train_BRA_1002-crop01",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1002-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "86bd024a2483579a8656e891df824fa53ffc6c0b9aa8b63e69c027b9ce3f224b"
+    },
+    {
+      "id": "train_BRA_1002-crop02",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1002-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "9a31f9c20c6c4b48e159db99653e429042afeae36f0fcf735f04d17323d7dcec"
+    },
+    {
+      "id": "train_BRA_1002-crop03",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1002-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a82ac0bbc3a68ca83b5ae852eeb1fbe2075a6855371ad9f09fb3ae0e49f50337"
+    },
+    {
+      "id": "train_BRA_1002-crop04",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1002-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "75d3d27da707901ece49f35703a42ebdac4ac2d577162d858a29c1e2b9f7cf76"
+    },
+    {
+      "id": "train_BRA_1002-crop05",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1002-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "20f164104bf8901c2c9b74870075e163c8856d63a66515ad2567a004d28c9b04"
+    },
+    {
+      "id": "train_BRA_1002-crop06",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1002-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "de38fbff03c427102b5fe9e0caf652a02913db8104837762bde7435e993aa4b0"
+    },
+    {
+      "id": "train_BRA_1002-crop07",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1002-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "1dcdd74a5a6bf06e51536ae622695d8fafcd25986a0355bb57fb483b833e4b85"
+    },
+    {
+      "id": "train_BRA_1002-crop08",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1002-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "bbb1248e7c9a4deed61ef4d6f50e481b904a7e4841d0c50d05895d987a66fb60"
+    },
+    {
+      "id": "train_BRA_1002-crop09",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1002-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "453b5893d8e37c4e246c37e72d104246c527eb77a215c258f8144c4826a867b8"
+    },
+    {
+      "id": "train_BRA_1002-crop10",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1002-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ccbbd91510c815298c20a7ba8322adbc5989b5e948da48c00b821ef6cd02a772"
+    },
+    {
+      "id": "train_BRA_1002-crop11",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1002-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2a6118a8eb9e231c099f9719ae6a30e04a582ee3687f4cc7143e34cbb83e87a9"
+    },
+    {
+      "id": "train_BRA_1002-crop12",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1002-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "05046aa6a0bfae6d8dae7eca49918a781fe0c6ebbe8e03a1e19c387f321048b1"
+    },
+    {
+      "id": "train_BRA_1002-crop13",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1002-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "74d672f000481e4fc68a52a67b95f56d019faca2435894f25b1db5e4ed79d901"
+    },
+    {
+      "id": "train_BRA_1002-crop14",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1002-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "90964eae6c0702042f0ee2881e8e87093aaa71eff1144fcc16677f2725a2c898"
+    },
+    {
+      "id": "train_BRA_1002-crop15",
+      "source_id": "train_BRA_1002",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1002-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "467359d474588ead1aab048698a3af5645bb0c6fd72e01aff2d5008faf545ad4"
+    },
+    {
+      "id": "train_BRA_1003-crop00",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1003-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "edcf17f6064bf696ee0a4fe9480b645b9e8daadd1e20790fdf9435b34fbc98a7"
+    },
+    {
+      "id": "train_BRA_1003-crop01",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1003-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "3366be83c4405711587629a558fc38e09dbaf7e928e395eb5b922de51fa6a134"
+    },
+    {
+      "id": "train_BRA_1003-crop02",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1003-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "7ce15618223577373795b4116284485539d3f0a11ea48b1ded90e575ddab2044"
+    },
+    {
+      "id": "train_BRA_1003-crop03",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1003-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f36d0a57a2c58729c592d02786e2cc23212fcd5e267ce1a1ca19cefaafb01aa3"
+    },
+    {
+      "id": "train_BRA_1003-crop04",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1003-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "45521b0a497ae008031e72ed7738dcfa0507945ea23c704b5c95bdf5ca59f974"
+    },
+    {
+      "id": "train_BRA_1003-crop05",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1003-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "314909aab11d9d16ea465a9829bb7761fac09a0ba5baef7d2b446ef985543c17"
+    },
+    {
+      "id": "train_BRA_1003-crop06",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1003-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "384096b34b788760c49f080ac289c20bf8866e6319ca573a297aa1856481d51b"
+    },
+    {
+      "id": "train_BRA_1003-crop07",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1003-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "970101765f45838c97c94733e5f210f82a77bfdac01781f4f5f2f8635e729a84"
+    },
+    {
+      "id": "train_BRA_1003-crop08",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1003-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b94aaf75cd235b99444d0ddc7bc4c204b39c1e552c86169bbf9da8894378b0b4"
+    },
+    {
+      "id": "train_BRA_1003-crop09",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1003-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "961bb664db6b5d63e881ef5ee4a821ceefec60f311a680b92b80a7e4695610ff"
+    },
+    {
+      "id": "train_BRA_1003-crop10",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1003-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "54703d492c1bbae013687c06c054c732e00c1624029a9a3938772eeb3f68739e"
+    },
+    {
+      "id": "train_BRA_1003-crop11",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1003-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4277fbdeff2919bcc6bcff1097452616aeadc0d8945d5af638725634a9378466"
+    },
+    {
+      "id": "train_BRA_1003-crop12",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1003-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "8a348cbc72df2d7fb4c51a43ad3fd15c147d7192f80e14b5ff18625570c361ec"
+    },
+    {
+      "id": "train_BRA_1003-crop13",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1003-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6f177828019e032e7d2f0fd4ed114a639da87d44cfbe8549368e6719feb29670"
+    },
+    {
+      "id": "train_BRA_1003-crop14",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1003-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "d81039aea7a2aee3ec1ae42b94fb2fda9ef43e62062fbe99f19936deb5d61273"
+    },
+    {
+      "id": "train_BRA_1003-crop15",
+      "source_id": "train_BRA_1003",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1003-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2ca3883277cd69ad4990f0429fa3168de35518a705367ba891efcd7c105c7172"
+    },
+    {
+      "id": "train_BRA_1011-crop00",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1011-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "73c0457650d94f07a225c6e815f499f618fbcfe01666d38bc0183f001e691417"
+    },
+    {
+      "id": "train_BRA_1011-crop01",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1011-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "025e3e779b8a31a1b376d765f07e022de657e19b6187453566a1e077d5386f08"
+    },
+    {
+      "id": "train_BRA_1011-crop02",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1011-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "67e7c01f6644cb510a95c4f9614a9d6d63133a354b641a1c81e3e8fea730a209"
+    },
+    {
+      "id": "train_BRA_1011-crop03",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1011-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1144dc98510b7f7558260f811b30339e4d45cabb02f56375fbc9e81d8c48d853"
+    },
+    {
+      "id": "train_BRA_1011-crop04",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1011-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "8e81c106df91fb5085993c054aad81ad6b03eff634b758f03fdeb10c4b80582b"
+    },
+    {
+      "id": "train_BRA_1011-crop05",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1011-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "0a16d62074285e4d16a39420727de4d62cd705a03ec8f2ad0c9b57db1d043fec"
+    },
+    {
+      "id": "train_BRA_1011-crop06",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1011-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "6310f99f04576235bc2331f98ce86afcd73d58dd0efe2f70f8b004127f597fbb"
+    },
+    {
+      "id": "train_BRA_1011-crop07",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1011-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "1f0e5c50d8e62896b3a41abe4cb0925a2de1205925513b3fe6dd09fb5047834e"
+    },
+    {
+      "id": "train_BRA_1011-crop08",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1011-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b4312ac1f880e71a8129a3b4697386203eecaa292d6d9d4cdbf4bfe3c1cce237"
+    },
+    {
+      "id": "train_BRA_1011-crop09",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1011-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e2584d0faac9cfcd267464dd7902fa7fc4b62702809ac2def659c4f87952a336"
+    },
+    {
+      "id": "train_BRA_1011-crop10",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1011-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "a7cfdd1c01119f771990eca9f59f51b65b53948c4039314953543c453f11e600"
+    },
+    {
+      "id": "train_BRA_1011-crop11",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1011-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ecb02fcb19a87ba6aa7f795aed64564e9681b5c43de91cff638909aaa00d2953"
+    },
+    {
+      "id": "train_BRA_1011-crop12",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1011-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f94176c553d7c4d539e756a96a79e62692345bceda975d4e422b71553a68e544"
+    },
+    {
+      "id": "train_BRA_1011-crop13",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1011-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b2cf8411ce34aabcffa15db7355530b09cd5b57925a0c950ec70a443f1708aec"
+    },
+    {
+      "id": "train_BRA_1011-crop14",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1011-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "209d18adab90238a10776e51e4f97d1093bd038b0a19eb682ccb8d9566fbb9c6"
+    },
+    {
+      "id": "train_BRA_1011-crop15",
+      "source_id": "train_BRA_1011",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1011-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e6fada367d20f105ae18d2ed1e7f043f3956fe1cb1a6f596dce51f478ae63d86"
+    },
+    {
+      "id": "train_BRA_1014-crop00",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1014-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "27e18de5f850147db916035869f510384026e198834c2edfb13f52677d8f3fa8"
+    },
+    {
+      "id": "train_BRA_1014-crop01",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1014-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2cfddd954be5dec6a68724e3bc2b4aece0ef207d40539699fdbfc8e24822b111"
+    },
+    {
+      "id": "train_BRA_1014-crop02",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1014-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "0e166517833c3497823b4b439e9521dda4f53529fb3e4286128f447e24e9ff50"
+    },
+    {
+      "id": "train_BRA_1014-crop03",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1014-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "94c25c42d44e51301fdbbeeb5c583d8a13959e2901439bb4f5881303061807e3"
+    },
+    {
+      "id": "train_BRA_1014-crop04",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1014-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ef3d8adc25b6731036be2b3ffdf97ff9a02caaee80909e7d2b4d5c41e3e12c71"
+    },
+    {
+      "id": "train_BRA_1014-crop05",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1014-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4aaad5549afbd820e0deb4ee727b8ab0983600ecd3cc0a22115978ad1f91e0ec"
+    },
+    {
+      "id": "train_BRA_1014-crop06",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1014-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "0d687c37620571b0a17cf62ba9656834b1229ade82e1a5f3074f1d8f58c38e4c"
+    },
+    {
+      "id": "train_BRA_1014-crop07",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1014-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4e6b09af2d96da96448b8f7996ef96023d20892220ad6e549f642d77e17f82f8"
+    },
+    {
+      "id": "train_BRA_1014-crop08",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1014-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "018fe6da74ed7a35e28bfa71c86dd13d6ee4799937a2a3ffad876f2d7073aa34"
+    },
+    {
+      "id": "train_BRA_1014-crop09",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1014-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "10725356e8a07ea9a53c24cdfbeece02fdd9b466a4df33bd6ecd37f2c3b3442a"
+    },
+    {
+      "id": "train_BRA_1014-crop10",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1014-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "a5eae75e910f04f77a42553fc3f9a2aa95abd14801e44babb774249bc6304184"
+    },
+    {
+      "id": "train_BRA_1014-crop11",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1014-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3d12a2c4f3e881af3aa0db8575bf8c3b55938ff8a36996628b8da2dc10c2f4fe"
+    },
+    {
+      "id": "train_BRA_1014-crop12",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1014-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "33d43e2b28d4a22f57ae787db43574cebabd3739b1063f0b4868b4d6e497709d"
+    },
+    {
+      "id": "train_BRA_1014-crop13",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1014-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "d3b6157490799730765db93faaaa60567c74db80c65b20e7782928c2d90089cf"
+    },
+    {
+      "id": "train_BRA_1014-crop14",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1014-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e41214bac3ed2a7117047e3ae4f85670d7cd9e5072d88e7bc0f40786cc5bd00a"
+    },
+    {
+      "id": "train_BRA_1014-crop15",
+      "source_id": "train_BRA_1014",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1014-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a1aedb44e43021578a2c878f31a360816d37d62fb32538962ac6414de255b330"
+    },
+    {
+      "id": "train_BRA_1023-crop00",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1023-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "49c889c5cc9411265df6b885140076fc53891bf5bf6c1e76a541502ee9f6a248"
+    },
+    {
+      "id": "train_BRA_1023-crop01",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1023-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "0f3277a1b22ebf07349da30a69e2bdbef496133e805f07c6b6745d990588e603"
+    },
+    {
+      "id": "train_BRA_1023-crop02",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1023-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b6b7681b054de1dc921c6d984bd8b84988da090b610d5d03e53b2af1245d17c3"
+    },
+    {
+      "id": "train_BRA_1023-crop03",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1023-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e30ce3a1e7e0e3fa78b6b89747458832b13ed357a87c6320579eab9d192d8145"
+    },
+    {
+      "id": "train_BRA_1023-crop04",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1023-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "facf624e9a23dde2615d392e9313354dbce4e328193c2eb5eb64c8a0329c3754"
+    },
+    {
+      "id": "train_BRA_1023-crop05",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1023-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "9a7b8b05b85036d56aad84d4ee5cb217138f9b7c02e7449649830636607a3ca9"
+    },
+    {
+      "id": "train_BRA_1023-crop06",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1023-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "050c297cd39bc27ea47c84c2ebc7f3650b2c3f8f0949a2306ffb3f4c6c578be5"
+    },
+    {
+      "id": "train_BRA_1023-crop07",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1023-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b1a60e1e84f0f245be076156e418adeee3bc08743ccf5603e35cb6d5dbfe90c2"
+    },
+    {
+      "id": "train_BRA_1023-crop08",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1023-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "dac7201f8ba67a1544443c6ce044eca3fc8995546af26a52d1b962e736dbcbf3"
+    },
+    {
+      "id": "train_BRA_1023-crop09",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1023-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2c1ec37b34cadce92e62f54f9b734b1ceefc79aa636d141a0ef376acea14ece2"
+    },
+    {
+      "id": "train_BRA_1023-crop10",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1023-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3cd48c5f231839a75918ed81a157363bd1a882f8bf197247921bf0112863ab01"
+    },
+    {
+      "id": "train_BRA_1023-crop11",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1023-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "adf36a0f2beb1a1248aac0bb7cbe95e0f599956596a7bbe694e97630ffe4a66b"
+    },
+    {
+      "id": "train_BRA_1023-crop12",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1023-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "428a7c38ee775c956a6a12536681148230654db1046b75549fc5ba483223ea36"
+    },
+    {
+      "id": "train_BRA_1023-crop13",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1023-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "acc146213e0e5273af5d2841383d11a331c8f6d389476a07b9c04af2d98e361b"
+    },
+    {
+      "id": "train_BRA_1023-crop14",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1023-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b7b6634e21e5820499ecde8d18d28dbac615b4feefd9ab93442c9b009719859c"
+    },
+    {
+      "id": "train_BRA_1023-crop15",
+      "source_id": "train_BRA_1023",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1023-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "52906f243229d4b31dbc12cc76230125dd5575fe9a17948143fc61cdf48e5981"
+    },
+    {
+      "id": "train_BRA_1041-crop00",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1041-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6e216eb764421069c6dbcd50382159f9f84b51b1d8ad01004219d2974191ec03"
+    },
+    {
+      "id": "train_BRA_1041-crop01",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1041-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "0c106ce585c3d20666f2c3054817196aeb8da823cab9898fd3488bd6b2270ed0"
+    },
+    {
+      "id": "train_BRA_1041-crop02",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1041-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f56c7ee117f4c7927bfdc2c931a199474d97db5257f7f7377b16e793307169b3"
+    },
+    {
+      "id": "train_BRA_1041-crop03",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1041-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "25b2d15e45b4441e1dadf114f1f4e0ad7f497c93c2eae903670d9545130d6e01"
+    },
+    {
+      "id": "train_BRA_1041-crop04",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1041-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d39ecaa903f2f6c2032870858811d25989e995a0b8ff48fc5a01943ca4e3b03f"
+    },
+    {
+      "id": "train_BRA_1041-crop05",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1041-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "7a5101162a6f8623ced8705a862db47bb211558054c93028f4acd04a0767815d"
+    },
+    {
+      "id": "train_BRA_1041-crop06",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1041-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "c75e9938960c3389800514d004e72a4bf897f4e1754627956c058bc241650431"
+    },
+    {
+      "id": "train_BRA_1041-crop07",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1041-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e7b2efa84d501d0f74ecc3d55e747f05d2cfabd2f6e813b0499910f3c2168257"
+    },
+    {
+      "id": "train_BRA_1041-crop08",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1041-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "780e1e4d803f64ef63a67f0bb0de1e657bea5f6931da053f6f26f14879dd99f7"
+    },
+    {
+      "id": "train_BRA_1041-crop09",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1041-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ee905be65e217091642f87ae19141c49144523249f0c3cd4824f2196558bdc84"
+    },
+    {
+      "id": "train_BRA_1041-crop10",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1041-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "f6407b64d4c948039c4c4fb6df85c2908354177db1b46f3b7dfc37352bdc85b7"
+    },
+    {
+      "id": "train_BRA_1041-crop11",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1041-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b9d0f11f93f432f34e8597d06289bf84234395b7eb510f5cb0cccfb7c3c62bd2"
+    },
+    {
+      "id": "train_BRA_1041-crop12",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1041-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6be2f9b9f05acd40b72c851e02ba427cf59a8122de4986b2ef5aa96d4161b5f1"
+    },
+    {
+      "id": "train_BRA_1041-crop13",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1041-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "0430be743572494dc20bb88323eda4f071d02e37be4b59fa90de9ad772ab1895"
+    },
+    {
+      "id": "train_BRA_1041-crop14",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1041-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e71307e6514cde085fdd5d8837dd2183aa6d5c023edd62784dfaf44f921ac69e"
+    },
+    {
+      "id": "train_BRA_1041-crop15",
+      "source_id": "train_BRA_1041",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1041-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6a3ade44942eebb1bc64df6fa6571a5c4b626d9a115de9b8b49d38372a15a6b1"
+    },
+    {
+      "id": "train_BRA_1048-crop00",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1048-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c55cced37dbee95f19fa6344d3d56dc51d987653f403fd526bd1a9977259bb9f"
+    },
+    {
+      "id": "train_BRA_1048-crop01",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1048-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "34bc06c5f963f09defbd003c709787c2d550e1351d39c47f6bd0123e4f84f7a9"
+    },
+    {
+      "id": "train_BRA_1048-crop02",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1048-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "728f4dc4bc31a074d22eef4d626dd571bdbf1b9c329594caa8779ab770f79f6e"
+    },
+    {
+      "id": "train_BRA_1048-crop03",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1048-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f29fea1ea653f55e2215a3ad5c58f867da266d4e3de0965ebf1259bf8c4bae05"
+    },
+    {
+      "id": "train_BRA_1048-crop04",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1048-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "c6f7e4cfcc8103f69c1289c7bd02319f094f5454a54d0a9e0baa6f35a636efe2"
+    },
+    {
+      "id": "train_BRA_1048-crop05",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1048-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "88f34ef136943a8c978dabc1ac232c282d6c04b2121fa05e19a45e5ede668e26"
+    },
+    {
+      "id": "train_BRA_1048-crop06",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1048-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "9799cca8de740c7e6e8f94082d1d04ab79ceddc41f6e7a56414d539aae70f246"
+    },
+    {
+      "id": "train_BRA_1048-crop07",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1048-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "caeb7b9fc5fdd10d70c06e09a641ae5daa6b8005badd76cdb9fd5ddfea3c7819"
+    },
+    {
+      "id": "train_BRA_1048-crop08",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1048-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "33c82ca822ffb04b1d67e59bd0202ea3fbd6db382778608b8b4496512a79f1b7"
+    },
+    {
+      "id": "train_BRA_1048-crop09",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1048-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "9985989779af795b601d846cc1730ef6ae6a5eeec09c7a4317f76b7ad10e0e26"
+    },
+    {
+      "id": "train_BRA_1048-crop10",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1048-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d912e2a64d9ee1f020512177211035b9a8aedbd1f9f34d603ccc4a4b070e838e"
+    },
+    {
+      "id": "train_BRA_1048-crop11",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1048-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4f038ea3b4843d5c69054c82dfe73f38b59284657f54f5ff2ba91f642dfdf1f3"
+    },
+    {
+      "id": "train_BRA_1048-crop12",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1048-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e0c1f781b27b0cab1c92e2a0991006e202c3d179a648ecccf2ce5424b01960e9"
+    },
+    {
+      "id": "train_BRA_1048-crop13",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1048-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "83f083da70d83c5597bc799a9868118cc1d4a347797fdb781186b00d44310c83"
+    },
+    {
+      "id": "train_BRA_1048-crop14",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1048-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "da5ea38fa593a04d39a24f412c21e92f0a6e379e935b2bab822ff5eaf21cc3ba"
+    },
+    {
+      "id": "train_BRA_1048-crop15",
+      "source_id": "train_BRA_1048",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1048-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "831881f9c4f9eaa17055cadf8d2c1498137fedbe8ddc16b8f9eadb44ad6a6ff6"
+    },
+    {
+      "id": "train_BRA_1063-crop00",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1063-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "93eef338d17bea573f3c69e3214492ab8722d1abb28a3aa69e2630f4d48e9abb"
+    },
+    {
+      "id": "train_BRA_1063-crop01",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1063-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1516fcb4a01a80c69d795694c130e7c2d7c90ce705c4a37f1e7b8958f1b080c2"
+    },
+    {
+      "id": "train_BRA_1063-crop02",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1063-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "47ff079ae5f9cde8346ed2899fc1bbd95312713f01a831e1da13e127bc8e7349"
+    },
+    {
+      "id": "train_BRA_1063-crop03",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1063-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a56c091bb093dc1f6be3bc70f843d3b9e1512a1a444fa12616177abc1f018d79"
+    },
+    {
+      "id": "train_BRA_1063-crop04",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1063-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "471ce5c587b74c7d46d88e1f09ae05c20fa0cb5a37dee9ebe36fee6b6ee041a9"
+    },
+    {
+      "id": "train_BRA_1063-crop05",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1063-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "15a55481242ca73c0298d6b56b6c4363decb51930ee9d15e5dfaabca270571aa"
+    },
+    {
+      "id": "train_BRA_1063-crop06",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1063-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4b403070e33bacc1b19b564f4b2aacd78dc6d8ed58b7b6411502a1ae0d9a1b30"
+    },
+    {
+      "id": "train_BRA_1063-crop07",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1063-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "9b8bfdb25b6487387ad84cd80a8fa4cc67ac1888af3c0322fd494b0b9affa1fd"
+    },
+    {
+      "id": "train_BRA_1063-crop08",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1063-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "f6d4d8ef02a1e7ea68fe659c76f9e840d6ac94b95f2c9cd776e84d76572e3565"
+    },
+    {
+      "id": "train_BRA_1063-crop09",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1063-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "efc66f3ef25421ecf126c9c1cca7c1f80f574ccf5f86f7efd2dbe22803cfdf09"
+    },
+    {
+      "id": "train_BRA_1063-crop10",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1063-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "92e87bad0fb3e617563f37009e1728bf06217548aa170e94b987c94bc42d84c5"
+    },
+    {
+      "id": "train_BRA_1063-crop11",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1063-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "0473c34c051ff6ff22309e52d25a2f5930c1a95efa31dfd46a0dd47d24a8fbab"
+    },
+    {
+      "id": "train_BRA_1063-crop12",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1063-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "cb09de2b95204b7013381a6fb30ff41bac1ebc44ed8b97fa8d6599005a9356e4"
+    },
+    {
+      "id": "train_BRA_1063-crop13",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1063-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "753e259f2d5bfaf1b7af0d55c181fe8174e7a4a4b2b955f3a109506548b1be00"
+    },
+    {
+      "id": "train_BRA_1063-crop14",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1063-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "d9ea68a8758cf123cd25b41083efa7b8e9cd35cf786baba6c6b3426d327309b7"
+    },
+    {
+      "id": "train_BRA_1063-crop15",
+      "source_id": "train_BRA_1063",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1063-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "ec136383da05245cacfe56c270b1b9c9dcf4ca026333ccadc88cdb035494e682"
+    },
+    {
+      "id": "train_BRA_1068-crop00",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRA_1068-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e0d43777ec0d52f1373e3b7c997b55808847ea65ef70ecbd3bfe622f8919e764"
+    },
+    {
+      "id": "train_BRA_1068-crop01",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRA_1068-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "971214aa6b40bdb2159667ec5b6f3032a5536bdef4013154ae6b2a9ebb088cd8"
+    },
+    {
+      "id": "train_BRA_1068-crop02",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRA_1068-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "0d7e60a91c99e03e6ad7b4b798244ce65a262b58193535cc0d8a35eb7748c0ec"
+    },
+    {
+      "id": "train_BRA_1068-crop03",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRA_1068-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "7bdc789dfe1901a7b08d2ed842c32df93c9507a800f2bff9c4a9823c44bd4bf8"
+    },
+    {
+      "id": "train_BRA_1068-crop04",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRA_1068-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "7dfb31fcce7348df4974c0b20495378287daa85118d2a423385418434b127cb5"
+    },
+    {
+      "id": "train_BRA_1068-crop05",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRA_1068-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "1faa8c28cb509117de6a7eb4b7e344c601c105ab021b6266f406c25c0012d9d8"
+    },
+    {
+      "id": "train_BRA_1068-crop06",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRA_1068-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "dba35d828464cdfb4a7640a3397d31c68bba78c4711b15016472293f7e6ce16e"
+    },
+    {
+      "id": "train_BRA_1068-crop07",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRA_1068-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3ea948f3980ef8c829d7d1485f78346401f8903c2ac9d5ce47d649143270f979"
+    },
+    {
+      "id": "train_BRA_1068-crop08",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRA_1068-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2124d9934391106342d15e8b0e2df8c8e767b277339ab4e74dad6314bac3fe56"
+    },
+    {
+      "id": "train_BRA_1068-crop09",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRA_1068-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2dba10248c665b44845f094b52673b0ba9299b4dabad43443815a05e00162cce"
+    },
+    {
+      "id": "train_BRA_1068-crop10",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRA_1068-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "812158a5ebcee5e4033d00e9d6c0f5050dc0d42b53cbdcec8171bb4d8f41043a"
+    },
+    {
+      "id": "train_BRA_1068-crop11",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRA_1068-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "0fb5aee3cdee03292c6bc5621a8135b1584fb08059961edc21bccba65f6e4e6d"
+    },
+    {
+      "id": "train_BRA_1068-crop12",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRA_1068-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b83198e24cfde65d524625c14302a61d6beb3436634af330dade00f126a4a3c0"
+    },
+    {
+      "id": "train_BRA_1068-crop13",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRA_1068-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "02d208e52181adf1f2333d5e36ef4b14462551218cc288738f5011bd443b84d1"
+    },
+    {
+      "id": "train_BRA_1068-crop14",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRA_1068-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "00e63bf86a1fa6ccdf7708eb49432aa6effecded1af0456b420dfb1fb3302628"
+    },
+    {
+      "id": "train_BRA_1068-crop15",
+      "source_id": "train_BRA_1068",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRA_1068-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "95c0e9c608f3a733502239cef74b1ee3bbc364ccccffc25dc927a04099df0f61"
+    },
+    {
+      "id": "train_BRK_2007-crop00",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRK_2007-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "022fefca3794b455a795002e85aa26ee3e815189552fd6a8bd179e382d3c549e"
+    },
+    {
+      "id": "train_BRK_2007-crop01",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRK_2007-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "4cf27cca6b54f6723fb7482b5808bc2317c21235bebbaa02616d28f33818cbfd"
+    },
+    {
+      "id": "train_BRK_2007-crop02",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRK_2007-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "91ea6b812abe24ad93701db29b15c50263a1234f6c59366bd9727acf89e2b707"
+    },
+    {
+      "id": "train_BRK_2007-crop03",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRK_2007-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e1201049ee5c580e17f74c4e40535ffe1dd330f7dbfadd9674f08339f9bae81e"
+    },
+    {
+      "id": "train_BRK_2007-crop04",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRK_2007-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3adeea58299399791089fae5bd5adeca52d5d22a0f6729ccd21a6fa839759770"
+    },
+    {
+      "id": "train_BRK_2007-crop05",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRK_2007-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "29a85c35ee72bfc4f2a5da6dcce50c53852e55a5fedc2d719ce4a18091f29d63"
+    },
+    {
+      "id": "train_BRK_2007-crop06",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRK_2007-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b181253b0e1d968fbeb8c9ede342a149658c94859c19d2e931a6beecf06ecfed"
+    },
+    {
+      "id": "train_BRK_2007-crop07",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRK_2007-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d64cb5fbea8aaf9ded3689f35b450d8bc6400c9aa1f565e1c5fb16cd80d7ea31"
+    },
+    {
+      "id": "train_BRK_2007-crop08",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRK_2007-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d003d499dc1d3c13c497037b54d9e490335521a40dec7943c830a1b857c0f79b"
+    },
+    {
+      "id": "train_BRK_2007-crop09",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRK_2007-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "34b2c17d75f73e3be0f1676e6f64064b6b34901370459389d3efd6e326e4e7da"
+    },
+    {
+      "id": "train_BRK_2007-crop10",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRK_2007-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "72fe292757db7637672758c43edd3d8a24c33459df9a51009b44750804095fc7"
+    },
+    {
+      "id": "train_BRK_2007-crop11",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRK_2007-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "74b02e8e5dcb4ad157cd6e0509556d0cefe83d45ca71379b93cd3e846b3196ac"
+    },
+    {
+      "id": "train_BRK_2007-crop12",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRK_2007-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "7f5ad7a7edc76a0a2a73b791b80b8be18b94264aba92fa254ce9638a9e3c79ca"
+    },
+    {
+      "id": "train_BRK_2007-crop13",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRK_2007-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "806589cce0c5c087e8d52105a4e1ec31e125db4dc7e555c9f932b10e2796f04c"
+    },
+    {
+      "id": "train_BRK_2007-crop14",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRK_2007-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "671fc31e001d57e6da2c1d47e55ff335c031e53c9abd136c94732379143c68c0"
+    },
+    {
+      "id": "train_BRK_2007-crop15",
+      "source_id": "train_BRK_2007",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRK_2007-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c04c44a3a79ee623e136088d53ab6705b6a6fb21e264377fc50fab3bd87ad14f"
+    },
+    {
+      "id": "train_BRK_2027-crop00",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRK_2027-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "ecbc9eb3b805052e52d7c84ab5df4e2477ab766118c6acfd5bb2cbb657295db4"
+    },
+    {
+      "id": "train_BRK_2027-crop01",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRK_2027-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c197b624b02262c493158265bb5b72883af00366a90bc8f146814f9a42ca5f5d"
+    },
+    {
+      "id": "train_BRK_2027-crop02",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRK_2027-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "36ed11bc5a3b94d1d24e6469b207f1f61932c9e85309d08f0beab748dde30a72"
+    },
+    {
+      "id": "train_BRK_2027-crop03",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRK_2027-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "bc0c396faa3f4453c4c6e8ddac8d1e084931988d73a1bb460a7f530037205184"
+    },
+    {
+      "id": "train_BRK_2027-crop04",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRK_2027-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "0eb6d7324d1b9fc7e94880b97aa616974e6fa6b836ad7bee302da5c19f2ac058"
+    },
+    {
+      "id": "train_BRK_2027-crop05",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRK_2027-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "dcbe9a5af3917154cbb2de8c993e3976f5507a84f73f6a8a56b0fb3915796a56"
+    },
+    {
+      "id": "train_BRK_2027-crop06",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRK_2027-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "cdfd940eb905c1da7017b2a8c0ab813232eef5ed553bcf6d7caf7f08fde80ba5"
+    },
+    {
+      "id": "train_BRK_2027-crop07",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRK_2027-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "c63837f2b6a2ac1dc48493d25a1824a28c7208b713767d704f593db3ca23602d"
+    },
+    {
+      "id": "train_BRK_2027-crop08",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRK_2027-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d1aef47ca5fab8b6ae8af3376532d00b3a204e7ece36ab54a4c146ebe18279b7"
+    },
+    {
+      "id": "train_BRK_2027-crop09",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRK_2027-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "a459ca6de633aa52781f3402ffdce0fe4fe8706df93ed33fd933c09ab5e61e3b"
+    },
+    {
+      "id": "train_BRK_2027-crop10",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRK_2027-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b1de1afc948af09bac27e248694ceab2f17696e6092c5fee6955d7efc526fe3f"
+    },
+    {
+      "id": "train_BRK_2027-crop11",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRK_2027-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4a060cf377bd94c91da79d38fff2150a1940f53ce65d5b70e3c58e047f61f0d7"
+    },
+    {
+      "id": "train_BRK_2027-crop12",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRK_2027-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "d620125dcd57f1cea2501a4ee03f99fa2e72802de754bf049eec4076ca472897"
+    },
+    {
+      "id": "train_BRK_2027-crop13",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRK_2027-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "3d9c31ff603558c4e059ec8a69d700b82a02817b74da67782a556558bd42499f"
+    },
+    {
+      "id": "train_BRK_2027-crop14",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRK_2027-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "cb2fc67606d042cdacd331c84ceec6756c00f3c85083787e80511b4f6a376f44"
+    },
+    {
+      "id": "train_BRK_2027-crop15",
+      "source_id": "train_BRK_2027",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRK_2027-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "04c4ab34292631ce4903cac4566e89d6fc1e04fbfadd05ff2da092e379b491dc"
+    },
+    {
+      "id": "train_BRK_2029-crop00",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRK_2029-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "45e32d3ba0f4632b92eb18e4faa072210c16e28184b49c9b7cca541f7eaf3a87"
+    },
+    {
+      "id": "train_BRK_2029-crop01",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRK_2029-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2bd879168f95803b0308e08b7147cbc6d93baf96ba024bcede2d94bae2698132"
+    },
+    {
+      "id": "train_BRK_2029-crop02",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRK_2029-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "04c3d1e1c5f0441ba870e72618f62d1cc95a0dd1ce29daf0b4ab07f0a04cd28e"
+    },
+    {
+      "id": "train_BRK_2029-crop03",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRK_2029-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "d689f571ed4e394116c3b5fb5ca6ad53236217e08b5622998bc91db3dd4141d7"
+    },
+    {
+      "id": "train_BRK_2029-crop04",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRK_2029-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d827e0c9ad5febd6225f645ab07463ccf4f78fcbc828291f87cd4de3fe41f0ec"
+    },
+    {
+      "id": "train_BRK_2029-crop05",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRK_2029-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "bdf28c63ae560989f819964088df4e7a5308fe3864c82f2d235caf2b2c40f72b"
+    },
+    {
+      "id": "train_BRK_2029-crop06",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRK_2029-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ce1394aacd9a87047070134ef6fbe68260c3edade6eb8710ce83474b6d2cfda9"
+    },
+    {
+      "id": "train_BRK_2029-crop07",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRK_2029-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "6ac675b1bc0f2b1c45c2544d5bc9fd7f670c6e40808eff7d6a11523b51f964f6"
+    },
+    {
+      "id": "train_BRK_2029-crop08",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRK_2029-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3004bcc6083b5840cbeb82e1055d3a35736b9d6397544f8836d5def433856c58"
+    },
+    {
+      "id": "train_BRK_2029-crop09",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRK_2029-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "efbbb13ffbedfaa1bf052fc877a757d1e4d3599448d6862f3acd6e70b92fb04d"
+    },
+    {
+      "id": "train_BRK_2029-crop10",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRK_2029-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3c07ea874e387db013e3d6fcca8f9853f5544b801df519275f5888032e63e067"
+    },
+    {
+      "id": "train_BRK_2029-crop11",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRK_2029-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "7e909c9c53a6e3486885c9203d51c3e6dda92b193d978d1bb01428e44c4dac55"
+    },
+    {
+      "id": "train_BRK_2029-crop12",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRK_2029-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "414e49b0778c6429af8fbff2e3a468682bc51f608179f75fc21c710832c6c2b6"
+    },
+    {
+      "id": "train_BRK_2029-crop13",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRK_2029-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "bb6e95ee982a78ef48eb25fbbb8d19e2e7a31a508b1130a9817bea763b4b4cea"
+    },
+    {
+      "id": "train_BRK_2029-crop14",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRK_2029-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a3d95f919e42adc143f4f979308e6f2f132710678972f0ee98ce1effadd4c769"
+    },
+    {
+      "id": "train_BRK_2029-crop15",
+      "source_id": "train_BRK_2029",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRK_2029-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b29398624f9708a9271ff4803918c3a186446e6929af3dc8fcfee8b731b8c403"
+    },
+    {
+      "id": "train_BRK_2043-crop00",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRK_2043-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e4a88c7ae221458c71f0095406a884c35acb08c16c7f8c3de07331394537f8bf"
+    },
+    {
+      "id": "train_BRK_2043-crop01",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRK_2043-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1bc2ad57bdf9e57e46d4b3c3b524f8ac79a7c564556a0d2f92ec9cf7b80734c5"
+    },
+    {
+      "id": "train_BRK_2043-crop02",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRK_2043-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "8735cef424970f2928c4786a83cb3cc28fa78b0a74505ef04a7e7d173dcb24f4"
+    },
+    {
+      "id": "train_BRK_2043-crop03",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRK_2043-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "d8cc8d173be7b1d9f11b5ddad68d03a04886643893e0aa87a1fde46d9ff2e9d2"
+    },
+    {
+      "id": "train_BRK_2043-crop04",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRK_2043-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "faca2072c31965cfc8377636a67619fe724b61f9cd459ae9e1dad396a0079041"
+    },
+    {
+      "id": "train_BRK_2043-crop05",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRK_2043-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "920d7fc1157949ae726cc88466805515b6307d89518f3fd960e9af1d5d01567d"
+    },
+    {
+      "id": "train_BRK_2043-crop06",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRK_2043-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "a73429ead0072577c19a1cd17a30d29fee70f7b77fda9ca3ef7e0a94efd54249"
+    },
+    {
+      "id": "train_BRK_2043-crop07",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRK_2043-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "fe8f7d67b4f548d7749e2a77d5bad711cbdd47bca13ad98787e42bf4dd3e4627"
+    },
+    {
+      "id": "train_BRK_2043-crop08",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRK_2043-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "61a35203a51603d25b5f2ba95c203b5c684db3f26873d3a9641460667896a350"
+    },
+    {
+      "id": "train_BRK_2043-crop09",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRK_2043-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3ae8f2885629f0ab655d4320db9eb95cfb4e5ad304513b179cb0584fb4751309"
+    },
+    {
+      "id": "train_BRK_2043-crop10",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRK_2043-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "a291d5346b7afa3dbb5887573d1fcc176707f6c45580c11cac8626b4f12fc693"
+    },
+    {
+      "id": "train_BRK_2043-crop11",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRK_2043-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "87485e55dfaca6c0d6657e00a1201747af4baa0113d7770ab3d50e1491a13215"
+    },
+    {
+      "id": "train_BRK_2043-crop12",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRK_2043-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f55a0ae7e1c323bd2f142dc5ba9176eb92879ecdf93a204f67c99666b4bfdacd"
+    },
+    {
+      "id": "train_BRK_2043-crop13",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRK_2043-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a9da8e39beb6328f7ffe880edd9fbb9e59a8a7feb33c336f24c08d738a917484"
+    },
+    {
+      "id": "train_BRK_2043-crop14",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRK_2043-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2e7c9e18586c3515dbad22d3943a50f952d1bd20027a5d4fe2cf9d9478a23b4f"
+    },
+    {
+      "id": "train_BRK_2043-crop15",
+      "source_id": "train_BRK_2043",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRK_2043-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e0310181a4f5a82af2eb71547d2fa64d7700ed998e405efdc0ccef5bca503800"
+    },
+    {
+      "id": "train_BRK_2056-crop00",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRK_2056-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "460c4a3fd2df1eb365e7f7375fdbc5e23305e4c5cde89ab4199a8dfaa7269144"
+    },
+    {
+      "id": "train_BRK_2056-crop01",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRK_2056-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "4f8e31c4654fe3dafd702a015b66965c0a3a9f506a79408533dcd858c7dc6aea"
+    },
+    {
+      "id": "train_BRK_2056-crop02",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRK_2056-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a06649ade0dc1aff6cda4be33b3a109805cb27e04f856575f32771915b06f1b9"
+    },
+    {
+      "id": "train_BRK_2056-crop03",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRK_2056-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b2f3b997794848b1f91f416f805a3e25bf298e73d6713258efed1988504ce021"
+    },
+    {
+      "id": "train_BRK_2056-crop04",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRK_2056-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "65817848750a5d99afcbefb74b917aab87f91b377a377536bd6d4cb04b9b0480"
+    },
+    {
+      "id": "train_BRK_2056-crop05",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRK_2056-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "16baedb0b3d369a7de00fb6fe0c6cca622764a35c852ba5b310c0fbb4a46e29c"
+    },
+    {
+      "id": "train_BRK_2056-crop06",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRK_2056-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "bcbbcb52fe7270c065ecc7ca09a839ca635aa32c02013e0d13a93d16bf595b4d"
+    },
+    {
+      "id": "train_BRK_2056-crop07",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRK_2056-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "18f17038e59502814caf7874264d3a5ec81822e31e83a1132ffdcb8a8ac009bf"
+    },
+    {
+      "id": "train_BRK_2056-crop08",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRK_2056-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d414d795309b706b891606e53ee9ddfe3f9057c103feec6c0b58efe20a30ecfd"
+    },
+    {
+      "id": "train_BRK_2056-crop09",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRK_2056-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "248859719898213914f059eda5803d7329eac0ae36a816bd168565bb030889cd"
+    },
+    {
+      "id": "train_BRK_2056-crop10",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRK_2056-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4d1c20b08e506fd239908e335c99faa95611384a64a79b0e3d00a7e77e862826"
+    },
+    {
+      "id": "train_BRK_2056-crop11",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRK_2056-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b4c52df15df7827bd546d75e658b7c2919031fe2bbaba8b6ce7dc2fcef5a570d"
+    },
+    {
+      "id": "train_BRK_2056-crop12",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRK_2056-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "991f27a1839b5066fd8cdffc736da531e86ef4dd251506b46b7161a6a7f78c53"
+    },
+    {
+      "id": "train_BRK_2056-crop13",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRK_2056-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "4cb97c7d411eb587bc78df116ff8348eeb7e4806782cb6ab1e2fd073bb735d27"
+    },
+    {
+      "id": "train_BRK_2056-crop14",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRK_2056-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1de4dd0c3b628ef0b670c85acb5dfad717a9139e4ef074a8e73c113d7daedb68"
+    },
+    {
+      "id": "train_BRK_2056-crop15",
+      "source_id": "train_BRK_2056",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRK_2056-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "8a6b6db33455f13ea085e47431c7a65600e48fe90376cd1ab39289e7d8d30530"
+    },
+    {
+      "id": "train_BRK_2092-crop00",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRK_2092-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "d265bb1115e54868d1d3b3d6046ea72515f796d0a06c20c815598ed2bb699098"
+    },
+    {
+      "id": "train_BRK_2092-crop01",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRK_2092-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "74bb49c43b8e7b86300eb019f81381c37653aedd44b668fb7623570dbb2e7531"
+    },
+    {
+      "id": "train_BRK_2092-crop02",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRK_2092-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2e4015711802c47bebe7893e58a9643564419264d111fe2bc39d5be9bcc33d0f"
+    },
+    {
+      "id": "train_BRK_2092-crop03",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRK_2092-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "5d99626bebed59ab7f0ae351325bda32198326de05861f383b0c956a12e26f1e"
+    },
+    {
+      "id": "train_BRK_2092-crop04",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRK_2092-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d8381ffd5082154bdc8aed325683d8e569abda1d43de7af1a80ea428b3f891fc"
+    },
+    {
+      "id": "train_BRK_2092-crop05",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRK_2092-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "1d165ffe6d00a549254c5efeeb3cb52ff55cf2de77c4df82c3c6f4e2823b052f"
+    },
+    {
+      "id": "train_BRK_2092-crop06",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRK_2092-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "bc21c7dce3498b6d7a451f80f1a051481060e91f759b3d66741109c7f6c57420"
+    },
+    {
+      "id": "train_BRK_2092-crop07",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRK_2092-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b86b708c37f9516604597d153ebe747d198f09fcb17ad602db3d175e184c0106"
+    },
+    {
+      "id": "train_BRK_2092-crop08",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRK_2092-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "36397837c9ed9623937242a5aee083ae3c3aa6a16f54a95bc2eb2a6ad23cbe89"
+    },
+    {
+      "id": "train_BRK_2092-crop09",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRK_2092-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "69e7cf01fb08bd55ccc0a6565e4d3b97cf9f63536781fcdcfef71e6b2801d3bc"
+    },
+    {
+      "id": "train_BRK_2092-crop10",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRK_2092-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "34635ab40f286bc9afe71eaf20a7f9182732567524ae46a3e4bd7e9ed55b14e6"
+    },
+    {
+      "id": "train_BRK_2092-crop11",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRK_2092-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "be3b7b37ad3af1897be438fee0b4dadf033123df02e35508bccf61ea08d21cc0"
+    },
+    {
+      "id": "train_BRK_2092-crop12",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRK_2092-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e73086e92143b9d3f9437b658f417c0ea01c32771f3a32f44186ac2509411aeb"
+    },
+    {
+      "id": "train_BRK_2092-crop13",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRK_2092-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6ef912444166202e702b562093d9e5d0a783655b7adf4a700104fdcb52ec663f"
+    },
+    {
+      "id": "train_BRK_2092-crop14",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRK_2092-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "5034a5c37edac2e3ec2768263bac0a2b38cd0048ffde91120ada125470d1a5fc"
+    },
+    {
+      "id": "train_BRK_2092-crop15",
+      "source_id": "train_BRK_2092",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRK_2092-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "78a05fa081305779779f8a0f846078438c1fcd5dda306ffe5e75c35980f76b61"
+    },
+    {
+      "id": "train_BRK_2102-crop00",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRK_2102-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1148583ba759d5656e426d8a675497cd5cc4b153081753b1d76e491570785977"
+    },
+    {
+      "id": "train_BRK_2102-crop01",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRK_2102-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a7143e2671d6ecb0e64fa659a3bb09b8bf2b7d8bc9b0312d075bbc4a45e39a8e"
+    },
+    {
+      "id": "train_BRK_2102-crop02",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRK_2102-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b6b4c38f20b0171254243cd68addafa264c7dca20bf437e54a0c0d4fd0f3950f"
+    },
+    {
+      "id": "train_BRK_2102-crop03",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRK_2102-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6cbf36ea6e64270c3dd9b38f438bb38c466525c293d4fba9358692bd678f7e48"
+    },
+    {
+      "id": "train_BRK_2102-crop04",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRK_2102-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "13a49a1aadb7aa548a738b27a5872d7601df0791ad51e4acbce418484e254789"
+    },
+    {
+      "id": "train_BRK_2102-crop05",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRK_2102-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "080c25051dde8189600b66120fcbe94aa31f79edcf15c14ba6b9fb2582346fab"
+    },
+    {
+      "id": "train_BRK_2102-crop06",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRK_2102-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4449b18bf0683055cec38b5b322234e817239fc888d9282387dadacb6733a197"
+    },
+    {
+      "id": "train_BRK_2102-crop07",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRK_2102-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3d30a3898ddcf3517ab2cae292e937af5fca718c9d16fdacf3642cdcbdc0881d"
+    },
+    {
+      "id": "train_BRK_2102-crop08",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRK_2102-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d19d0b62a4a63ab5766ad2b3acdd609f9c520f700914d4ea2a0e8ffe06b48e1b"
+    },
+    {
+      "id": "train_BRK_2102-crop09",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRK_2102-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3ec22bf02d4096a615deda346c1d0482d8013968dfe1c6997fe349a76ebe4798"
+    },
+    {
+      "id": "train_BRK_2102-crop10",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRK_2102-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "f2eb9440fc81bb6669117a201c4c159e6e0bd7aaf00b100d44562970de80f672"
+    },
+    {
+      "id": "train_BRK_2102-crop11",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRK_2102-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3b5f792dc93ea7af794cf9f6c2ea4095c4d167354f2550b7122837b0de981c1a"
+    },
+    {
+      "id": "train_BRK_2102-crop12",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRK_2102-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "ccc56df407320ed8ce0e68b35aef09eef0c44aaae20e935433f49ab1ef3e6d0f"
+    },
+    {
+      "id": "train_BRK_2102-crop13",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRK_2102-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "adb80b04af5bc183b7186fb3347b3e7a59aca968cbdb06f35f3232482dc8087e"
+    },
+    {
+      "id": "train_BRK_2102-crop14",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRK_2102-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "bcbe8f3041f82afd93672527cbff67b4b84b977281be8757bf9f3ce40881da4f"
+    },
+    {
+      "id": "train_BRK_2102-crop15",
+      "source_id": "train_BRK_2102",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRK_2102-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "4f5fc136f8726461928406e0cc769c314afcc1fec04c91dcacd4e4438dff5a0d"
+    },
+    {
+      "id": "train_BRK_2128-crop00",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_BRK_2128-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "963c33e8893bb11696c565842787b6ba1a002906569062e3c5b38d49a6acad70"
+    },
+    {
+      "id": "train_BRK_2128-crop01",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_BRK_2128-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "33ee90f6bdb2542886e7382c98883a67d712b26be77eb6d7b0ee57c763adcedb"
+    },
+    {
+      "id": "train_BRK_2128-crop02",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_BRK_2128-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e49e6c834cb503e7de4afb9e3ca4db03cafc135613fc4a5e26fcaffade4a5b15"
+    },
+    {
+      "id": "train_BRK_2128-crop03",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_BRK_2128-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "462404b80aff985e6b865e671843f7f1d0d36d8b4a911c675f910eef8c61bf41"
+    },
+    {
+      "id": "train_BRK_2128-crop04",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_BRK_2128-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "6e73b8a936325b13eaaa44d40e8ed9c7c5530254f2a27944a675a12a64540cc3"
+    },
+    {
+      "id": "train_BRK_2128-crop05",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_BRK_2128-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "c8413645961caf09bb8e5f08463b0092e2cf666b7e23093202d259d25149a8a5"
+    },
+    {
+      "id": "train_BRK_2128-crop06",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_BRK_2128-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "7b7b2567d5487181e97f9785528930d209ded1190b0e6adf42556588d015a123"
+    },
+    {
+      "id": "train_BRK_2128-crop07",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_BRK_2128-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "70664336593060049ead8dd8a1be288e29af201ad358e6ed9be99327323d5a30"
+    },
+    {
+      "id": "train_BRK_2128-crop08",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_BRK_2128-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "5fcd8d76c89e36b4fc6adb50c431dd51e451507acf98227860465cc8b7db26e8"
+    },
+    {
+      "id": "train_BRK_2128-crop09",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_BRK_2128-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "f0a1814483d2ba18dd197bf3175d015ac193fbd2f5ca748641f1dfa5b517ca88"
+    },
+    {
+      "id": "train_BRK_2128-crop10",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_BRK_2128-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "dcd15d3a777ecb443ac4b11cb0205c0cc0968a9ffbf44aafe5a5d99a7c7508d4"
+    },
+    {
+      "id": "train_BRK_2128-crop11",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_BRK_2128-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "c4e856a005960395d3ec01aeefa7629803101a4b66db7930c08059e009bed4b2"
+    },
+    {
+      "id": "train_BRK_2128-crop12",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_BRK_2128-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e1d8b1d067b3755c1ef128551cd71823810c2222fc01c10c229f01efc6d28c54"
+    },
+    {
+      "id": "train_BRK_2128-crop13",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_BRK_2128-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "7ef225ad1a95d1dd0a3983a979f4bb2703754038836e2bfccbf4ced992e0fca9"
+    },
+    {
+      "id": "train_BRK_2128-crop14",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_BRK_2128-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f791ed9e199b844aebab310b15cd1458952a392729620ad3be4b284882728ba7"
+    },
+    {
+      "id": "train_BRK_2128-crop15",
+      "source_id": "train_BRK_2128",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_BRK_2128-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "074ed9bd432be4fe46953948bfb1af21eea8061ec158c1533130e987c4b781d3"
+    },
+    {
+      "id": "train_MED_3008-crop00",
+      "source_id": "train_MED_3008",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_3008-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "db0ab376b4bfaa7a7e7bbf208295a63ee73e182218264e20009257618f987722"
+    },
+    {
+      "id": "train_MED_3008-crop01",
+      "source_id": "train_MED_3008",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_3008-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "0a0ab9be7bd6fc4283ba4def0e1062c166362bd95caf2fe31b18979e4e137482"
+    },
+    {
+      "id": "train_MED_3008-crop02",
+      "source_id": "train_MED_3008",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_3008-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "4e2d2c00f89efc86765de7a3a4042a2362809dbffce02b0d8cdcc6cb146f8190"
+    },
+    {
+      "id": "train_MED_3008-crop03",
+      "source_id": "train_MED_3008",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_3008-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "dde60afdbdbad231131158f76295948d02869d4a7609c373ed236a1d41cfd619"
+    },
+    {
+      "id": "train_MED_3008-crop04",
+      "source_id": "train_MED_3008",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_3008-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d060d4a7d0cddf62423dfbfa85fed193f35619cc52b445c88c57204e2cb7e283"
+    },
+    {
+      "id": "train_MED_3008-crop05",
+      "source_id": "train_MED_3008",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_3008-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "aeba2729fff369ed0d93d638e3f4da4b834f9c81e51238623fb05d56266baa4e"
+    },
+    {
+      "id": "train_MED_3008-crop06",
+      "source_id": "train_MED_3008",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_3008-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "eba9a971175636af5713056fce83dd50cc7a856cb3f1210185e40e37d3646c4e"
+    },
+    {
+      "id": "train_MED_3008-crop07",
+      "source_id": "train_MED_3008",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_3008-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "180f06c03911a71912821b4d403b59edcf463f2df2223d548de02fe331e3ac22"
+    },
+    {
+      "id": "train_MED_3008-crop08",
+      "source_id": "train_MED_3008",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_3008-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ee6a1b89be53c152322f5199b4a945ce84e5ac924aeaec0f8e4983021b7dcf35"
+    },
+    {
+      "id": "train_MED_3008-crop09",
+      "source_id": "train_MED_3008",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_3008-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4bebd7a9c804f2b980397b09fac6add79410c91d805f7bd6f88a8337ed9629d2"
+    },
+    {
+      "id": "train_MED_3008-crop10",
+      "source_id": "train_MED_3008",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_3008-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ec16011118159700dad0e5ba123b3cb8217166856e6bbba66df943b5ea01b762"
+    },
+    {
+      "id": "train_MED_3008-crop11",
+      "source_id": "train_MED_3008",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_3008-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "296554a74fd497e15f2a34a76acda41dd3d6ccef15188a12855c47f677a70875"
+    },
+    {
+      "id": "train_MED_3008-crop12",
+      "source_id": "train_MED_3008",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_3008-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "fdb3bc54f5e72ef17b6880598101cb61dc506e597bdfca1b2fcf8ecc5c2e59a0"
+    },
+    {
+      "id": "train_MED_3008-crop13",
+      "source_id": "train_MED_3008",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_3008-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c2711f72aab9d35a9ba13b494f9b065f0109cbfb15a6e45df50a147932d787a7"
+    },
+    {
+      "id": "train_MED_3008-crop14",
+      "source_id": "train_MED_3008",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_3008-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "426d275746eb2e3fc5be6d0cb8129abd68657ba34198baef55a1a14a95480286"
+    },
+    {
+      "id": "train_MED_3008-crop15",
+      "source_id": "train_MED_3008",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_3008-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "250168c44fc5fa25231e50bcc0c73ccec5be97cf3cbc9c5e0e151404b78e9d03"
+    },
+    {
+      "id": "train_MED_3022-crop00",
+      "source_id": "train_MED_3022",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_3022-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "53f0ad402337a1be395fd92d35bc8780e110991ceea6b3a5c7e7f43a1055ac06"
+    },
+    {
+      "id": "train_MED_3022-crop01",
+      "source_id": "train_MED_3022",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_3022-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "80f0515482292d9a23de11cfdaf68645dbd210c569d1b8cbc87aef2d129f63df"
+    },
+    {
+      "id": "train_MED_3022-crop02",
+      "source_id": "train_MED_3022",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_3022-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f6fa1d821483398076897ffa8fc20760bcece9705dd985101ec7b6f195977cfa"
+    },
+    {
+      "id": "train_MED_3022-crop03",
+      "source_id": "train_MED_3022",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_3022-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "573e5d7c73bd8e5bdb693a36108ced7b9a30decd1d1496b400cea3d38f5b8308"
+    },
+    {
+      "id": "train_MED_3022-crop04",
+      "source_id": "train_MED_3022",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_3022-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "41164d829e84b06eea27283a28b132d38fa4e120c160beee2fb34050fe3bfd05"
+    },
+    {
+      "id": "train_MED_3022-crop05",
+      "source_id": "train_MED_3022",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_3022-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "bb3a6c7f7e406b1ad149b107928a70eefaf1d8299c3f0fa171e5b1c207e46b37"
+    },
+    {
+      "id": "train_MED_3022-crop06",
+      "source_id": "train_MED_3022",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_3022-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "39c5ad2d44fabd9db558741d81ac9355e985b8e72faf2ef0dc263aab7d51077e"
+    },
+    {
+      "id": "train_MED_3022-crop07",
+      "source_id": "train_MED_3022",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_3022-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "499f7bdb191c4befdf3b5d17e66540f7980531a1a80ee5d647f7857d5d584b07"
+    },
+    {
+      "id": "train_MED_3022-crop08",
+      "source_id": "train_MED_3022",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_3022-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ef1aec74eaa51d0923eae5dfa0f9064e9dbe555d0616188b8cd2f27dbbcfb1dc"
+    },
+    {
+      "id": "train_MED_3022-crop09",
+      "source_id": "train_MED_3022",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_3022-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "5a447e57ba99f59316718fe1d811f7795c197c6f388e879f2be1483c17609d00"
+    },
+    {
+      "id": "train_MED_3022-crop10",
+      "source_id": "train_MED_3022",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_3022-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "7bc4f75567c739850500576d62e489d5018d69c8821e48907b530bc4065eb6b0"
+    },
+    {
+      "id": "train_MED_3022-crop11",
+      "source_id": "train_MED_3022",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_3022-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2787d67754b3920c08cfd15c1ffe753245f6522f76449babe6e251739d6a5c4c"
+    },
+    {
+      "id": "train_MED_3022-crop12",
+      "source_id": "train_MED_3022",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_3022-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1d2cac856b8dd3a8a54615d4efa4ebf2054dd12b0181b76a5307be58abe7c70b"
+    },
+    {
+      "id": "train_MED_3022-crop13",
+      "source_id": "train_MED_3022",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_3022-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "25d5faebd941e95a1f538fb2095344c6fb64d2a91a5c4617d540a7702ccb1b09"
+    },
+    {
+      "id": "train_MED_3022-crop14",
+      "source_id": "train_MED_3022",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_3022-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f27a6606e39a543f24b9e3e491fe17eef9cf6762461d84136a2f59ce512a0988"
+    },
+    {
+      "id": "train_MED_3022-crop15",
+      "source_id": "train_MED_3022",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_3022-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a58f5fe8e2d8f319b9906b469f35aadee211182cf4f926d1073475565d2e586b"
+    },
+    {
+      "id": "train_MED_3024-crop00",
+      "source_id": "train_MED_3024",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_3024-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "85abc5a7c5fe7ac8ca74f3d8650f2349758ea83e5b75a403c4851ce9bbf3aec6"
+    },
+    {
+      "id": "train_MED_3024-crop01",
+      "source_id": "train_MED_3024",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_3024-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "55976034bd4525e139cb7982760db7d590384d2d4a60e36b787e4455f88fa277"
+    },
+    {
+      "id": "train_MED_3024-crop02",
+      "source_id": "train_MED_3024",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_3024-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e2f51d26c48acbfa1d95972d65a708451e9d18541ff871f0c6e32da03a15ab11"
+    },
+    {
+      "id": "train_MED_3024-crop03",
+      "source_id": "train_MED_3024",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_3024-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2aad228bf41dd0f391e178a426f41a10f637ee922550d19ba6bd7e06844f5721"
+    },
+    {
+      "id": "train_MED_3024-crop04",
+      "source_id": "train_MED_3024",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_3024-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2e0da7c24c2e8507cf5402e9a858b3d84b3be2ad37361f8ff3902ffa3ef1e1f9"
+    },
+    {
+      "id": "train_MED_3024-crop05",
+      "source_id": "train_MED_3024",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_3024-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4da2999a22e0668e12b0833c91acaefc482d4ec3da001e82a1cdaf60895b7c34"
+    },
+    {
+      "id": "train_MED_3024-crop06",
+      "source_id": "train_MED_3024",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_3024-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "46e70348566aa2da4187437abbdf6b33668ac0373163628f3984e014b0cb9da5"
+    },
+    {
+      "id": "train_MED_3024-crop07",
+      "source_id": "train_MED_3024",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_3024-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "12eb6c0bdb70bcee125e6b4e272dc3bd68292bb932d1bd48f3fea5a2cda59b49"
+    },
+    {
+      "id": "train_MED_3024-crop08",
+      "source_id": "train_MED_3024",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_3024-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2d3072cd7b316c5e63f837eb059bc9c95275a50ac63fe6a104e376a4e7519fbe"
+    },
+    {
+      "id": "train_MED_3024-crop09",
+      "source_id": "train_MED_3024",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_3024-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d022d87695190fefbb84c804d40bf2d519a4a8c297e9243d5e24fb56a1d0def6"
+    },
+    {
+      "id": "train_MED_3024-crop10",
+      "source_id": "train_MED_3024",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_3024-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3700d7e78e2c672de2ecf149bcd910ee29999c81813cbd75b768ae23eb3ae753"
+    },
+    {
+      "id": "train_MED_3024-crop11",
+      "source_id": "train_MED_3024",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_3024-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "1c4abdb02e3775788331825a71007c2af858a7ee6a1bb48125143ce01ca824e0"
+    },
+    {
+      "id": "train_MED_3024-crop12",
+      "source_id": "train_MED_3024",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_3024-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "8320551dc7dcda55c7a5e176eb4b15b8513d329756530b722a37859dd8fe7ac1"
+    },
+    {
+      "id": "train_MED_3024-crop13",
+      "source_id": "train_MED_3024",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_3024-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "48104e76206bfc660aefd5791953dc28bd53c80879f63af89c2e83a453dea845"
+    },
+    {
+      "id": "train_MED_3024-crop14",
+      "source_id": "train_MED_3024",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_3024-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1a23b2e4a82dd952fa0402081eab500ee2039126ba63bc06faeae48e2e4fc25e"
+    },
+    {
+      "id": "train_MED_3024-crop15",
+      "source_id": "train_MED_3024",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_3024-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "05f68c31969165170f0084c63590db6fc31faaec4734db950225a147b2a945cb"
+    },
+    {
+      "id": "train_MED_3028-crop00",
+      "source_id": "train_MED_3028",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_3028-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "dfe9e6f9b760559464020bfd947818c28d10afee24642a1d8c570bcf45e385f6"
+    },
+    {
+      "id": "train_MED_3028-crop01",
+      "source_id": "train_MED_3028",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_3028-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b54dd034db7d4423c29460ac41cf78876ae42917241804ef1d45013d8e5db7bf"
+    },
+    {
+      "id": "train_MED_3028-crop02",
+      "source_id": "train_MED_3028",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_3028-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "95bbac214d2cb89900cea447d93f4f8815f33d98adb8c1bd25b266d0c55e123d"
+    },
+    {
+      "id": "train_MED_3028-crop03",
+      "source_id": "train_MED_3028",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_3028-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "371f62658265c6061292b6939954e5cf3d389e6528eecd2f58a9fbfa3fc998d9"
+    },
+    {
+      "id": "train_MED_3028-crop04",
+      "source_id": "train_MED_3028",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_3028-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ff1458236b2e35d9a3d01ba5a6748e9df180ea5a140abc524eb267bc803db21f"
+    },
+    {
+      "id": "train_MED_3028-crop05",
+      "source_id": "train_MED_3028",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_3028-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "fda0c5453701fa47d2b8e0c0745a363d7627767487cb9811f57e967ca223bccb"
+    },
+    {
+      "id": "train_MED_3028-crop06",
+      "source_id": "train_MED_3028",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_3028-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "9c856d4526f788d6a47cc865ba84d33bceb1cce25856b35bc503265babf0fc6e"
+    },
+    {
+      "id": "train_MED_3028-crop07",
+      "source_id": "train_MED_3028",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_3028-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2b42dc272877045a6da8c4078c794a5e2d3ed2623c00e0a2143b3b3e949988b5"
+    },
+    {
+      "id": "train_MED_3028-crop08",
+      "source_id": "train_MED_3028",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_3028-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "39c8a1edba1665e346cb4c6c2ceafe74d04ee5f7228e33a3249e73353de68911"
+    },
+    {
+      "id": "train_MED_3028-crop09",
+      "source_id": "train_MED_3028",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_3028-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "03bc13fe4aa559766433d58f889ca292a6ba6c0092d2a6186b9ddbef48b96519"
+    },
+    {
+      "id": "train_MED_3028-crop10",
+      "source_id": "train_MED_3028",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_3028-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "f3dff9a8e8d5cfc729669b1b05fa451170183ae4c9c688884ef12a5653863f9b"
+    },
+    {
+      "id": "train_MED_3028-crop11",
+      "source_id": "train_MED_3028",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_3028-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e0bba6bcb63caf1657cd14ea85d1cf02b651945dddae3f2308f2337b9dd9f90a"
+    },
+    {
+      "id": "train_MED_3028-crop12",
+      "source_id": "train_MED_3028",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_3028-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b892dd85b5ca9347af97a19f5880e638fe7d4fed171ff131acdb0cc769536312"
+    },
+    {
+      "id": "train_MED_3028-crop13",
+      "source_id": "train_MED_3028",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_3028-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "3b2b8c581146a94299316323913027fd14f3b26cfa43050ebe93b31bad69588a"
+    },
+    {
+      "id": "train_MED_3028-crop14",
+      "source_id": "train_MED_3028",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_3028-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b4a83e73afa93141b6d726b43f794d53a5435e393d2a2f75ec7df7eddea08313"
+    },
+    {
+      "id": "train_MED_3028-crop15",
+      "source_id": "train_MED_3028",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_3028-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "731dc6850da05fb64814f7da9b6e250efe0b9ddaec0888042386cdf7dce86078"
+    },
+    {
+      "id": "train_MED_3057-crop00",
+      "source_id": "train_MED_3057",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_3057-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6ff2b9f3a517d482efdad9b07a6356903088e521744fe6cf0e292eee9b36bd30"
+    },
+    {
+      "id": "train_MED_3057-crop01",
+      "source_id": "train_MED_3057",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_3057-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "557c054212a7c427a6c1450477d2dd3a38a214da9c8210078cce4c5f5367432f"
+    },
+    {
+      "id": "train_MED_3057-crop02",
+      "source_id": "train_MED_3057",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_3057-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "ac1adb41aa116240e0626e14e3fdea036834272073ffd8b033b07143b5a71d20"
+    },
+    {
+      "id": "train_MED_3057-crop03",
+      "source_id": "train_MED_3057",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_3057-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "956c437281391eb5591fe47d4a2e6e19573999a5e82c08d461dc3e602321c0d9"
+    },
+    {
+      "id": "train_MED_3057-crop04",
+      "source_id": "train_MED_3057",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_3057-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "338f855b41ceafd1a28d10d3e00bc1098cdbf4efeb9a7daf6d810c4261eb6c73"
+    },
+    {
+      "id": "train_MED_3057-crop05",
+      "source_id": "train_MED_3057",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_3057-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e957d258449bf2fc17a2f0e99ae6396a83dd8b206f5e19e2938e65f3fd15302b"
+    },
+    {
+      "id": "train_MED_3057-crop06",
+      "source_id": "train_MED_3057",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_3057-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "535cf3c52005206cd598b11ca5eda7e72e74997f1dabd973bc41dc25269c27c2"
+    },
+    {
+      "id": "train_MED_3057-crop07",
+      "source_id": "train_MED_3057",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_3057-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "464e84c2807b65bf6c5b194a129a42a596d76ab26af38fe7dbd37a6e92267a3f"
+    },
+    {
+      "id": "train_MED_3057-crop08",
+      "source_id": "train_MED_3057",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_3057-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "ddb60a16d24750305888363009693f329557e5cea2581ea2a8ff487e0ec77529"
+    },
+    {
+      "id": "train_MED_3057-crop09",
+      "source_id": "train_MED_3057",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_3057-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "73595fb59623b1240ba31ea78f681a5788674fdcc34944691d3b413fc295c8ca"
+    },
+    {
+      "id": "train_MED_3057-crop10",
+      "source_id": "train_MED_3057",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_3057-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "cda358d96a4dc0e48280b29df455f3e44483bdec9053d017cb56a11d3ea27fda"
+    },
+    {
+      "id": "train_MED_3057-crop11",
+      "source_id": "train_MED_3057",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_3057-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "19c50a372448d88429cc3d479d312d9412062b3c62dd2e3a16683ae5c1e19c06"
+    },
+    {
+      "id": "train_MED_3057-crop12",
+      "source_id": "train_MED_3057",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_3057-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "33d9db47c30643ca45aec2af521a4082bb400e06a9df7039cb83dc38f858e138"
+    },
+    {
+      "id": "train_MED_3057-crop13",
+      "source_id": "train_MED_3057",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_3057-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "162728fcf38243295e9b8847ee3e2152b6ee651b8a861f7c5d5afa062df0c9d5"
+    },
+    {
+      "id": "train_MED_3057-crop14",
+      "source_id": "train_MED_3057",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_3057-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2fa69bf43331de68bf107e2383274258e5dde28df62e0d5a12077c98f41edf17"
+    },
+    {
+      "id": "train_MED_3057-crop15",
+      "source_id": "train_MED_3057",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_3057-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "4a0bceb18b0c878099a2184a3e069afae17a46d1fe5755547d0e48db45baea0f"
+    },
+    {
+      "id": "train_MED_3070-crop00",
+      "source_id": "train_MED_3070",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_3070-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "39b548fb90ee59bab579bd3e9cef6739a64ce287481ec617df290d8deb69ba79"
+    },
+    {
+      "id": "train_MED_3070-crop01",
+      "source_id": "train_MED_3070",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_3070-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2003ad0684f2f0238b1939b008dbe143253ded30f2e13010868c9da58daa7efd"
+    },
+    {
+      "id": "train_MED_3070-crop02",
+      "source_id": "train_MED_3070",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_3070-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1407b6b2a7696e720af8bb3b920a6641c94b2996cf922bbac5d0ff49de9c764a"
+    },
+    {
+      "id": "train_MED_3070-crop03",
+      "source_id": "train_MED_3070",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_3070-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "158b679d0a3939c64228131fb195b830a6477621b44567fc6b6ba0133371299f"
+    },
+    {
+      "id": "train_MED_3070-crop04",
+      "source_id": "train_MED_3070",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_3070-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b5a6d64a1a42990ea54bc84d90375a70c763a9d229eee14b873d29700fbc5b9f"
+    },
+    {
+      "id": "train_MED_3070-crop05",
+      "source_id": "train_MED_3070",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_3070-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "0fea1395d4f17315d5e43685ee14ba768b1f2876e5de74908f3e9b30920892dc"
+    },
+    {
+      "id": "train_MED_3070-crop06",
+      "source_id": "train_MED_3070",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_3070-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "07e0e30f628c9fdceb7dc58adb87f952513f8fbba69ad6c224a7a241ee3d17ab"
+    },
+    {
+      "id": "train_MED_3070-crop07",
+      "source_id": "train_MED_3070",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_3070-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "22362547aae6761d93305ac860d0ef141a9c7ec56910920c3e4ff6dea4d93c87"
+    },
+    {
+      "id": "train_MED_3070-crop08",
+      "source_id": "train_MED_3070",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_3070-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "858ca9e6cc5ce7ba90b3e7b45bebfb80455d92cd0e8d2aa7046d118340dcef23"
+    },
+    {
+      "id": "train_MED_3070-crop09",
+      "source_id": "train_MED_3070",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_3070-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "5694aa0d65f3455c84200205e6584d3833e2afcca32c38aed054f8bd71c2bcd8"
+    },
+    {
+      "id": "train_MED_3070-crop10",
+      "source_id": "train_MED_3070",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_3070-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2c8eee6b4c8b01edafd8514dec14e1cddefff4091a923e91bc577308caf679c8"
+    },
+    {
+      "id": "train_MED_3070-crop11",
+      "source_id": "train_MED_3070",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_3070-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "82ed32b713d2ba13e223ae0be7112cb376d51df5a68ccab8a2b684d372e930ac"
+    },
+    {
+      "id": "train_MED_3070-crop12",
+      "source_id": "train_MED_3070",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_3070-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e06f4a23c71716073532dcaaede125938741d4b16f52ed151cb406fecbe740c8"
+    },
+    {
+      "id": "train_MED_3070-crop13",
+      "source_id": "train_MED_3070",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_3070-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "7eb3b0f799cc680512e7304ea69e7249bed40d572fa01864593a8750e68ef259"
+    },
+    {
+      "id": "train_MED_3070-crop14",
+      "source_id": "train_MED_3070",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_3070-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "561ae921c4a153fd4ec15cffaf2a71bb1110eec8695afa0a273855a205a2cce4"
+    },
+    {
+      "id": "train_MED_3070-crop15",
+      "source_id": "train_MED_3070",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_3070-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "548c5b364be904a577f7ab81213c302c0657475490423548d5a069a29dfbb787"
+    },
+    {
+      "id": "train_MED_4002-crop00",
+      "source_id": "train_MED_4002",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_4002-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6980da2a0bc3c6364c90a7922e145a9dac03be9970cd4f70578734ef10fd649c"
+    },
+    {
+      "id": "train_MED_4002-crop01",
+      "source_id": "train_MED_4002",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_4002-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a8146a815daa9b47b6f6bb3532479bf03270abb0ff0b1953da9d50b4beb069a7"
+    },
+    {
+      "id": "train_MED_4002-crop02",
+      "source_id": "train_MED_4002",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_4002-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "3655bb4b4595b2c3e12feeadd78668a35916320a325fc6b7e4a2b2791db71922"
+    },
+    {
+      "id": "train_MED_4002-crop03",
+      "source_id": "train_MED_4002",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_4002-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "adaea38e9b60ac5002ef87305f7e393f36a524c4a0c1d5829e05eb874ec7ba5e"
+    },
+    {
+      "id": "train_MED_4002-crop04",
+      "source_id": "train_MED_4002",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_4002-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "024089471fd4225f6020fe3524bd927911526ae39157e483a472f4b86949e96f"
+    },
+    {
+      "id": "train_MED_4002-crop05",
+      "source_id": "train_MED_4002",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_4002-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e92a83ba20b6c2a7c70fab9e82395ac09e5fa0ff5f764c3f282583a20bc719f1"
+    },
+    {
+      "id": "train_MED_4002-crop06",
+      "source_id": "train_MED_4002",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_4002-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "79caf587ba40011684700acbd70a2c53c647547f04bd47830f7e34107a35aa6d"
+    },
+    {
+      "id": "train_MED_4002-crop07",
+      "source_id": "train_MED_4002",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_4002-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "776dc2a1a1080c463d613346a471a4736043958949db317735483e4922510edf"
+    },
+    {
+      "id": "train_MED_4002-crop08",
+      "source_id": "train_MED_4002",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_4002-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "c0be5a87933dc615ce246210835feff6d0ce16da6231771194292429f6c6df85"
+    },
+    {
+      "id": "train_MED_4002-crop09",
+      "source_id": "train_MED_4002",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_4002-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "a88aeddbd0f4c5305e48481b21f85bb9399e5cf59e464d2a97525f354dfc9c93"
+    },
+    {
+      "id": "train_MED_4002-crop10",
+      "source_id": "train_MED_4002",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_4002-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d72057a1b4612763ef55a31bceaf6b219b603aefe1da673d2c62fd928d088c8c"
+    },
+    {
+      "id": "train_MED_4002-crop11",
+      "source_id": "train_MED_4002",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_4002-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "f37867f80067dbf54c6e186b9c9c422706f80338c4990668c5af0d886fc76add"
+    },
+    {
+      "id": "train_MED_4002-crop12",
+      "source_id": "train_MED_4002",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_4002-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "72179757b5d1081301d4be6539215180daeb2bd451b70fceb0df3003ee895577"
+    },
+    {
+      "id": "train_MED_4002-crop13",
+      "source_id": "train_MED_4002",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_4002-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1bf084b6cdea46dd658bd639dd2295e89188a4509f65d810bc4efe4afaba1464"
+    },
+    {
+      "id": "train_MED_4002-crop14",
+      "source_id": "train_MED_4002",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_4002-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6ec1a525ddf3d68effe635eabfbbb92bf6bde9242e6446d3dff4a7216e72aceb"
+    },
+    {
+      "id": "train_MED_4002-crop15",
+      "source_id": "train_MED_4002",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_4002-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "57d618723e493e6e35130b78f7b1fa21a77ce5a229c24936c8b611bc1b1ae77d"
+    },
+    {
+      "id": "train_MED_4003-crop00",
+      "source_id": "train_MED_4003",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_4003-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "7dc988c3d760f6bace173685dc77e883f107c248e1a9ec9deba29d75cc46e04f"
+    },
+    {
+      "id": "train_MED_4003-crop01",
+      "source_id": "train_MED_4003",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_4003-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6a7a453dd73a29329c5f84d82e1ca71ca212f8983947d8102db79396bc5aa8d7"
+    },
+    {
+      "id": "train_MED_4003-crop02",
+      "source_id": "train_MED_4003",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_4003-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "45df26ecf4cfea51eb8d134058a1555ec55de2bbd0668c43bae8fefcc3823260"
+    },
+    {
+      "id": "train_MED_4003-crop03",
+      "source_id": "train_MED_4003",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_4003-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "3a78dceee99d30c86bf5af6a787038c4c7d9b1a936dcde4dbc36fd9e58a1b334"
+    },
+    {
+      "id": "train_MED_4003-crop04",
+      "source_id": "train_MED_4003",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_4003-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "45537523127325e36bd206e68e624df170a5025ca15e3eb6cdac1c148724d13d"
+    },
+    {
+      "id": "train_MED_4003-crop05",
+      "source_id": "train_MED_4003",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_4003-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "8c3a6d2f614cc7b8f076711fadeee0bae822777b2f34b62ffc85ed0d2be44806"
+    },
+    {
+      "id": "train_MED_4003-crop06",
+      "source_id": "train_MED_4003",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_4003-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "839cacfcc643504af6b2b584d18cd40cdfddc80633d40f57f4b2ea634bb6f70a"
+    },
+    {
+      "id": "train_MED_4003-crop07",
+      "source_id": "train_MED_4003",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_4003-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "5363b2cffd1b6cedb38bf04e51f7a167b1d6f518ab3ec497574dbe00fb056c1f"
+    },
+    {
+      "id": "train_MED_4003-crop08",
+      "source_id": "train_MED_4003",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_4003-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "bad56bb7436c25bb1641c0f18950ea444f7a9fc9d66248aad04977da1a635b56"
+    },
+    {
+      "id": "train_MED_4003-crop09",
+      "source_id": "train_MED_4003",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_4003-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "94a690282d8187e2aff4e7668b6298d2e9448e6d9b21803a23305a665c0ca7b4"
+    },
+    {
+      "id": "train_MED_4003-crop10",
+      "source_id": "train_MED_4003",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_4003-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "78e826e4239dfa0b16cd1190910d53d945a29185f7ebe297873ccfd43865a3f8"
+    },
+    {
+      "id": "train_MED_4003-crop11",
+      "source_id": "train_MED_4003",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_4003-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "300482538f370c676e2d9d430997cbb947156d449eb3524510ef9e221a3059d2"
+    },
+    {
+      "id": "train_MED_4003-crop12",
+      "source_id": "train_MED_4003",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_4003-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c577837ae5193e7653dae9dfb7ecf9d4064d81a70c8bb66a87d95dd708ab665b"
+    },
+    {
+      "id": "train_MED_4003-crop13",
+      "source_id": "train_MED_4003",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_4003-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "ccb5a44c987b5307debf7cdfcf6cb8e4f504b32cf3a8c6dcd32765262f6b5964"
+    },
+    {
+      "id": "train_MED_4003-crop14",
+      "source_id": "train_MED_4003",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_4003-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "f5cde300593e80ba5ca9579024221193d61ea22e8e8c02ab7b8313216f2a2a4c"
+    },
+    {
+      "id": "train_MED_4003-crop15",
+      "source_id": "train_MED_4003",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_4003-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "0b7aa4a3364f0cfc677ba8291797db62c1e701a66e7813aad12393a64dd49122"
+    },
+    {
+      "id": "train_MED_4004-crop00",
+      "source_id": "train_MED_4004",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_4004-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1e06063d3d0b7321a383fcb92b716693ca633d04b6e8ba557cb3f5b25a73422b"
+    },
+    {
+      "id": "train_MED_4004-crop01",
+      "source_id": "train_MED_4004",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_4004-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "42dff955663b4d5f6e82fa9c08ba1ec194dc62104ebb678e8a48494a586b1cf8"
+    },
+    {
+      "id": "train_MED_4004-crop02",
+      "source_id": "train_MED_4004",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_4004-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "945e7c59b806ca9886d2fbf0067fdee96c1647b471c48a108a0b45bed3d0c046"
+    },
+    {
+      "id": "train_MED_4004-crop03",
+      "source_id": "train_MED_4004",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_4004-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "383e721dbff2044f67ffdce38e2656a48ec71526dee2a61f01d5c97c22228f5b"
+    },
+    {
+      "id": "train_MED_4004-crop04",
+      "source_id": "train_MED_4004",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_4004-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "f06225e6354b9230bc3a2064a7897e2e753cf3a8a2d0394ed22c0906a842a409"
+    },
+    {
+      "id": "train_MED_4004-crop05",
+      "source_id": "train_MED_4004",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_4004-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "725259ea2a665c210677aafbba0ba50a4a3745ac30b081df27770813f642499a"
+    },
+    {
+      "id": "train_MED_4004-crop06",
+      "source_id": "train_MED_4004",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_4004-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "dcaceefdec37f0ebc551ab24a67523c30e9a094c818d00381de4b4b3e98bcb31"
+    },
+    {
+      "id": "train_MED_4004-crop07",
+      "source_id": "train_MED_4004",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_4004-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "3c03a49760dfd00199aad032590df324bb970bc39269382f7dafd071e5818e20"
+    },
+    {
+      "id": "train_MED_4004-crop08",
+      "source_id": "train_MED_4004",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_4004-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2e76348c3e4fab81110ecf5e08de97368fc3020ca0e4cc584f5ce456ad1794be"
+    },
+    {
+      "id": "train_MED_4004-crop09",
+      "source_id": "train_MED_4004",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_4004-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2dc3a93b8291ce9e24e381b4642a65f0f2ce7a89953797fe698e6cd867eb2590"
+    },
+    {
+      "id": "train_MED_4004-crop10",
+      "source_id": "train_MED_4004",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_4004-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "cfe26100119816aa5924968fe20970a3980010e4dd737dc4f3412adaa33aa824"
+    },
+    {
+      "id": "train_MED_4004-crop11",
+      "source_id": "train_MED_4004",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_4004-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "6a1c34a82f897e11533a3741f0d54aa6e3417e6c8c00a07dc481950b60b55427"
+    },
+    {
+      "id": "train_MED_4004-crop12",
+      "source_id": "train_MED_4004",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_4004-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "70ffdaa91f6a520265a40b03d98ccb834d700cac892e68649fd42aa5dbd5f531"
+    },
+    {
+      "id": "train_MED_4004-crop13",
+      "source_id": "train_MED_4004",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_4004-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "afd07576a99b21bba03848ab534f16bb7a0b83dde3c9b3e7820ecd132a98f749"
+    },
+    {
+      "id": "train_MED_4004-crop14",
+      "source_id": "train_MED_4004",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_4004-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "66eef754859b6ce28b847ea2fa0146455de99bdabbaa0e686c9e50f7ef6607c9"
+    },
+    {
+      "id": "train_MED_4004-crop15",
+      "source_id": "train_MED_4004",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_4004-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e1d4c88edb0a9f9998ed6d6fc4d7e76d3b6cbda9b9d6785208693be6841d7c3f"
+    },
+    {
+      "id": "train_MED_4006-crop00",
+      "source_id": "train_MED_4006",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_4006-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "aa26c8d051c5cf8c52dd7e049d8cc666c7adb6a7590f6706c737d9aef450805e"
+    },
+    {
+      "id": "train_MED_4006-crop01",
+      "source_id": "train_MED_4006",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_4006-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "9aeba93070219d6368caabd00b1b46ed80eea2c937886418cd10ed792393d158"
+    },
+    {
+      "id": "train_MED_4006-crop02",
+      "source_id": "train_MED_4006",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_4006-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b00d4a9f0f911ee71e29d41e861d748e4294b582a8ef1a005558620cadf852c2"
+    },
+    {
+      "id": "train_MED_4006-crop03",
+      "source_id": "train_MED_4006",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_4006-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "d918f8830727a5c37bc63bfc4bb35e9b95e2a67a8e2fc01f69b900b0237d2641"
+    },
+    {
+      "id": "train_MED_4006-crop04",
+      "source_id": "train_MED_4006",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_4006-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "87b84891790e3d05e4703bc26faf78e9d844606ba3da54d942dbe4d1b5dda843"
+    },
+    {
+      "id": "train_MED_4006-crop05",
+      "source_id": "train_MED_4006",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_4006-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "f46eb60d39281ed301e318751202e6e2e94a5745646fc6e81b89ba8095cbcc20"
+    },
+    {
+      "id": "train_MED_4006-crop06",
+      "source_id": "train_MED_4006",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_4006-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "21d6a911b354d7fca75daf85d7778d02c9819aca6d6dc30f9e453d712a1c3e79"
+    },
+    {
+      "id": "train_MED_4006-crop07",
+      "source_id": "train_MED_4006",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_4006-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "696f566bca87f2d5d7cae1aa267cf645dcca38a5ea4218cf73a487047dae5f0f"
+    },
+    {
+      "id": "train_MED_4006-crop08",
+      "source_id": "train_MED_4006",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_4006-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "9d5baf77b51643dcccc00fc7cf920c90cceba2209fc1cef82c6ec66486876323"
+    },
+    {
+      "id": "train_MED_4006-crop09",
+      "source_id": "train_MED_4006",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_4006-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "878377417fc1d6af793bd2b7acd2412ace72a7aa0149d2e3dc11f391e98eaab8"
+    },
+    {
+      "id": "train_MED_4006-crop10",
+      "source_id": "train_MED_4006",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_4006-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "92c69af2881d09a53efb19b5abc0f7c6f05eb182ee11cee90d00b2ce59a173d4"
+    },
+    {
+      "id": "train_MED_4006-crop11",
+      "source_id": "train_MED_4006",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_4006-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "8608523f035069193e2773cf43fcb5e0951116dde9d83f5a99c53097ee153c3f"
+    },
+    {
+      "id": "train_MED_4006-crop12",
+      "source_id": "train_MED_4006",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_4006-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "4b3cb82526f918dd8b2cdf12f63385f738647d5721af4dd78b941a020af2c469"
+    },
+    {
+      "id": "train_MED_4006-crop13",
+      "source_id": "train_MED_4006",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_4006-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "402a4d706131e51ffc9818630f4d16b2815fb3ea225537f29b21a7b82f874d8b"
+    },
+    {
+      "id": "train_MED_4006-crop14",
+      "source_id": "train_MED_4006",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_4006-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "140b2fb28095737dbd956d6d58bd05525d03c5a116b518231861840f528f8e16"
+    },
+    {
+      "id": "train_MED_4006-crop15",
+      "source_id": "train_MED_4006",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_4006-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "196b518a0e962c96b9ba2391410a4fafb568fd0e4bd7fb2fe21897140a0fac0d"
+    },
+    {
+      "id": "train_MED_4007-crop00",
+      "source_id": "train_MED_4007",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_4007-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c1a133fc1a3a3e2009ae45567ddf79485a983894a444dac3d0bbaa441535b6e4"
+    },
+    {
+      "id": "train_MED_4007-crop01",
+      "source_id": "train_MED_4007",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_4007-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "bcad0c4c209ec70b0509f51cab1c23e9cd586eacd961156dabdb589ab6ff112e"
+    },
+    {
+      "id": "train_MED_4007-crop02",
+      "source_id": "train_MED_4007",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_4007-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "3ff840da592a12588d0915457dd0908d423a2f94f428eb38797419674ab8931d"
+    },
+    {
+      "id": "train_MED_4007-crop03",
+      "source_id": "train_MED_4007",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_4007-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e450b41239bb75f3490775dfcf24a3613857722ae4bbf60637e409e9fda54895"
+    },
+    {
+      "id": "train_MED_4007-crop04",
+      "source_id": "train_MED_4007",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_4007-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "411b61ce78da40a1a488dc6c52406a1ead0dd9d3d108baf8f422b7511c881187"
+    },
+    {
+      "id": "train_MED_4007-crop05",
+      "source_id": "train_MED_4007",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_4007-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "eedcb8cd08341135161abc83afa2380b7fca6f5a8c7406e8ecacbd91744ea5f5"
+    },
+    {
+      "id": "train_MED_4007-crop06",
+      "source_id": "train_MED_4007",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_4007-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "0bf390117cd3b6521525eef6d68d040ea0f3e9decc687c78d7a6e209beb05e96"
+    },
+    {
+      "id": "train_MED_4007-crop07",
+      "source_id": "train_MED_4007",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_4007-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "935e5768f943b252ee76f9b29ceaf4d57f5652b4bf0868613d43f82812c71750"
+    },
+    {
+      "id": "train_MED_4007-crop08",
+      "source_id": "train_MED_4007",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_4007-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "c0615088710a29af0579e9433d469888005be733e55722e2e5116ab805b5a512"
+    },
+    {
+      "id": "train_MED_4007-crop09",
+      "source_id": "train_MED_4007",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_4007-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "97b3a1e242b0fd036332c1e2862f4f03c3a1e0eca0bd0b19b3c50d30e74ce4cf"
+    },
+    {
+      "id": "train_MED_4007-crop10",
+      "source_id": "train_MED_4007",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_4007-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "1cfdae55b4beb22504b1050575c01bd073a764cc78496dd31b6b4c3345072190"
+    },
+    {
+      "id": "train_MED_4007-crop11",
+      "source_id": "train_MED_4007",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_4007-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "485f1675abe594ef858b20c6c8708bbb611afaa3927c1605ce3b242089265a4f"
+    },
+    {
+      "id": "train_MED_4007-crop12",
+      "source_id": "train_MED_4007",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_4007-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "528a168a8dd273f418c57264fd22c8d8af3a665a17c3826444f1e429d78615e9"
+    },
+    {
+      "id": "train_MED_4007-crop13",
+      "source_id": "train_MED_4007",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_4007-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "020a8cf7ef4c7f5ef51fb2ac8a573eb20495f83718badfab3620d1596e2ba771"
+    },
+    {
+      "id": "train_MED_4007-crop14",
+      "source_id": "train_MED_4007",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_4007-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "3c958258d33634024edde5bf9172609dda8bc3636382b675a4babe99d7562db9"
+    },
+    {
+      "id": "train_MED_4007-crop15",
+      "source_id": "train_MED_4007",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_4007-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6f694d0d12b5e1dd05340df9d43164d911a15340cfea5df0e2f09e573b96e134"
+    },
+    {
+      "id": "train_MED_4043-crop00",
+      "source_id": "train_MED_4043",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_4043-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "38ff57ceec3d4bbca8f713ccbdffe4b5ba2a66db9fe7560aaa96bcd333228e34"
+    },
+    {
+      "id": "train_MED_4043-crop01",
+      "source_id": "train_MED_4043",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_4043-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "cb204333e8f6751ba2cf26d2ff34d5c7e112c0fc5dbba1a93a92282ed3e15ae2"
+    },
+    {
+      "id": "train_MED_4043-crop02",
+      "source_id": "train_MED_4043",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_4043-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "48b88434e66be40404954525b6a9a0b0768750fcf8493f6cf1b1f464ce7ae8aa"
+    },
+    {
+      "id": "train_MED_4043-crop03",
+      "source_id": "train_MED_4043",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_4043-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "ea9525e29e7bef8c0f2835d11bb17d827d4d8c5722dbbe09a7aeb19423db319b"
+    },
+    {
+      "id": "train_MED_4043-crop04",
+      "source_id": "train_MED_4043",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_4043-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "513b7d8faa59c7f09938964afbfbf0a96fdcfb088ab9e1118d9218da618460aa"
+    },
+    {
+      "id": "train_MED_4043-crop05",
+      "source_id": "train_MED_4043",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_4043-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "d0cf3d8a1273dbe810b320758ef7f4068f2e1d4e546ebbd44d6bd5903d99634c"
+    },
+    {
+      "id": "train_MED_4043-crop06",
+      "source_id": "train_MED_4043",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_4043-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e0e772aa7816e42cc0bd8c2038cb565839ab2c25e872d1007c6e3bf1386d8871"
+    },
+    {
+      "id": "train_MED_4043-crop07",
+      "source_id": "train_MED_4043",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_4043-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "0eae014d2af6a07e05dc93665c47ec20e586fe952e584c62a1c9609914a9c4f0"
+    },
+    {
+      "id": "train_MED_4043-crop08",
+      "source_id": "train_MED_4043",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_4043-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "fe5807a5dd9370061f3dff66609a5319cd0a50e4a3be8f52a7201253b261afae"
+    },
+    {
+      "id": "train_MED_4043-crop09",
+      "source_id": "train_MED_4043",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_4043-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "7932b778e0d3658f003d118665f88dc493a6a831adc273c288410688254f8559"
+    },
+    {
+      "id": "train_MED_4043-crop10",
+      "source_id": "train_MED_4043",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_4043-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "b7f0a61647f08a995b19ccce7a54be6d4e2bb888502f9f8af26ad97ccaf20611"
+    },
+    {
+      "id": "train_MED_4043-crop11",
+      "source_id": "train_MED_4043",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_4043-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "cacad1c0477f15f7f935aa91ed099d8234ab7904a5d29199e36a0d5c53fe8cd8"
+    },
+    {
+      "id": "train_MED_4043-crop12",
+      "source_id": "train_MED_4043",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_4043-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "9e142e85ce5b6813d12faa07081b05a330dcd02a3321126b242eaf1c28cfab45"
+    },
+    {
+      "id": "train_MED_4043-crop13",
+      "source_id": "train_MED_4043",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_4043-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c481c905a73c3c2f96dcddb0c3620a58d61103e80f9b31452e5d9f1cf664fe1e"
+    },
+    {
+      "id": "train_MED_4043-crop14",
+      "source_id": "train_MED_4043",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_4043-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "8347b7a7688208c99fc28f16bb08e8636fecd01f708750b223fd6615e5ec93db"
+    },
+    {
+      "id": "train_MED_4043-crop15",
+      "source_id": "train_MED_4043",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_4043-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c3e1ab484a13b1470da10d3bc293d99d81253d2384d091d3194147230dca6a49"
+    },
+    {
+      "id": "train_MED_4056-crop00",
+      "source_id": "train_MED_4056",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_MED_4056-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c531e116757d1b7a59cc56ea56d7a16e6cb61f08271de0a3ff1bd1d6a5e63dd6"
+    },
+    {
+      "id": "train_MED_4056-crop01",
+      "source_id": "train_MED_4056",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_MED_4056-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "3af442f6a2bd68519deae7beef6b2cf77c1a0747b9bc5b9ce6362b583d28c352"
+    },
+    {
+      "id": "train_MED_4056-crop02",
+      "source_id": "train_MED_4056",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_MED_4056-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "25d8f1475225f1f774c93c703e05e8870b840e9ced876088909fbd4a4b03d8e0"
+    },
+    {
+      "id": "train_MED_4056-crop03",
+      "source_id": "train_MED_4056",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_MED_4056-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a54207d471f527fd66165d9b365f9db0b7c81ad3371a48ba1c810e8096c4d314"
+    },
+    {
+      "id": "train_MED_4056-crop04",
+      "source_id": "train_MED_4056",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_MED_4056-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "181240a649e0c052161120df2149c333e527dd67bdd854df242473f2e74e3446"
+    },
+    {
+      "id": "train_MED_4056-crop05",
+      "source_id": "train_MED_4056",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_MED_4056-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "4504732bce57200a2ccf03d46c155faf92949de36bf9f17875f097ae0cc7d264"
+    },
+    {
+      "id": "train_MED_4056-crop06",
+      "source_id": "train_MED_4056",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_MED_4056-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "003ff9d1bcff99f23d363835c2e2df72621e30422d90a438a5bc3b690345a2fe"
+    },
+    {
+      "id": "train_MED_4056-crop07",
+      "source_id": "train_MED_4056",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_MED_4056-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "af5e30084010910b8410287c63ed6691112c10e60d8ae33cd9a345ca37802c06"
+    },
+    {
+      "id": "train_MED_4056-crop08",
+      "source_id": "train_MED_4056",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_MED_4056-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "45233ae8a3f19b202f2315de5362d4d185f8c352e620f193b668935811b8da46"
+    },
+    {
+      "id": "train_MED_4056-crop09",
+      "source_id": "train_MED_4056",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_MED_4056-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e30e842cc782a2e61fa3f3bd613ea3619e7067413537bb4870443ff9d88fdfba"
+    },
+    {
+      "id": "train_MED_4056-crop10",
+      "source_id": "train_MED_4056",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_MED_4056-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "274db938131df29d002220716a9780bcde61cfaaf2f4c756b137e517f4834797"
+    },
+    {
+      "id": "train_MED_4056-crop11",
+      "source_id": "train_MED_4056",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_MED_4056-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "351c33603c20568dbabe4ed16603751d0726000d102848b3f7ec7f7867f27511"
+    },
+    {
+      "id": "train_MED_4056-crop12",
+      "source_id": "train_MED_4056",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_MED_4056-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "bbd8b88a2e04c1ded410bd354153107ae5fa39df85278df4eb37e16d3eb22611"
+    },
+    {
+      "id": "train_MED_4056-crop13",
+      "source_id": "train_MED_4056",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_MED_4056-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "bb94ec79125d0534d83ed937418feda6f98d4c48c8117dbac94460b6685a7db3"
+    },
+    {
+      "id": "train_MED_4056-crop14",
+      "source_id": "train_MED_4056",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_MED_4056-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "250fcfdbba257fd0e882d96845450c1ac56f6cd310b677e62da5f999f6bd303b"
+    },
+    {
+      "id": "train_MED_4056-crop15",
+      "source_id": "train_MED_4056",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_MED_4056-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2ccb8af6f9942470b9d50a7bf2c244e1bb8cdba2fafa2d35ab7d3dc5d0cddc73"
+    },
+    {
+      "id": "train_SB_0016-crop00",
+      "source_id": "train_SB_0016",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_SB_0016-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6f9dd0b36e7c36fae60427b6b28a07168c255585bbbf15b67a56e2c6465c6ad5"
+    },
+    {
+      "id": "train_SB_0016-crop01",
+      "source_id": "train_SB_0016",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_SB_0016-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6abc2dc85a8434630305da1b4f1f3fe1f0155469cb09ee23cfba6a2b11b3bbea"
+    },
+    {
+      "id": "train_SB_0016-crop02",
+      "source_id": "train_SB_0016",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_SB_0016-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2b540d41b83531fbd493308321199cfe2a13ca2f0de0ff07eeed3e8b9c227d2b"
+    },
+    {
+      "id": "train_SB_0016-crop03",
+      "source_id": "train_SB_0016",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_SB_0016-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "2a9d6985f0ba6c7f7aa0673bb178421403bb69c44c9d1bb5557e416753462cf0"
+    },
+    {
+      "id": "train_SB_0016-crop04",
+      "source_id": "train_SB_0016",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_SB_0016-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e4cfd0e2f149c6b9a42e890b45bfae509226120271b9b6feaeedee3d1afef89b"
+    },
+    {
+      "id": "train_SB_0016-crop05",
+      "source_id": "train_SB_0016",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_SB_0016-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "c26febad3115908c22d5fe19ebf7c0e7f3c3c15789bbefedeacb9e0e327aedc3"
+    },
+    {
+      "id": "train_SB_0016-crop06",
+      "source_id": "train_SB_0016",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_SB_0016-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "5e2d4b20c426850e0b30f4fd1dd955610a92f2b96b45fb707f47ca9fdbaeeae1"
+    },
+    {
+      "id": "train_SB_0016-crop07",
+      "source_id": "train_SB_0016",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_SB_0016-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "26d441116fdfb05e50b3ab1628bb9f93fd27859578b424f602a80db3b112dcfb"
+    },
+    {
+      "id": "train_SB_0016-crop08",
+      "source_id": "train_SB_0016",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_SB_0016-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "29cddababaa78b9dab1d1e4d2540367deb4b0bb03b2d742b8855779bf2bd2c2d"
+    },
+    {
+      "id": "train_SB_0016-crop09",
+      "source_id": "train_SB_0016",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_SB_0016-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "94d88dd8832a1463df134ef374007b038d7bfa301887c2dce06cc2c13c27b60c"
+    },
+    {
+      "id": "train_SB_0016-crop10",
+      "source_id": "train_SB_0016",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_SB_0016-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "88115f087df39e41252183f9de5c8e3dcf3ff862beacb39f2d98893be46ead93"
+    },
+    {
+      "id": "train_SB_0016-crop11",
+      "source_id": "train_SB_0016",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_SB_0016-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "2d7d6ab50c7c89f2f8d41be835f0830f026d5624dacfac191ea8947be7e27556"
+    },
+    {
+      "id": "train_SB_0016-crop12",
+      "source_id": "train_SB_0016",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_SB_0016-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "9e16bb35c5cc866cd635b518300877782e61af468eb2f4097ed47738a9f0fc95"
+    },
+    {
+      "id": "train_SB_0016-crop13",
+      "source_id": "train_SB_0016",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_SB_0016-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "1cfbc55b9ba57ebf2d0d95bf5ef879b96b9606ceca324046c9dfa6dc366769be"
+    },
+    {
+      "id": "train_SB_0016-crop14",
+      "source_id": "train_SB_0016",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_SB_0016-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6e4d858156f2cc1838b58e713d18a152aaf28abe04f5e795171833c3bdc938d3"
+    },
+    {
+      "id": "train_SB_0016-crop15",
+      "source_id": "train_SB_0016",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_SB_0016-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "261893a30c1eb293aefb984a46df7cf01f7063f43d500de26fee50256a38553d"
+    },
+    {
+      "id": "train_SB_0026-crop00",
+      "source_id": "train_SB_0026",
+      "rect": [
+        0,
+        0,
+        1100,
+        825
+      ],
+      "path": "train_SB_0026-crop00.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "6942b40815008551077d6bccf1eb7f9703b22b81fd96bf624872a26ab9c35fd8"
+    },
+    {
+      "id": "train_SB_0026-crop01",
+      "source_id": "train_SB_0026",
+      "rect": [
+        900,
+        0,
+        2100,
+        825
+      ],
+      "path": "train_SB_0026-crop01.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "e3b7fedd36edc6aa8151fff5f96fbb84205fd599cab17d9865468fc1a67b4dea"
+    },
+    {
+      "id": "train_SB_0026-crop02",
+      "source_id": "train_SB_0026",
+      "rect": [
+        1900,
+        0,
+        3100,
+        825
+      ],
+      "path": "train_SB_0026-crop02.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "06fb40cbe37ae65ea8300c114a0dbd35719db8ac189f9f9f14052d9c754de591"
+    },
+    {
+      "id": "train_SB_0026-crop03",
+      "source_id": "train_SB_0026",
+      "rect": [
+        2900,
+        0,
+        4000,
+        825
+      ],
+      "path": "train_SB_0026-crop03.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "b828c1b2b881062cd334eae145c2f1f7d523f58b254f57dc02e1a82020faa90d"
+    },
+    {
+      "id": "train_SB_0026-crop04",
+      "source_id": "train_SB_0026",
+      "rect": [
+        0,
+        675,
+        1100,
+        1575
+      ],
+      "path": "train_SB_0026-crop04.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "5c44fb5e4bfa8252248b2613fe54c63ae668d9e18f7fe52d7276aeeec4d004d2"
+    },
+    {
+      "id": "train_SB_0026-crop05",
+      "source_id": "train_SB_0026",
+      "rect": [
+        900,
+        675,
+        2100,
+        1575
+      ],
+      "path": "train_SB_0026-crop05.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e93b59a4ec038e0521aa2e2e5605659196e001c5d7e21d748ec4eeceab45493c"
+    },
+    {
+      "id": "train_SB_0026-crop06",
+      "source_id": "train_SB_0026",
+      "rect": [
+        1900,
+        675,
+        3100,
+        1575
+      ],
+      "path": "train_SB_0026-crop06.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "dea2ea2481221fefbd6b97167226b64edd4a907c7d0c5f7389bd02297954326a"
+    },
+    {
+      "id": "train_SB_0026-crop07",
+      "source_id": "train_SB_0026",
+      "rect": [
+        2900,
+        675,
+        4000,
+        1575
+      ],
+      "path": "train_SB_0026-crop07.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "338f32ebae3de463fddc0abd54438dd01fbfa3bf89783b0a553935e5986bd9b4"
+    },
+    {
+      "id": "train_SB_0026-crop08",
+      "source_id": "train_SB_0026",
+      "rect": [
+        0,
+        1425,
+        1100,
+        2325
+      ],
+      "path": "train_SB_0026-crop08.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "e37f20e9dfa4de8dd4683aa13258b7cb0fdc722b636cd54a9cd6d9fbcb79b912"
+    },
+    {
+      "id": "train_SB_0026-crop09",
+      "source_id": "train_SB_0026",
+      "rect": [
+        900,
+        1425,
+        2100,
+        2325
+      ],
+      "path": "train_SB_0026-crop09.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "856719f64f27775ca590533f3181203f3d1625faaa6e0901b0c2394bad20523f"
+    },
+    {
+      "id": "train_SB_0026-crop10",
+      "source_id": "train_SB_0026",
+      "rect": [
+        1900,
+        1425,
+        3100,
+        2325
+      ],
+      "path": "train_SB_0026-crop10.png",
+      "width": 1200,
+      "height": 900,
+      "boxes": [],
+      "sha256": "8678f2051f6ceef88a500c1c9a7b7b9e6c1bbbc3d0ccb84105e414862b4f9cd2"
+    },
+    {
+      "id": "train_SB_0026-crop11",
+      "source_id": "train_SB_0026",
+      "rect": [
+        2900,
+        1425,
+        4000,
+        2325
+      ],
+      "path": "train_SB_0026-crop11.png",
+      "width": 1100,
+      "height": 900,
+      "boxes": [],
+      "sha256": "61db64f2ed55fe04cc2578a99eb1296b5feed430328ea341dfc4f259bc61462a"
+    },
+    {
+      "id": "train_SB_0026-crop12",
+      "source_id": "train_SB_0026",
+      "rect": [
+        0,
+        2175,
+        1100,
+        3000
+      ],
+      "path": "train_SB_0026-crop12.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "c673c75a408d887f2f48f8b1d3136bec5778973def35785f7ef7820358f0819b"
+    },
+    {
+      "id": "train_SB_0026-crop13",
+      "source_id": "train_SB_0026",
+      "rect": [
+        900,
+        2175,
+        2100,
+        3000
+      ],
+      "path": "train_SB_0026-crop13.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "48aa2d346eb21052ad5647da422ff7d21ba70540ec8338742e0abc11f44ee92f"
+    },
+    {
+      "id": "train_SB_0026-crop14",
+      "source_id": "train_SB_0026",
+      "rect": [
+        1900,
+        2175,
+        3100,
+        3000
+      ],
+      "path": "train_SB_0026-crop14.png",
+      "width": 1200,
+      "height": 825,
+      "boxes": [],
+      "sha256": "58d4fc5a8a97268280e031ab5f0d443d16db7392e62d87f72f94020d5d77d591"
+    },
+    {
+      "id": "train_SB_0026-crop15",
+      "source_id": "train_SB_0026",
+      "rect": [
+        2900,
+        2175,
+        4000,
+        3000
+      ],
+      "path": "train_SB_0026-crop15.png",
+      "width": 1100,
+      "height": 825,
+      "boxes": [],
+      "sha256": "a2b71756aafa150abd5834ba732b228744dd6fa8d193a785425a6a0602ff1609"
+    }
+  ],
+  "model_hash_basis": "Committed Git blob bytes; text files use LF. No model change.",
+  "source_checkpoint_sha256": "321b3164ad4c94005345bfd716997e2e5741d6dfb6687dabd156080e1cec47ae",
+  "source_checkpoint": "D85: yolo26n-wisard-full-20261022/mixed640/weights/best.pt",
+  "export_environment": {
+    "torch": "2.7.0",
+    "ultralytics": "8.4.171",
+    "coremltools": "9.0",
+    "nms": true,
+    "half_argument": false,
+    "imgsz": 640
+  },
+  "crop_fixture": true
+}

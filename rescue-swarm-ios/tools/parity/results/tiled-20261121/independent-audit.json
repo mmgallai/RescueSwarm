@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "metrics": {
+    "swift": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23
+    },
+    "python_native": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23
+    },
+    "python_swift_pixels": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23
+    },
+    "python_pytorch": {
+      "tp": 30,
+      "fp": 26,
+      "fn": 23
+    }
+  },
+  "files": {
+    "comparison.json": "75a89c4b79af2ff889ab641f5eac1916e8243a58a9c89e3d7a682acc460680a6",
+    "crop-manifest.json": "2d7ffec8e4563c5eb286b842b54b9287188117b7cd24512c27802b33f060f46d",
+    "crop-results.json": "5d1c3b2fc8d37e2f77ec8d2f37b56c5243cb185dd069de38e27981a31b851205",
+    "manifest.json": "184677bef34735c70c3f7958c20e5327265e7ef85b23f4604e5593aac9005046",
+    "paired-results.json": "67c010a8ee8fac3ff268947b593bf9da018b05a95037fb7963da97af8abfb1cd",
+    "source-manifest.json": "184677bef34735c70c3f7958c20e5327265e7ef85b23f4604e5593aac9005046",
+    "swift-merged.json": "09fdb75a629ed84a4aef29b8602dc317034971369fd639d87ef36065201599f6",
+    "swift-results.json": "7b8e6c0b272b853387e1873ff1690097bbf1e8fc793afad45829232305890464"
+  },
+  "candidate_package_hashes": "PASS",
+  "historical_same_person_identity_check": "PASS"
+}
