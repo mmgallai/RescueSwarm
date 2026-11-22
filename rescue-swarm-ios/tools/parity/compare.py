@@ -89,17 +89,17 @@ def run(root):
             else:
                 rgb = Image.open(root / (row["id"] + "-swift.ppm")).convert("RGB")
                 box = Letterbox.fit(row["width"], row["height"], settings["imgsz"])
-            output = model.predict({"image": rgb, "iouThreshold": settings["iou"], "confidenceThreshold": settings["conf"]})
+            output = model.predict({"image": rgb, "iouThreshold": settings["iou"], "confidenceThreshold": settings.get("inference_conf", settings["conf"])})
             detections = decode(output["coordinates"], output["confidence"], box, row["width"], row["height"], settings["conf"])
             results[mode] = {"detections": [{"box": [float(v) for v in d.box_xyxy], "confidence": float(d.confidence)} for d in detections],
                              "elapsed_ms": (time.perf_counter()-began)*1000}
         if torch_model is not None:
             began = time.perf_counter()
-            prediction = torch_model.predict(original, imgsz=settings["imgsz"], conf=settings["conf"],
+            prediction = torch_model.predict(original, imgsz=settings["imgsz"], conf=settings.get("inference_conf", settings["conf"]),
                 iou=settings["iou"], rect=False, half=False, device="cpu", max_det=300, verbose=False)[0]
             results["python_pytorch"] = {"detections": [
                 {"box": [float(v) for v in b[:4]], "confidence": float(b[4])}
-                for b in prediction.boxes.data.cpu().tolist() if int(b[5]) == 0],
+                for b in prediction.boxes.data.cpu().tolist() if int(b[5]) == 0 and b[4] >= settings["conf"]],
                 "elapsed_ms": (time.perf_counter()-began)*1000}
         records.append({"id": row["id"], "swift": swift[row["id"]], **results})
         print("PARITY_PYTHON", row["id"], {k: len(v["detections"]) for k, v in results.items()}, flush=True)
@@ -109,7 +109,8 @@ def run(root):
     (root / "paired-results.json").write_text(json.dumps({"images": records, "environment": {
         "python": platform.python_version(), "platform": platform.platform(), "coremltools": ct.__version__,
         "opencv": cv2.__version__, "numpy": np.__version__}, "model_files": model_hashes()}, indent=2))
-    audit(root)
+    if not manifest.get("crop_fixture"):
+        audit(root)
 
 
 def audit(root):

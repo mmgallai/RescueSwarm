@@ -1,0 +1,52 @@
+name: Tiled fine-tuned detector parity
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/swift-integration]
+    paths:
+      - '.github/workflows/tiled-parity.yml'
+      - 'rescue-swarm-ios/tools/parity/tiled.py'
+      - 'rescue-swarm-ios/tools/parity/checkpoints/**'
+permissions:
+  contents: read
+jobs:
+  parity:
+    runs-on: macos-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: rescue-swarm-ios
+    env:
+      PARITY_SIZE: "640"
+      PARITY_TILED: "1"
+      PARITY_ROOT: ${{ github.workspace }}/rescue-swarm-ios/TestResults/tiled-parity
+      PARITY_MODEL: ${{ github.workspace }}/rescue-swarm-ios/TestResults/tiled-parity/d85-best.mlpackage
+      PARITY_MANIFEST: ${{ github.workspace }}/rescue-swarm-ios/TestResults/tiled-parity/manifest.json
+      PARITY_CHECKPOINT: ${{ github.workspace }}/rescue-swarm-ios/tools/parity/checkpoints/d85-best.pt
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install isolated export and inference dependencies
+        run: |
+          python -m venv .venv-parity
+          .venv-parity/bin/pip install coremltools==9.0 torch==2.7.0 torchvision==0.22.0 ultralytics==8.4.171 opencv-python==4.11.0.86 opencv-python-headless==4.11.0.86 numpy==1.26.4 Pillow==11.2.1 scipy==1.15.3
+      - name: Export an immutable checkpoint copy, outside the app
+        run: .venv-parity/bin/python tools/parity/export_finetuned.py
+      - name: Hash-verify same frozen corrected validation sample
+        run: .venv-parity/bin/python tools/parity/tiled.py prepare
+      - name: Actual Swift detector with candidate model
+        run: swift test --filter CorrectedValidationParityTests
+      - name: Original PyTorch versus CoreML, Python versus Swift
+        run: .venv-parity/bin/python tools/parity/tiled.py run
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tiled-parity-reports
+          path: rescue-swarm-ios/TestResults/tiled-parity/*.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: tiled-coreml-candidate
+          path: rescue-swarm-ios/TestResults/tiled-parity/d85-best.mlpackage
